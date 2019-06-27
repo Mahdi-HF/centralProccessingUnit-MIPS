@@ -199,7 +199,7 @@ module Controller(
 
     always @(ALUOp)
     begin
-        if(ALUOp == 2'b10)
+        if(ALUOp == 2'b10) //delegate it ...
         begin
             case(funct)
                 6'b100000: //ADD
@@ -229,14 +229,14 @@ module Controller(
             aluControl = 2'b10; //ADD
         end
 
-        else if(ALUOp == 2'b01)
+        else if(ALUOp == 2'b01) 
         begin
-            aluControl = 2'b10;
+            aluControl = 2'b11; //SUB
         end
 
         else
         begin
-            aluControl = 2'b10;
+            aluControl = 2'bz; //impossible !
         end  
         
     end
