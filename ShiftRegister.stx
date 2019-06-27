@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Parameter xsthdpdir set to Z:/Memari_Project/MemariProject/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Reading design: ShiftRegister.prj
 
@@ -44,7 +44,7 @@ Parsing module <ShiftRegister>.
 
 
 Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 7.34 secs
+Total CPU time to Xst completion: 6.94 secs
  
 --> 
 

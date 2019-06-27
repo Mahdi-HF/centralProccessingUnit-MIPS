@@ -23,7 +23,7 @@ module Shifter2(input [31:0]in,
 
     always @*
     begin
-      in = in<<2;
+      out = in<<2;
     end
 
 endmodule

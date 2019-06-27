@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Parameter xsthdpdir set to Z:/Memari_Project/MemariProject/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.18 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Reading design: Memory.prj
 
@@ -43,8 +43,8 @@ Analyzing Verilog file "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Memo
 Parsing module <Memory>.
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 5.39 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.93 secs
  
 --> 
 

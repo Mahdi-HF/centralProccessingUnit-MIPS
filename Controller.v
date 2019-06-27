@@ -19,7 +19,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module Controller(
-    input Clk, Reset, [5:0]Op, [5:0]funct
+    input Clk, Reset, [5:0]Op, [5:0]funct,
     output reg isBranch, PCWrite, lorD, MemWrite, MemtoReg, IRWrite,
     output reg [1:0]aluControl, ALUSrcB, PCSource, ALUSrcA, RegWrite, RegDst);
 
@@ -222,6 +222,7 @@ module Controller(
                     aluControl = 2'b11;
                 end
                 default : aluControl = 2'bz;
+				endcase
         end
 
         else if(ALUOp == 2'b00)

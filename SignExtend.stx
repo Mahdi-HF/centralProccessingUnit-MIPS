@@ -4,15 +4,15 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to Z:/Memari_Project/MemariProject/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.14 secs
  
---> Reading design: ALU.prj
+--> Reading design: SignExtend.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -39,12 +39,12 @@ TABLE OF CONTENTS
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\ALU.v" into library work
-Parsing module <ALU>.
+Analyzing Verilog file "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\SignExtend.v" into library work
+Parsing module <SignExtend>.
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.39 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.62 secs
  
 --> 
 

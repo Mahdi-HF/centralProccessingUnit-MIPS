@@ -46,6 +46,12 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ShiftRegister.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="ShiftRegister.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="ShiftRegister.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Shifter2.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Shifter2.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="Shifter2.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="SignExtend.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="SignExtend.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="SignExtend.xst"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>

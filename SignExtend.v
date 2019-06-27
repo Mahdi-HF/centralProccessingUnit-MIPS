@@ -20,7 +20,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 module SignExtend(input [15:0]in,
     output reg [31:0]out );
-
-    assign out = { {16{in[15]} }, in[15:0] };
+	 
+	 always @* 
+    begin
+        out = { {16{in[15]} }, in[15:0] };
+    end
 
 endmodule
