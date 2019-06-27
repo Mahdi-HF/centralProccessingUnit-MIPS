@@ -31,6 +31,9 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Memory.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Memory.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="Memory.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="MultiCycleProccessor.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="MultiCycleProccessor.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="MultiCycleProccessor.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Mux2.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Mux2.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="Mux2.xst"/>

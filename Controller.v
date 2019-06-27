@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 module Controller(
     input Clk, Reset, [5:0]Op,
-    output reg PCWriteCond, PCWrite, lorD, MemRead, MemWrite, MemtoReg, IRWrite,
+    output reg PCWriteCond, PCWrite, lorD, MemWrite, MemtoReg, IRWrite,
     output reg [1:0]ALUOp, ALUSrcB, PCSource, ALUSrcA, RegWrite, RegDst);
 
     reg [4:0] state = 0, nextstate;
@@ -58,7 +58,6 @@ module Controller(
         case(state)
             S0: 
             begin
-                MemRead=1'b1;
                 ALUSrcA=1'b0;
                 lorD= 1'b0; 
                 IRWrite=1'b1; 
@@ -74,7 +73,6 @@ module Controller(
 
             S1: 
             begin
-                MemRead=1'b0;
                 IRWrite=1'b0;
                 ALUSrcA=1'b0;
                 ALUSrcB=2'b11;
@@ -126,14 +124,12 @@ module Controller(
 
             S3: 
             begin
-                MemRead=1'b1;
                 lorD = 1'b1; 
                 nextstate=S4;
             end
 
             S4: 
             begin
-                MemRead=1'b0;
                 RegDst = 1'b0;
                 RegWrite = 1'b1; 
                 MemtoReg= 1'b1; 
