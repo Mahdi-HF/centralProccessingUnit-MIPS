@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    04:41:52 06/27/2019 
+// Create Date:    06:41:37 06/27/2019 
 // Design Name: 
-// Module Name:    ShiftRegister 
+// Module Name:    ShiftRegisterEnable 
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
@@ -18,13 +18,14 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module ShiftRegister(
-    input [31:0] dataIn, CLK,
+module ShiftRegisterEnable(
+    input [31:0] dataIn, CLK, control,
     output reg [31:0] dataOut );
 
     always @(posedge CLK) 
     begin
-        dataOut <= dataIn;
+        if(control==1'b1)
+            dataOut <= dataIn;
     end
 
 endmodule
