@@ -85,7 +85,7 @@ module Controller(
                 end
 
                 if(Op==rType) 
-                begin // if R type instruction
+                begin
                     nextstate=S6;
                 end
 

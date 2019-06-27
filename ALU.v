@@ -27,10 +27,10 @@ module ALU(
         result = 10'b0;
         zFlag = 1'b0;
         case (control)
-            2'b00 : result = a & b;
-            2'b01 : result = a ^ b;
-            2'b10 : result = a + b;
-            2'b11 : result = a - b;
+            2'b00 : result = a & b; //and
+            2'b01 : result = a ^ b; //xor
+            2'b10 : result = a + b; //add
+            2'b11 : result = a - b; //sub
             default: result = 10'bz;
         endcase
     end
