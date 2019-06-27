@@ -19,7 +19,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module RegFile(
-    input [4:0] rA, rB, dR, [31:0] wData, wEnable, CLK,
+    input [4:0] rA, rB, dR, [31:0] wData, input wEnable, input CLK,
     output [31:0] aData, bData);
 
     reg [31:0] regData [31:0];

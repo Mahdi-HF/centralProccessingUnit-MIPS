@@ -19,10 +19,10 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module Mux2(
-    input control, [31:0] A, B, C, D,
+    input control, [31:0]A, [31:0]B,
     output reg [31:0] out );
 
-    always @ (control, A, B, C, D) 
+    always @ (control, A, B) 
     begin
        if(control == 1'b0)
             out = A;

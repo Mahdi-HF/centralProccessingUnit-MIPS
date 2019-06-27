@@ -37,25 +37,131 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Mux2.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Mux2.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="Mux2.xst"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="Mux2Test_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Mux2Test_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Mux4.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Mux4.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="Mux4.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Mux4_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RegFile.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="RegFile.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="RegFile.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ShiftRegister.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="ShiftRegister.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="ShiftRegister.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ShiftRegisterTest_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="ShiftRegisterTest_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="ShiftRegisterTest_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ShiftRegisterTest_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Shifter2.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Shifter2.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="Shifter2.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="SignExtend.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="SignExtend.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="SignExtend.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="mux4test_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="mux4test_stx_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="shifter2Test_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="shifter2Test_stx_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
-  <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1561652890" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1561652890">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1561656383" xil_pn:in_ck="5900426853520612799" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1561656383">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="ALU.v"/>
+      <outfile xil_pn:name="Controller.v"/>
+      <outfile xil_pn:name="DataPath.v"/>
+      <outfile xil_pn:name="Memory.v"/>
+      <outfile xil_pn:name="MultiCycleProccessor.v"/>
+      <outfile xil_pn:name="Mux2.v"/>
+      <outfile xil_pn:name="Mux2Test.v"/>
+      <outfile xil_pn:name="Mux4.v"/>
+      <outfile xil_pn:name="RegFile.v"/>
+      <outfile xil_pn:name="ShiftRegister.v"/>
+      <outfile xil_pn:name="ShiftRegisterTest.v"/>
+      <outfile xil_pn:name="Shifter2.v"/>
+      <outfile xil_pn:name="SignExtend.v"/>
+      <outfile xil_pn:name="mux4test.v"/>
+      <outfile xil_pn:name="shifter2Test.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1561654619" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="1917309071727241274" xil_pn:start_ts="1561654619">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1561654619" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="8787972440808708440" xil_pn:start_ts="1561654619">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1561653035" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="9051349066072761915" xil_pn:start_ts="1561653035">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1561656383" xil_pn:in_ck="5900426853520612799" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1561656383">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="ALU.v"/>
+      <outfile xil_pn:name="Controller.v"/>
+      <outfile xil_pn:name="DataPath.v"/>
+      <outfile xil_pn:name="Memory.v"/>
+      <outfile xil_pn:name="MultiCycleProccessor.v"/>
+      <outfile xil_pn:name="Mux2.v"/>
+      <outfile xil_pn:name="Mux2Test.v"/>
+      <outfile xil_pn:name="Mux4.v"/>
+      <outfile xil_pn:name="RegFile.v"/>
+      <outfile xil_pn:name="ShiftRegister.v"/>
+      <outfile xil_pn:name="ShiftRegisterTest.v"/>
+      <outfile xil_pn:name="Shifter2.v"/>
+      <outfile xil_pn:name="SignExtend.v"/>
+      <outfile xil_pn:name="mux4test.v"/>
+      <outfile xil_pn:name="shifter2Test.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1561656385" xil_pn:in_ck="5900426853520612799" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="4270413812502118979" xil_pn:start_ts="1561656383">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="ShiftRegisterTest_beh.prj"/>
+      <outfile xil_pn:name="ShiftRegisterTest_isim_beh.exe"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1561656385" xil_pn:in_ck="4290791683020065024" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="2045830148078757638" xil_pn:start_ts="1561656385">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="ShiftRegisterTest_isim_beh.wdb"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+    </transform>
+  </transforms>
 
 </generated_project>

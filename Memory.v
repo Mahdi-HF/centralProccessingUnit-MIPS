@@ -19,7 +19,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module Memory(
-    input [31:0] Address, Clk, writeData, writeEnable,
+    input [31:0] Address, writeData, input Clk, input writeEnable,
     output reg [31:0]MemData );
 
     reg [31:0] data [1023:0];

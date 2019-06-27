@@ -21,7 +21,7 @@
 module Controller(
     input Clk, Reset, [5:0]Op, [5:0]funct,
     output reg isBranch, PCWrite, lorD, MemWrite, MemtoReg, IRWrite,
-    output reg [1:0]aluControl, ALUSrcB, PCSource, ALUSrcA, RegWrite, RegDst);
+    output reg [1:0]aluControl, ALUSrcB, output PCSource, output ALUSrcA, output RegWrite, output RegDst);
 
     reg [4:0] state = 0, nextstate;
     reg [1:0]ALUOp;

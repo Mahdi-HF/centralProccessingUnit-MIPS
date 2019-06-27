@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "Z:/Memari_Project/MemariProject/ShiftRegisterTest_isim_beh.exe" -prj "Z:/Memari_Project/MemariProject/ShiftRegisterTest_beh.prj" "work.ShiftRegisterTest" "work.glbl" 

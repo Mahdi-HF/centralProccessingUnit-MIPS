@@ -19,12 +19,15 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module ShiftRegister(
-    input [31:0] dataIn, CLK,
+    input [31:0] dataIn, input CLK,
     output reg [31:0] dataOut );
 
+	 initial
+	     dataOut = 32'bz;
+		
     always @(posedge CLK) 
     begin
-        dataOut <= dataIn;
+        dataOut = dataIn;
     end
 
 endmodule
