@@ -19,11 +19,11 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module ALU(
-    input a[4:0], b[4:0], control[1:0],
-    output reg result[9:0], reg zFlag;
-    );
+    input [4:0]a, [4:0]b, [1:0]control,
+    output reg [9:0]result, reg zFlag);
 
-    always @(a,b,control) begin
+    always @(a,b,control) 
+    begin
         result = 10'b0;
         zFlag = 1'b0;
         case (control)

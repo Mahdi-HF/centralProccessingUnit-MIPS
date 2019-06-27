@@ -21,7 +21,28 @@
 
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="MemariProject.xise"/>
 
-  <files xmlns="http://www.xilinx.com/XMLSchema"/>
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ALU.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="ALU.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="ALU.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Memory.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Memory.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="Memory.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Mux2.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Mux2.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="Mux2.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Mux4.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Mux4.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="Mux4.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RegFile.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="RegFile.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="RegFile.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ShiftRegister.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="ShiftRegister.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="ShiftRegister.xst"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
 

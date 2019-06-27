@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    02:11:37 06/27/2019 
+// Create Date:    04:41:52 06/27/2019 
 // Design Name: 
-// Module Name:    Mux2 
+// Module Name:    ShiftRegister 
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
@@ -18,15 +18,14 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module Mux2(
-    input control, [31:0] A, B, C, D,
-    output reg [31:0] out );
+module ShiftRegister(
+    input [31:0] dataIn, CLK, control,
+    output reg [31:0] dataOut );
 
-    always @ (control, A, B, C, D) 
+    always @(posedge CLK) 
     begin
-       if(control == 1'b0)
-            out = A;
-       else
-            out = B;
+        if(control==1'b1)
+            dataOut <= dataIn;
     end
+
 endmodule
