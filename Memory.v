@@ -18,10 +18,9 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module Memory(Clk, Address, WriteData, writeEnable, MemRead, MemData);
-
-    input [31:0] Address, WriteData, writeEnable, MemRead, Clk;
-    output [31:0] MemData;
+module Memory(
+    input [31:0] Address, Clk, writeData, writeEnable,
+    output MemData );
 
     wire [31:0] MemData;
     reg [31:0] data [512:0];
@@ -30,11 +29,11 @@ module Memory(Clk, Address, WriteData, writeEnable, MemRead, MemData);
     begin
         if(writeEnable==1'b1)
         begin
-            data[Address] <= WriteData;
+            data[Address] <= writeData;
         end
     end
 
-    assign MemData = (MemRead==1'b1)? data[Address] : 0;
+    assign MemData = data[Address];
 
     initial
     begin //load in data and instructions of program data[0] <= 32'd8;
@@ -52,12 +51,4 @@ module Memory(Clk, Address, WriteData, writeEnable, MemRead, MemData);
         data[160] <=32'h1000fffb;
         data[164] <=32'hac040006;
     end 
-    endmodule
-
-
-
-endmodule
-
-
-
 endmodule
