@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 module ALU(
     input [4:0]a, [4:0]b, [1:0]control,
-    output reg [9:0]result, reg zFlag);
+    output reg [9:0]result, zFlag);
 
     always @(a,b,control) 
     begin

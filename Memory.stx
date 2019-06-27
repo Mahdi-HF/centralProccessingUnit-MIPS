@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Parameter xsthdpdir set to Z:/Memari_Project/MemariProject/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.20 secs
+Total CPU time to Xst completion: 0.18 secs
  
 --> Reading design: Memory.prj
 
@@ -41,13 +41,16 @@ TABLE OF CONTENTS
 =========================================================================
 Analyzing Verilog file "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Memory.v" into library work
 Parsing module <Memory>.
-ERROR:HDLCompiler:806 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Memory.v" Line 59: Syntax error near "endmodule".
-Verilog file \\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Memory.v ignored due to errors
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.39 secs
+ 
 --> 
 
 Total memory usage is 126644 kilobytes
 
-Number of errors   :    1 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

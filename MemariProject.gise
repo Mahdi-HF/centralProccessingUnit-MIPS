@@ -25,6 +25,9 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ALU.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="ALU.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="ALU.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Controller.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Controller.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="Controller.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Memory.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Memory.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="Memory.xst"/>

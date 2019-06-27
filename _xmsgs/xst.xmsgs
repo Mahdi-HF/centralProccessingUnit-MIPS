@@ -5,8 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="HDLCompiler" num="806" delta="new" >"\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Memory.v" Line 59: Syntax error near &quot;<arg fmt="%s" index="1">endmodule</arg>&quot;.
-</msg>
-
 </messages>
 

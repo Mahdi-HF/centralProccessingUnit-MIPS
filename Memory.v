@@ -31,12 +31,14 @@ module Memory(
             data[Address] <= writeData;
         end
     end
-
-    assign MemData = data[Address];
-
+	
+    always @* begin
+        MemData = data[Address];
+    end
+    
     initial
     begin //load in data and instructions of program data[0] <= 32'd8;
-        data[1] <= 32'd1;
+        data[1] <= 32'd1; 
         data[2] <= 32'd1;
 
         data[128] <= 32'h8c030000;
