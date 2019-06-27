@@ -20,10 +20,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 module Controller(
     input Clk, Reset, [5:0]Op,
-    output PCWriteCond, PCWrite, lorD, MemRead, MemWrite, MemtoReg, IRWrite,
-    output [1:0]ALUOp, ALUSrcB, PCSource, ALUSrcA, RegWrite, RegDst);
+    output reg PCWriteCond, PCWrite, lorD, MemRead, MemWrite, MemtoReg, IRWrite,
+    output reg [1:0]ALUOp, ALUSrcB, PCSource, ALUSrcA, RegWrite, RegDst);
 
-    reg [1:0] ALUOp, ALUSrcB, PCSource, PCWriteCond, PCWrite, lorD, MemRead, MemWrite, MemtoReg, IRWrite, ALUSrcA, RegWrite, RegDst;
     reg [4:0] state = 0, nextstate;
 
     parameter S0=0;
@@ -39,15 +38,11 @@ module Controller(
     parameter S10=10; 
     parameter S11=11;
 
-    parameter lw = 6'b100011;
     parameter sw = 6'b101011;
-
-    parameter rType = 6'b000000;
-
+    parameter lw = 6'b100011;
     parameter beq = 6'b000100;
-
     parameter jump = 6'b000010;
-
+    parameter rType = 6'b000000;
     parameter iType1 = 6'b001100;
     parameter iType2 = 6'b001101;
     parameter iType3 = 6'b001110;

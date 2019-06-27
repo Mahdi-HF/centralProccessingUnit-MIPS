@@ -20,9 +20,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 module Memory(
     input [31:0] Address, Clk, writeData, writeEnable,
-    output MemData );
+    output reg [31:0]MemData );
 
-    wire [31:0] MemData;
     reg [31:0] data [512:0];
 
     always @ (posedge Clk)
