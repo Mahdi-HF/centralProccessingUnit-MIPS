@@ -1,47 +1,48 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    02:06:35 06/27/2019 
-// Design Name: 
-// Module Name:    Controller 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
+// Company:
+// Engineer:
 //
-// Dependencies: 
+// Create Date:    02:06:35 06/27/2019
+// Design Name:
+// Module Name:    Controller
+// Project Name:
+// Target Devices:
+// Tool versions:
+// Description:
 //
-// Revision: 
+// Dependencies:
+//
+// Revision:
 // Revision 0.01 - File Created
-// Additional Comments: 
+// Additional Comments:
 //
 //////////////////////////////////////////////////////////////////////////////////
 module Controller(
-    input Clk, Reset, [5:0]Op,
-    output reg PCWriteCond, PCWrite, lorD, MemWrite, MemtoReg, IRWrite,
-    output reg [1:0]ALUOp, ALUSrcB, PCSource, ALUSrcA, RegWrite, RegDst);
+    input Clk, Reset, [5:0]Op, [5:0]funct
+    output reg isBranch, PCWrite, lorD, MemWrite, MemtoReg, IRWrite,
+    output reg [1:0]aluControl, ALUSrcB, PCSource, ALUSrcA, RegWrite, RegDst);
 
     reg [4:0] state = 0, nextstate;
+    reg [1:0]ALUOp;
 
-    parameter S0=0;
-    parameter S1=1;
-    parameter S2=2;
-    parameter S3=3;
-    parameter S4=4; 
-    parameter S5=5; 
-    parameter S6=6; 
-    parameter S7=7; 
-    parameter S8=8; 
-    parameter S9=9; 
-    parameter S10=10; 
-    parameter S11=11;
+    parameter fetch=0;
+    parameter decode=1;
+    parameter memAddr=2;
+    parameter memRead=3;
+    parameter memWriteBack=4;
+    parameter memWrite=5;
+    parameter execute=6;
+    parameter aluWriteBack=7;
+    parameter branch=8;
+    parameter jump=9;
+    parameter addIExecute=10;
+    parameter addIwriteBack=11;
 
     parameter sw = 6'b101011;
     parameter lw = 6'b100011;
     parameter beq = 6'b000100;
-    parameter jump = 6'b000010;
+    parameter jumps = 6'b000010;
     parameter rType = 6'b000000;
     parameter iType1 = 6'b001100;
     parameter iType2 = 6'b001101;
@@ -56,22 +57,23 @@ module Controller(
     always @(state, Op)
     begin
         case(state)
-            S0: 
+            fetch:
             begin
                 ALUSrcA=1'b0;
-                lorD= 1'b0; 
-                IRWrite=1'b1; 
+                lorD= 1'b0;
+                IRWrite=1'b1;
                 ALUSrcB=2'b01;
-                ALUOp= 2'b00; PCWrite=1'b1; 
-                PCSource=2'b00; 
-                nextstate=S1; 
-                RegWrite = 1'b0; 
-                MemWrite=1'b0; 
-                PCWriteCond= 1'b0; 
+                ALUOp= 2'b00;
+                PCWrite=1'b1;
+                PCSource=2'b00;
+                RegWrite = 1'b0;
+                MemWrite=1'b0;
+                isBranch= 1'b0;
                 MemtoReg=1'b0;
+                nextstate=decode;
             end
 
-            S1: 
+            decode:
             begin
                 IRWrite=1'b0;
                 ALUSrcA=1'b0;
@@ -79,118 +81,164 @@ module Controller(
                 PCWrite=1'b0;
                 ALUOp= 2'b00;
 
-                if(Op==lw | Op==sw) 
+                if(Op==lw | Op==sw)
                 begin
-                    nextstate=S2; 
+                    nextstate=memAddr;
                 end
 
-                if(Op==rType) 
+                if(Op==rType)
                 begin
-                    nextstate=S6;
+                    nextstate=execute;
                 end
 
-                if(Op==beq) 
+                if(Op==beq)
                 begin
-                    nextstate=S8;
+                    nextstate=branch;
                 end
 
-                if(Op==jump) 
+                if(Op==jumps)
                 begin
-                    nextstate=S9;
+                    nextstate=jump;
                 end
 
-                if( (Op==iType1)| (Op==iType2)| (Op==iType3)| (Op==iType4)) 
+                if( (Op==iType1)| (Op==iType2)| (Op==iType3)| (Op==iType4))
                 begin
-                    nextstate=S10;
+                    nextstate=addIExecute;
                 end
             end
 
-            S2: 
+            memAddr:
             begin
                 ALUSrcA = 1'b1;
                 ALUSrcB= 2'b10;
                 ALUOp = 2'b00;
 
-                if(Op==lw) 
+                if(Op==lw)
                 begin
-                    nextstate=S3;
+                    nextstate=memRead;
                 end
 
-                if(Op==sw) 
+                if(Op==sw)
                 begin
-                    nextstate=S5;
+                    nextstate=memWrite;
                 end
             end
 
-            S3: 
+            memRead:
             begin
-                lorD = 1'b1; 
-                nextstate=S4;
+                lorD = 1'b1;
+                nextstate=memWriteBack;
             end
 
-            S4: 
+            memWriteBack:
             begin
                 RegDst = 1'b0;
-                RegWrite = 1'b1; 
-                MemtoReg= 1'b1; 
-                nextstate=S0; 
+                RegWrite = 1'b1;
+                MemtoReg= 1'b1;
+                nextstate=fetch;
             end
 
-            S5: 
+            memWrite:
             begin
                 MemWrite=1'b1;
                 lorD= 1'b1;
-                nextstate=S0;
+                nextstate=fetch;
             end
 
-            S6: 
+            execute:
             begin
                 ALUSrcA= 1'b1;
                 ALUSrcB= 2'b00;
                 ALUOp = 2'b10;
-                nextstate = S7;
+                nextstate = aluWriteBack;
             end
 
-            S7: 
+            aluWriteBack:
             begin
                 RegDst= 1'b1;
                 RegWrite = 1'b1;
                 MemtoReg = 1'b0;
-                nextstate= S0;
+                nextstate= fetch;
             end
 
-            S8: 
+            branch:
             begin
                 ALUSrcA= 1'b1;
                 ALUSrcB= 2'b00;
                 ALUOp=2'b01;
-                PCWriteCond= 1'b1;
+                isBranch= 1'b1;
                 PCSource = 2'b01;
-                nextstate= S0;
+                nextstate= fetch;
             end
 
-            S9: 
+            jump:
             begin
                 PCWrite= 1'b1;
                 PCSource= 2'b10;
-                nextstate= S0;
+                nextstate= fetch;
             end
 
-            S10:
+            addIExecute:
             begin
                 ALUSrcA= 1'b1;
                 ALUSrcB= 2'b10;
                 ALUOp = 2'b10;
-                nextstate = S11;
+                nextstate = addIwriteBack;
             end
 
-            S11: 
+            addIwriteBack:
             begin
                 RegDst= 1'b1;
                 RegWrite = 1'b1;
                 MemtoReg = 1'b0;
-                nextstate= S0;
+                nextstate= fetch;
             end
-        endcase 
+        endcase
     end
+
+
+    always @(ALUOp)
+    begin
+        if(ALUOp == 2'b10)
+        begin
+            case(funct)
+                6'b100000: //ADD
+                begin
+                    aluControl = 2'b10;
+                end
+
+                6'b100100: //AND
+                begin
+                    aluControl = 2'b00;
+                end
+
+                6'b100110: //XOR
+                begin
+                    aluControl = 2'b01;
+                end
+
+                6'b100010: //SUB
+                begin
+                    aluControl = 2'b11;
+                end
+                default : aluControl = 2'bz;
+        end
+
+        else if(ALUOp == 2'b00)
+        begin
+            aluControl = 2'b10; //ADD
+        end
+
+        else if(ALUOp == 2'b01)
+        begin
+            aluControl = 2'b10;
+        end
+
+        else
+        begin
+            aluControl = 2'b10;
+        end  
+        
+    end
+
 endmodule

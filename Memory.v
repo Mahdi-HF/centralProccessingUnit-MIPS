@@ -22,9 +22,9 @@ module Memory(
     input [31:0] Address, Clk, writeData, writeEnable,
     output reg [31:0]MemData );
 
-    reg [31:0] data [512:0];
+    reg [31:0] data [1023:0];
 
-    always @ (posedge Clk)
+    always @(posedge Clk)
     begin
         if(writeEnable==1'b1)
         begin
@@ -32,7 +32,8 @@ module Memory(
         end
     end
 	
-    always @* begin
+    always @* 
+    begin
         MemData = data[Address];
     end
     
@@ -44,12 +45,12 @@ module Memory(
         data[128] <= 32'h8c030000;
         data[132] <= 32'h8c040001;
         data[136] <= 32'h8c050002;
-        data[140] <=32'h8c010002;
-        data[144] <=32'h10600004;
-        data[148] <=32'h00852020;
-        data[152] <=32'h00852822;
-        data[156] <=32'h00611820;
-        data[160] <=32'h1000fffb;
-        data[164] <=32'hac040006;
+        data[140] <= 32'h8c010002;
+        data[144] <= 32'h10600004;
+        data[148] <= 32'h00852020;
+        data[152] <= 32'h00852822;
+        data[156] <= 32'h00611820;
+        data[160] <= 32'h1000fffb;
+        data[164] <= 32'hac040006;
     end 
 endmodule
