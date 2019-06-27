@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    05:09:35 06/27/2019 
+// Create Date:    09:01:17 06/27/2019 
 // Design Name: 
-// Module Name:    SignExtend 
+// Module Name:    DataPath 
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
@@ -18,12 +18,8 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module SignExtend(input [15:0]in,
-    output reg [31:0]out );
-	 
-	always @* 
-    begin
-        out = { {16{in[15]} }, in[15:0] };
-    end
+module DataPath(
+    );
+
 
 endmodule
