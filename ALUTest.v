@@ -26,21 +26,22 @@ module ALUTest;
 
 	// Inputs
 	reg [31:0] a;
+	reg [31:0] b;
+	reg [1:0]control;
+
+	wire [31:0] result;
+	wire zFlag;
 
 	// Instantiate the Unit Under Test (UUT)
-	ALU uut (
-		.a(a)
-	);
+	ALU uut (a,b,control,result,zFlag);
 
 	initial begin
-		// Initialize Inputs
-		a = 0;
-
-		// Wait 100 ns for global reset to finish
-		#100;
-        
-		// Add stimulus here
-
+		a = 32'h00000001;b = 32'h00000001;control = 2'b00;
+		#100;a = 32'h00000001;b = 32'h00000001;control = 2'b01;
+		#100;a = 32'h00000001;b = 32'h00000003;control = 2'b10;
+		#100;a = 32'h00000003;b = 32'h00000001;control = 2'b11;
+		#100;a = 32'h00000001;b = 32'h00000001;control = 2'b11;
+		#100;$stop;
 	end
       
 endmodule

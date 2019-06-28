@@ -1,5 +1,5 @@
 ISim log file
-Running: Z:\Memari_Project\MemariProject\RegFileTest_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb Z:/Memari_Project/MemariProject/RegFileTest_isim_beh.wdb 
+Running: Z:\Memari_Project\MemariProject\MemoryTest_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb Z:/Memari_Project/MemariProject/MemoryTest_isim_beh.wdb 
 ISim P.20131013 (signature 0x8ef4fb42)
 This is a Full version of ISim.
 Time resolution is 1 ps
@@ -8,4 +8,4 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-Stopped at time : 300 ns :  in File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/RegFileTest.v" Line 48 
+Stopped at time : 200 ns :  in File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MemoryTest.v" Line 80 

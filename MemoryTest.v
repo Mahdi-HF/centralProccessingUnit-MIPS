@@ -41,7 +41,7 @@ module MemoryTest;
 		.MemData(MemData)
 	);
 
-	always #100 clk = ~clk;
+	always #50 Clk = ~Clk;
 
 	initial begin
 		// Initialize Inputs
@@ -49,40 +49,36 @@ module MemoryTest;
 		Address = 0;
 		writeData = 0;
 		writeEnable = 0;
+	end
 
-		// Wait 100 ns for global reset to finish
-		#100;
-        
+    always begin  
 		// Add stimulus here
-		always @(posedge clk)
-		begin
-			#100;
-			writeEnable = 1;
-			writeData = 32'hFFFFFFFF;
-			Address = 32'h0000000F
+		writeEnable = 1;
+		writeData = 32'hFFFFFFFF;
+		Address = 32'h0000000F;
 
-			#100;
-			writeEnable = 1;
-			writeData = 32'hF0F0F0F0;
-			Address = 32'h0000000F
+		// #100;
+		// writeEnable = 1;
+		// writeData = 32'hF0F0F0F0;
+		// Address = 32'h0000000F;
 
-			#100;
-			writeEnable = 1;
-			writeData = 32'hFFFF0000;
-			Address = 32'h000000FF
+		// #100;
+		// writeEnable = 1;
+		// writeData = 32'hFFFF0000;
+		// Address = 32'h000000FF;
 
-			#100;
-			writeEnable = 0;
-			writeData = 32'h11111111;
-			Address = 32'h0000000F
+		#100;
+		writeEnable = 0;
+		// writeData = 32'h11111111;
+		Address = 32'h0000000F;
 
-			#100;
-			writeEnable = 0;
-			writeData = 32'h11111111;
-			Address = 32'h000000FF
+		// #100;
+		// writeEnable = 0;
+		// writeData = 32'h11111111;
+		// Address = 32'h000000FF;
 
-			#100; $stop;
-		end
+		#100; $stop;
+		
 	end
 endmodule
 

@@ -24,6 +24,8 @@ module Memory(
 
     reg [31:0] data [1023:0];
 
+	 reg [10:0] i;
+	 
     always @(posedge Clk)
     begin
         if(writeEnable==1'b1)
@@ -38,7 +40,10 @@ module Memory(
     end
     
     initial
-    begin //load in data and instructions of program data[0] <= 32'd8;
+    begin
+		  for (i = 0; i < 32; i = i + 1)
+            data[i] = 32'dz;
+				
         data[1] <= 32'd1; 
         data[2] <= 32'd1;
 
