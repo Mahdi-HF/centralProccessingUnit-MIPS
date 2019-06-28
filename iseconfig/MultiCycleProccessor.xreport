@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2019-06-27T08:50:00</DateModified>
+  <DateModified>2019-06-27T21:40:38</DateModified>
   <ModuleName>MultiCycleProccessor</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>Z:/Memari_Project/MemariProject/iseconfig/MultiCycleProccessor.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>Z:/Memari_Project/MemariProject</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>Z:/Memari_Project/MemariProject\</ImplementationReportsDirectory>
   <DateInitialized>2019-06-27T08:50:00</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to Z:/Memari_Project/MemariProject/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: SignExtend.prj
 
@@ -43,8 +43,8 @@ Analyzing Verilog file "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Sign
 Parsing module <SignExtend>.
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 6.62 secs
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 3.62 secs
  
 --> 
 
