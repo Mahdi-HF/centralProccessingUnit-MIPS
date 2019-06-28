@@ -53,6 +53,9 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ShiftRegister.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="ShiftRegister.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="ShiftRegister.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ShiftRegisterEnable.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="ShiftRegisterEnable.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="ShiftRegisterEnable.xst"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="ShiftRegisterTest_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ShiftRegisterTest_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Shifter2.prj"/>
@@ -88,7 +91,10 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU.v"/>
       <outfile xil_pn:name="Controller.v"/>
       <outfile xil_pn:name="DataPath.v"/>
@@ -122,7 +128,11 @@
     <transform xil_pn:end_ts="1561698500" xil_pn:in_ck="-378137056583609058" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1561698500">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU.v"/>
       <outfile xil_pn:name="Controller.v"/>
       <outfile xil_pn:name="DataPath.v"/>
@@ -144,8 +154,10 @@
     <transform xil_pn:end_ts="1561698502" xil_pn:in_ck="-378137056583609058" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-6613178969571737223" xil_pn:start_ts="1561698500">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="RegFileTest_beh.prj"/>
       <outfile xil_pn:name="RegFileTest_isim_beh.exe"/>

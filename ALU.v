@@ -24,14 +24,14 @@ module ALU(
 
     always @(a,b,control) 
     begin
-        result = 10'b0;
+        result = 32'b0;
         zFlag = 1'b0;
         case (control)
             2'b00 : result = a & b; //AND
             2'b01 : result = a ^ b; //XOR
             2'b10 : result = a + b; //ADD
             2'b11 : result = a - b; //SUB
-            default: result = 10'bz;
+            default: result = 32'bz;
         endcase
     end
 
