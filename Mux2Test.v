@@ -35,8 +35,8 @@ module Mux2Test;
 	initial begin
 		// Initialize Inputs
 		control = 0;
-		A = 4'h0001;
-		B = 4'h0002;
+		A = 32'h00000001;
+		B = 32'h00000002;
 		clk = 0;
 	end
 	
@@ -47,7 +47,7 @@ module Mux2Test;
 		begin
 		#100; control = 1'b0;
 		#100; control = 1'b1;
-      #100; $stop;
+		#100; $stop;
 		end
       
 endmodule

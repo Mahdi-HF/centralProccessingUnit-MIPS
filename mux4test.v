@@ -23,14 +23,14 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 module mux4test;
-
 	// Inputs
-	reg [1:0] control;
+	reg clk;
 	reg [31:0] A;
 	reg [31:0] B;
 	reg [31:0] C;
 	reg [31:0] D;
-	reg clk;
+	reg [1:0] control;
+	
 	wire [31:0]ou;
 
 	// Instantiate the Unit Under Test (UUT)
@@ -38,12 +38,12 @@ module mux4test;
 
 	initial begin
 		// Initialize Inputs
-		control = 0;
-		A = 4'h0001;
-		B = 4'h0002;
-		C = 4'h0003;
-		D = 4'h0004;
 		clk = 0;
+		control = 0;
+		A = 32'h00000001;
+		B = 32'h00000002;
+		C = 32'h00000003;
+		D = 32'h00000004;
 	end
 	
 	always #100 clk = ~clk;
@@ -55,6 +55,6 @@ module mux4test;
 		#100; control = 2'b01;
 		#100; control = 2'b10;
 		#100; control = 2'b11;
-      #100; $stop;
+		#100; $stop;
 		end
 endmodule 

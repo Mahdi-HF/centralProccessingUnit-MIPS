@@ -23,7 +23,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 module shifter2Test;
-
 	// Inputs
 	reg [31:0] in;
 
@@ -31,30 +30,20 @@ module shifter2Test;
 	wire [31:0] out;
 
 	// Instantiate the Unit Under Test (UUT)
-	Shifter2 uut (
-		.in(in), 
-		.out(out)
-	);
+	Shifter2 uut (in , out);
 
 	initial begin
 		// Initialize Inputs
 		in = 0;
-
-		// Wait 100 ns for global reset to finish
-		#100;
 		
 		// Add stimulus here
-		
-		#100; in = 32'h0002;
-		#100; in = 32'h0010;
-		#100; in = 32'hFFFF;
-		#100; in = 32'h0000;
-		#100; in = 32'hF0F0;
-		#100; in = 32'h1234;
-      #100; $stop;
-		
-		
+		#100; in = 32'h00000002;
+		#100; in = 32'h00000010;
+		#100; in = 32'hFFFFFFFF;
+		#100; in = 32'h00000000;
+		#100; in = 32'hF0F0F0F0;
+		#100; in = 32'h12341234;
+		#100; $stop;
 	end
-      
 endmodule
 

@@ -23,7 +23,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 module ShiftRegisterTest;
-
 	// Inputs
 	reg [31:0] dataIn;
 	reg CLK;
@@ -42,9 +41,9 @@ module ShiftRegisterTest;
 		CLK = 0;
 		
 		// Wait 100 ns for global reset to finish
-		 dataIn = 32'h0001;
-		#100; dataIn = 32'hFFFF;
-		#100; dataIn = 32'h00FF;
+		dataIn = 32'h00000001;
+		#100; dataIn = 32'hFFFFFFFF;
+		#100; dataIn = 32'h0000FFFF;
 		#100; $stop;
 	end
       
