@@ -34,7 +34,7 @@ module ShiftRegisterTest;
 	ShiftRegister uut (dataIn,CLK,dataOut);
 
 	always #50 CLK = ~CLK;
-		
+	
 	initial begin
 		// Initialize Inputs
 		dataIn = 32'h0;

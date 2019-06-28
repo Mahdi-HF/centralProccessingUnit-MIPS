@@ -19,7 +19,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module ShiftRegisterEnable( 
-    input [31:0] dataIn, CLK, control, 
+    input [31:0] dataIn, input CLK, control, 
     output reg [31:0] dataOut ); 
  
     always @(posedge CLK)  

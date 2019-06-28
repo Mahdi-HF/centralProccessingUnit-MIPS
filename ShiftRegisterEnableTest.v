@@ -23,11 +23,10 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 module ShiftRegisterEnableTest;
-
 	// Inputs
+	reg CLK;
+	reg control;
 	reg [31:0] dataIn;
-	reg [31:0] CLK;
-	reg [31:0] control;
 
 	// Outputs
 	wire [31:0] dataOut;
@@ -40,18 +39,32 @@ module ShiftRegisterEnableTest;
 		.dataOut(dataOut)
 	);
 
+	always #50 CLK = ~CLK;
+
 	initial begin
 		// Initialize Inputs
-		dataIn = 0;
 		CLK = 0;
+		dataIn = 0;
 		control = 0;
 
-		// Wait 100 ns for global reset to finish
-		#100;
-        
 		// Add stimulus here
+		#100 
+		control = 1;
+		dataIn = 32'h00000001;
 
+		#100 
+		control = 1;
+		dataIn = 32'hFFFFFFFF;
+
+		#100 
+		control = 0;
+		dataIn = 32'h00000000;
+
+		#100 
+		control = 1;
+		dataIn = 32'hFF0000FF;
+
+		#100; $stop;
 	end
-      
 endmodule
 
