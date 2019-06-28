@@ -3,16 +3,16 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to Z:/Memari_Project/MemariProject/xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Parameter xsthdpdir set to Z:/Memari_Project/MemariProject/xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.20 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
  
---> Reading design: MultiCycleProccessor.prj
+--> Reading design: DataPath.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -61,18 +61,14 @@ Analyzing Verilog file "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\ALU.
 Parsing module <ALU>.
 Analyzing Verilog file "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" into library work
 Parsing module <DataPath>.
-Analyzing Verilog file "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" into library work
-Parsing module <Controller>.
-Analyzing Verilog file "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\MultiCycleProccessor.v" into library work
-Parsing module <MultiCycleProccessor>.
 
 
 Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 7.85 secs
+Total CPU time to Xst completion: 7.89 secs
  
 --> 
 
-Total memory usage is 126644 kilobytes
+Total memory usage is 126324 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

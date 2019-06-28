@@ -20,9 +20,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 module Controller(
     input [5:0]Op, funct,
-    input Clk, INT, NMI, INTD
-    output reg isBranch, PCWrite, lorD, MemWrite, MemtoReg, IRWrite, INA
-    output reg [1:0]aluControl, ALUSrcB, output PCSource, ALUSrcA, RegWrite, RegDst, isInterrupted);
+    input Clk, INT, NMI, INTD,
+    output reg isBranch, PCWrite, lorD, MemWrite, MemtoReg, IRWrite, INA,
+    output reg [1:0]aluControl, ALUSrcB, output reg PCSource, ALUSrcA, RegWrite, RegDst, isInterrupted);
 
     reg [4:0] state = 0, nextstate;
     reg [1:0] ALUOp;
@@ -54,10 +54,10 @@ module Controller(
     parameter iType3 = 6'b001110;
     parameter iType4 = 6'b001111;
 
-    always(INT,NMI) 
+    always@(INT,NMI) 
     begin
-        if(INT) INTFlag = 1; 
-        if(NMI) NMIFlag = 1; 
+        if(INT == 1) INTFlag = 1; 
+        if(NMI == 1) NMIFlag = 1; 
     end
 
     always@(posedge Clk)
@@ -74,13 +74,13 @@ module Controller(
                 begin
                     if(NMIFlag == 0)    // do nothing
                     begin
-                        isInterrupted = 0;
+                        isInterrupted = 1'b0;
                         nextstate = fetch;
                     end
 
                     else    // NMI should be taken
                     begin
-                        isInterrupted = 1;
+                        isInterrupted = 1'b1;
                         INA = 0;  
                         nextstate = interrupt;
                     end 
@@ -90,27 +90,27 @@ module Controller(
                 begin
                     if (INTFlag == 0 & NMIFlag == 0 )   // do nothing
                     begin
-                        isInterrupted = 0;
+                        isInterrupted = 1'b0;
                         nextstate = fetch;
                     end
 
                     else if (INTFlag == 1 & NMIFlag == 0 )   // INT should be taken
                     begin
-                        isInterrupted = 1;
+                        isInterrupted = 1'b1;
                         INA = 1;
                         nextstate = interrupt;
                     end
 
                     else if (INTFlag == 1 & NMIFlag == 1 )  // NMI should be taken 
                     begin
-                        isInterrupted = 1;
+                        isInterrupted = 1'b1;
                         INA = 0;
                         nextstate = interrupt;
                     end
 
                     else if (INTFlag == 0 & NMIFlag == 1 )  // NMI should be taken 
                     begin
-                        isInterrupted = 1;
+                        isInterrupted = 1'b1;
                         INA = 0;
                         nextstate = interrupt;
                     end

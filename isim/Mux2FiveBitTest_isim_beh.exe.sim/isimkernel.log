@@ -1,0 +1,28 @@
+Command line:
+   Mux2FiveBitTest_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  1105
+
+Fri Jun 28 03:09:05 2019
+
+
+ Elaboration Time: 0.170244 sec
+
+ Current Memory Usage: 521.343 Meg
+
+ Total Signals          : 17
+ Total Nets             : 29
+ Total Signal Drivers   : 9
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 14
+ Total Traceable Variables  : 23
+ Total Scalar Nets and Variables : 126
+
+ Total Simulation Time: 0.180258 sec
+
+ Current Memory Usage: 364.057 Meg
+
+Fri Jun 28 03:09:20 2019
+

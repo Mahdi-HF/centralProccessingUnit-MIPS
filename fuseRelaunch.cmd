@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "Z:/Memari_Project/MemariProject/MemoryTest_isim_beh.exe" -prj "Z:/Memari_Project/MemariProject/MemoryTest_beh.prj" "work.MemoryTest" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "Z:/Memari_Project/MemariProject/Mux2FiveBitTest_isim_beh.exe" -prj "Z:/Memari_Project/MemariProject/Mux2FiveBitTest_beh.prj" "work.Mux2FiveBitTest" "work.glbl" 

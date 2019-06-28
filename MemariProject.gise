@@ -30,6 +30,9 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Controller.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Controller.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="Controller.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="DataPath.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="DataPath.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="DataPath.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Memory.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Memory.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="Memory.xst"/>
@@ -43,6 +46,7 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Mux2.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Mux2.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="Mux2.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Mux2FiveBitTest_stx_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="Mux2Test_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Mux2Test_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Mux4.prj"/>
@@ -93,7 +97,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1561701541" xil_pn:in_ck="4266825610828548317" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1561701541">
+    <transform xil_pn:end_ts="1561716538" xil_pn:in_ck="-2493608899934282897" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1561716538">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ALU.v"/>
@@ -104,6 +108,8 @@
       <outfile xil_pn:name="MemoryTest.v"/>
       <outfile xil_pn:name="MultiCycleProccessor.v"/>
       <outfile xil_pn:name="Mux2.v"/>
+      <outfile xil_pn:name="Mux2FiveBit.v"/>
+      <outfile xil_pn:name="Mux2FiveBitTest.v"/>
       <outfile xil_pn:name="Mux2Test.v"/>
       <outfile xil_pn:name="Mux4.v"/>
       <outfile xil_pn:name="RegFile.v"/>
@@ -118,11 +124,11 @@
       <outfile xil_pn:name="mux4test.v"/>
       <outfile xil_pn:name="shifter2Test.v"/>
     </transform>
-    <transform xil_pn:end_ts="1561700390" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-4637862171933570416" xil_pn:start_ts="1561700390">
+    <transform xil_pn:end_ts="1561716495" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="3112283678528298028" xil_pn:start_ts="1561716495">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1561700390" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="7708099899549641902" xil_pn:start_ts="1561700390">
+    <transform xil_pn:end_ts="1561716495" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="4238013768397490250" xil_pn:start_ts="1561716495">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -130,9 +136,13 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1561701541" xil_pn:in_ck="4266825610828548317" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1561701541">
+    <transform xil_pn:end_ts="1561716525" xil_pn:in_ck="-2493608899934282897" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1561716524">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU.v"/>
       <outfile xil_pn:name="ALUTest.v"/>
       <outfile xil_pn:name="Controller.v"/>
@@ -141,6 +151,8 @@
       <outfile xil_pn:name="MemoryTest.v"/>
       <outfile xil_pn:name="MultiCycleProccessor.v"/>
       <outfile xil_pn:name="Mux2.v"/>
+      <outfile xil_pn:name="Mux2FiveBit.v"/>
+      <outfile xil_pn:name="Mux2FiveBitTest.v"/>
       <outfile xil_pn:name="Mux2Test.v"/>
       <outfile xil_pn:name="Mux4.v"/>
       <outfile xil_pn:name="RegFile.v"/>
@@ -155,21 +167,21 @@
       <outfile xil_pn:name="mux4test.v"/>
       <outfile xil_pn:name="shifter2Test.v"/>
     </transform>
-    <transform xil_pn:end_ts="1561701543" xil_pn:in_ck="4266825610828548317" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-2056067220346020593" xil_pn:start_ts="1561701541">
-      <status xil_pn:value="SuccessfullyRun"/>
+    <transform xil_pn:end_ts="1561716526" xil_pn:in_ck="-2493608899934282897" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="3239702509303230183" xil_pn:start_ts="1561716525">
+      <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="MemoryTest_beh.prj"/>
-      <outfile xil_pn:name="MemoryTest_isim_beh.exe"/>
-      <outfile xil_pn:name="fuse.log"/>
-      <outfile xil_pn:name="isim"/>
-      <outfile xil_pn:name="xilinxsim.ini"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputChanged"/>
     </transform>
     <transform xil_pn:end_ts="1561701543" xil_pn:in_ck="4679476752318189103" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="4403138311278380658" xil_pn:start_ts="1561701543">
-      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="AbortedRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="MemoryTest_isim_beh.wdb"/>
-      <outfile xil_pn:name="isim.cmd"/>
-      <outfile xil_pn:name="isim.log"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForced"/>
+      <status xil_pn:value="InputRemoved"/>
     </transform>
   </transforms>
 
