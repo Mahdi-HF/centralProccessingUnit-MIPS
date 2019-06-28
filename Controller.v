@@ -19,13 +19,18 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module Controller(
-    input Clk, Reset, [5:0]Op, [5:0]funct,
-    output reg isBranch, PCWrite, lorD, MemWrite, MemtoReg, IRWrite,
-    output reg [1:0]aluControl, ALUSrcB, output PCSource, output ALUSrcA, output RegWrite, output RegDst);
+    input [5:0]Op, funct,
+    input Clk, Reset, INT, NMI, INTD
+    output reg isBranch, PCWrite, lorD, MemWrite, MemtoReg, IRWrite, INA
+    output reg [1:0]aluControl, ALUSrcB, output PCSource, ALUSrcA, RegWrite, RegDst, isInterrupted);
 
     reg [4:0] state = 0, nextstate;
-    reg [1:0]ALUOp;
+    reg [1:0] ALUOp;
+    reg INTFlag = 0;
+    reg NMIFlag = 0;
 
+    parameter preFetch=12;
+    parameter interrupt=13;
     parameter fetch=0;
     parameter decode=1;
     parameter memAddr=2;
@@ -49,6 +54,12 @@ module Controller(
     parameter iType3 = 6'b001110;
     parameter iType4 = 6'b001111;
 
+    always(INT,NMI) 
+    begin
+        if(INT) INTFlag = 1; 
+        if(NMI) NMIFlag = 1; 
+    end
+
     always@(posedge Clk)
     begin
         state=nextstate;
@@ -57,6 +68,51 @@ module Controller(
     always @(state, Op)
     begin
         case(state)
+            preFetch:
+            begin
+                if(INTD == 1)
+                begin
+                    if(NMIFlag == 0)    // do nothing
+                    begin
+                        isInterrupted = 0;
+                        nextstate = fetch;
+                    end
+                    else    // NMI should be taken
+                    begin
+                        isInterrupted = 1;
+                        INA = 0;  
+                        nextstate = interrupt;
+                    end 
+                end
+
+                else 
+                begin
+                    if (INTFlag == 0 & NMIFlag == 0 )   // do nothing
+                    begin
+                        isInterrupted = 0;
+                        nextstate = fetch;
+                    end
+                    else if (INTFlag == 1 & NMIFlag == 0 )   // INT should be taken
+                    begin
+                        isInterrupted = 1;
+                        INA = 1;
+                        nextstate = interrupt;
+                    end
+                    else if (INTFlag == 1 & NMIFlag == 1 )  // NMI should be taken 
+                    begin
+                        isInterrupted = 1;
+                        INA = 0;
+                        nextstate = interrupt;
+                    end
+                    else if (INTFlag == 0 & NMIFlag == 1 )  // NMI should be taken 
+                    begin
+                        isInterrupted = 1;
+                        INA = 0;
+                        nextstate = interrupt;
+                    end
+                end
+            end
+
             fetch:
             begin
                 ALUSrcA=1'b0;
@@ -135,14 +191,14 @@ module Controller(
                 RegDst = 1'b0;
                 RegWrite = 1'b1;
                 MemtoReg= 1'b1;
-                nextstate=fetch;
+                nextstate=preFetch;
             end
 
             memWrite:
             begin
                 MemWrite=1'b1;
                 lorD= 1'b1;
-                nextstate=fetch;
+                nextstate=preFetch;
             end
 
             execute:
@@ -158,7 +214,7 @@ module Controller(
                 RegDst= 1'b1;
                 RegWrite = 1'b1;
                 MemtoReg = 1'b0;
-                nextstate= fetch;
+                nextstate= preFetch;
             end
 
             branch:
@@ -168,14 +224,14 @@ module Controller(
                 ALUOp=2'b01;
                 isBranch= 1'b1;
                 PCSource = 2'b01;
-                nextstate= fetch;
+                nextstate= preFetch;
             end
 
             jump:
             begin
                 PCWrite= 1'b1;
                 PCSource= 2'b10;
-                nextstate= fetch;
+                nextstate= preFetch;
             end
 
             addIExecute:
@@ -191,7 +247,7 @@ module Controller(
                 RegDst= 1'b1;
                 RegWrite = 1'b1;
                 MemtoReg = 1'b0;
-                nextstate= fetch;
+                nextstate= preFetch;
             end
         endcase
     end
