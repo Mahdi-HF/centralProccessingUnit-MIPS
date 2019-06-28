@@ -1,6 +1,9 @@
-set -tmpdir "Z:/Memari_Project/MemariProject/xst/projnav.tmp"
-set -xsthdpdir "Z:/Memari_Project/MemariProject/xst"
-run -compileonly yes
+set -tmpdir "xst/projnav.tmp"
+set -xsthdpdir "xst"
+run
+-ifn MultiCycleProccessor.prj
+-ofn MultiCycleProccessor
+-ofmt NGC
 -p xc7a100t-3-csg324
 -top MultiCycleProccessor
 -opt_mode Speed
@@ -47,4 +50,3 @@ run -compileonly yes
 -iob Auto
 -equivalent_register_removal YES
 -slice_utilization_ratio_maxmargin 5
--ifn MultiCycleProccessor.prj

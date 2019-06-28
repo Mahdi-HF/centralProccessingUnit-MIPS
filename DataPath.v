@@ -20,37 +20,38 @@
 //////////////////////////////////////////////////////////////////////////////////
 module DataPath(input [1:0] aluControl, aluSrcB,
     input PCSource, ALUSrcA, RegWrite, RegDst, isInterrupted, clk,
-    input isBranch, PCWrite, lorD, MemWrite, MemtoReg, IRWrite, INA,
+    input isBranch, PCWrite, lorD, MemWrite, MemtoReg, IRWrite,
     output reg [5:0] op, funct);
 
-    reg zeroFlag;
-    reg pcEnable;
-    reg [31:0]Adr;
-    reg [31:0]pcIn;
-    reg [31:0]Data;
-    reg [31:0]srcA;
-    reg [31:0]srcB;
-    reg [4:0]dstAdr;
-    reg [31:0]Instr;
-    reg [31:0]aData;
-    reg [31:0]bData;
-    reg [31:0]pcOut;
-    reg [31:0]pcOut2;
-    reg [31:0]ALUOut;
-    reg [31:0]memData;
-    reg [31:0]signImm;
-    reg [31:0]aluResult;
-    reg [31:0]writeData;
-    reg [31:0]writeRegData;
-    reg [31:0]four = 32'h00000004;
-    reg [31:0]interruptAddress = 32'hFFFFFFFF;
+    wire zeroFlag;
+    wire pcEnable;
+    wire [31:0]Adr;
+    wire [31:0]pcIn;
+    wire [31:0]Data;
+    wire [31:0]srcA;
+    wire [31:0]srcB;
+    wire [4:0]dstAdr;
+    //wire [31:0]Instr;
+    wire [31:0]aData;
+    wire [31:0]bData;
+    wire [31:0]pcOut;
+    wire [31:0]pcOut2;
+    wire [31:0]ALUOut;
+    wire [31:0]memData;
+    wire [31:0]signImm;
+    wire [31:0]aluResult;
+    wire [31:0]writeData;
+    wire [31:0]writeRegData;
+    wire [31:0]four = 32'h00000004;
+    wire [31:0]interruptAddress = 32'hFFFFFFFF;
     
 	always @* 
     begin
-        op = Instr[31:26];
-        funct = Instr[5:0];
-        pcEnable = (isBranch & zeroFlag) | PCWrite;
+        op = Instr[26+:5];
+        funct = Instr[0+:5];
     end
+
+    assign pcEnable = (isBranch & zeroFlag) | PCWrite;
 
     ShiftRegisterEnable pcReg(pcIn, clk, pcEnable, pcOut);
 

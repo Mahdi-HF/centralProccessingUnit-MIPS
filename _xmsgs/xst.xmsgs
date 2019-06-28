@@ -5,5 +5,23 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="error" file="HDLCompiler" num="271" delta="old" >"\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 50: Cannot index into non-array <arg fmt="%s" index="1">Instr</arg>
+</msg>
+
+<msg type="error" file="HDLCompiler" num="271" delta="old" >"\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 51: Cannot index into non-array <arg fmt="%s" index="1">Instr</arg>
+</msg>
+
+<msg type="error" file="HDLCompiler" num="271" delta="old" >"\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 66: Cannot index into non-array <arg fmt="%s" index="1">Instr</arg>
+</msg>
+
+<msg type="error" file="HDLCompiler" num="271" delta="old" >"\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 69: Cannot index into non-array <arg fmt="%s" index="1">Instr</arg>
+</msg>
+
+<msg type="error" file="HDLCompiler" num="271" delta="old" >"\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 72: Cannot index into non-array <arg fmt="%s" index="1">Instr</arg>
+</msg>
+
+<msg type="error" file="HDLCompiler" num="598" delta="old" >"\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 21: Module &lt;<arg fmt="%s" index="1">DataPath</arg>&gt; ignored due to previous errors.
+</msg>
+
 </messages>
 

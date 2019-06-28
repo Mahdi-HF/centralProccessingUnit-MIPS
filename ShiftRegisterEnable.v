@@ -21,7 +21,11 @@
 module ShiftRegisterEnable( 
     input [31:0] dataIn, input CLK, control, 
     output reg [31:0] dataOut ); 
- 
+
+    initial begin
+      dataOut = 32'bz;
+    end
+    
     always @(posedge CLK)  
     begin 
         if(control==1'b1) 

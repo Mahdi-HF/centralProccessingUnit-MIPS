@@ -20,12 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 module ALU(
     input [31:0]a, [31:0]b, [1:0]control,
-    output reg [31:0]result, zFlag);
+    output reg [31:0]result, output reg zFlag);
 
     always @(a,b,control) 
     begin
         result = 32'b0;
-        zFlag = 1'b0;
         case (control)
             2'b00 : result = a & b; //AND
             2'b01 : result = a ^ b; //XOR
@@ -40,6 +39,9 @@ module ALU(
         if (a==b) begin
             zFlag = 1'b1;
         end
+		  else begin
+				zFlag = 1'b0;
+		  end
     end
 
 endmodule
