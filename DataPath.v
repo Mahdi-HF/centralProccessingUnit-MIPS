@@ -24,17 +24,18 @@ module DataPath(input [1:0] aluControl, aluSrcB,
     output reg [5:0] op, funct);
 
     reg zeroFlag;
+    reg pcEnable;
     reg [31:0]Adr;
     reg [31:0]pcIn;
     reg [31:0]Data;
     reg [31:0]srcA;
     reg [31:0]srcB;
+    reg [4:0]dstAdr;
     reg [31:0]Instr;
     reg [31:0]aData;
     reg [31:0]bData;
     reg [31:0]pcOut;
     reg [31:0]pcOut2;
-    reg [31:0]dstAdr; //TODO
     reg [31:0]ALUOut;
     reg [31:0]memData;
     reg [31:0]signImm;
@@ -43,19 +44,13 @@ module DataPath(input [1:0] aluControl, aluSrcB,
     reg [31:0]writeRegData;
     reg [31:0]four = 32'h00000004;
     reg [31:0]interruptAddress = 32'hFFFFFFFF;
-
     
-	 always @* 
+	always @* 
     begin
-        assign op = Instr[31:26];
+        op = Instr[31:26];
+        funct = Instr[5:0];
+        pcEnable = (isBranch & zeroFlag) | PCWrite;
     end
-	 
-    always @* 
-    begin
-        assign funct = Instr[5:0];
-    end
-    
-    assign pcEnable = (isBranch & zeroFlag) | PCWrite;
 
     ShiftRegisterEnable pcReg(pcIn, clk, pcEnable, pcOut);
 
@@ -67,7 +62,7 @@ module DataPath(input [1:0] aluControl, aluSrcB,
     ShiftRegisterEnable instructionReg(memData, clk, IRWrite, Instr);
     ShiftRegister dataReg(memData, clk, Data);
 
-    Mux2FiveBit dstMux(RegDst, Instr[20:16], Instr[15:11], dstAdr); //TODO
+    Mux2FiveBit dstMux(RegDst, Instr[20:16], Instr[15:11], dstAdr);
     Mux2 writeDataMux(MemtoReg, ALUOut, Data, writeRegData);
 
     SignExtend signExtender(Instr[15:0], signImm);
