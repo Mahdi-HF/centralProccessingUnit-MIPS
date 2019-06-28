@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 module Controller(
     input [5:0]Op, funct,
-    input Clk, Reset, INT, NMI, INTD
+    input Clk, INT, NMI, INTD
     output reg isBranch, PCWrite, lorD, MemWrite, MemtoReg, IRWrite, INA
     output reg [1:0]aluControl, ALUSrcB, output PCSource, ALUSrcA, RegWrite, RegDst, isInterrupted);
 
@@ -29,8 +29,6 @@ module Controller(
     reg INTFlag = 0;
     reg NMIFlag = 0;
 
-    parameter preFetch=12;
-    parameter interrupt=13;
     parameter fetch=0;
     parameter decode=1;
     parameter memAddr=2;
@@ -43,6 +41,8 @@ module Controller(
     parameter jump=9;
     parameter addIExecute=10;
     parameter addIwriteBack=11;
+    parameter preFetch=12;
+    parameter interrupt=13;
 
     parameter sw = 6'b101011;
     parameter lw = 6'b100011;
@@ -77,6 +77,7 @@ module Controller(
                         isInterrupted = 0;
                         nextstate = fetch;
                     end
+
                     else    // NMI should be taken
                     begin
                         isInterrupted = 1;
@@ -92,18 +93,21 @@ module Controller(
                         isInterrupted = 0;
                         nextstate = fetch;
                     end
+
                     else if (INTFlag == 1 & NMIFlag == 0 )   // INT should be taken
                     begin
                         isInterrupted = 1;
                         INA = 1;
                         nextstate = interrupt;
                     end
+
                     else if (INTFlag == 1 & NMIFlag == 1 )  // NMI should be taken 
                     begin
                         isInterrupted = 1;
                         INA = 0;
                         nextstate = interrupt;
                     end
+
                     else if (INTFlag == 0 & NMIFlag == 1 )  // NMI should be taken 
                     begin
                         isInterrupted = 1;
@@ -278,7 +282,7 @@ module Controller(
                     aluControl = 2'b11;
                 end
                 default : aluControl = 2'bz;
-				endcase
+			endcase
         end
 
         else if(ALUOp == 2'b00)
@@ -294,8 +298,6 @@ module Controller(
         else
         begin
             aluControl = 2'bz; //impossible !
-        end  
-        
+        end   
     end
-
 endmodule

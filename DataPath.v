@@ -26,27 +26,27 @@ module DataPath(input [1:0] aluControl, aluSrcB,
     reg zeroFlag;
     reg [31:0]Adr;
     reg [31:0]pcIn;
-    reg [31:0]pcOut;
-    reg [31:0]pcOut2;
-    reg [31:0]Instr;
     reg [31:0]Data;
-    reg [31:0]ALUOut;
-    reg [31:0]memData;
-    reg [31:0]writeRegData;
-    reg [31:0]signImm;
-    reg [31:0]aData;
-    reg [31:0]bData;
     reg [31:0]srcA;
     reg [31:0]srcB;
-    reg [31:0]four = 32'h00000004;
-    reg [31:0]aluResult;
+    reg [31:0]Instr;
+    reg [31:0]aData;
+    reg [31:0]bData;
+    reg [31:0]pcOut;
+    reg [31:0]pcOut2;
     reg [31:0]dstAdr; //TODO
+    reg [31:0]ALUOut;
+    reg [31:0]memData;
+    reg [31:0]signImm;
+    reg [31:0]aluResult;
     reg [31:0]writeData;
+    reg [31:0]writeRegData;
+    reg [31:0]four = 32'h00000004;
     reg [31:0]interruptAddress = 32'hFFFFFFFF;
 
-    assign pcEnable = (isBranch & zeroFlag) | PCWrite;
     assign op = Instr[31:26];
     assign funct = Instr[5:0];
+    assign pcEnable = (isBranch & zeroFlag) | PCWrite;
 
     ShiftRegisterEnabel pcReg(pcIn, clk, pcEnable, pcOut);
 
