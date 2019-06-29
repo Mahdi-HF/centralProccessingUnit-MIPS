@@ -19,12 +19,12 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module Controller(
-    input [5:0]Op, funct,
+    input [5:0]op, funct,
     input clk, INT, NMI, INTD,
-    output reg isBranch, PCWrite, lorD, MemWrite, MemtoReg, IRWrite, INA,
+    output reg isBranch, pcWrite, lorD, MemWrite, MemtoReg, IRWrite, INA,
     output reg [1:0]aluControl, aluSrcB, PCSource, output reg aluSrcA, RegWrite, RegDst, isInterrupted);
 
-    reg [4:0] state = 12, nextstate;
+    reg [4:0] state = 5'b01100, nextstate; //state will stat at 12
     reg [1:0] aluOp;
     reg INTFlag = 0;
     reg NMIFlag = 0;
@@ -70,7 +70,7 @@ module Controller(
         state=nextstate;
     end
 
-    always @(state, Op)
+    always @(state, op)
     begin
         case(state)
             preFetch:
@@ -129,7 +129,7 @@ module Controller(
                 IRWrite=1'b1;
                 aluSrcB=2'b01;
                 aluOp= 2'b00;
-                PCWrite=1'b1;
+                pcWrite=1'b1;
                 PCSource=2'b00;
                 RegWrite = 1'b0;
                 MemWrite=1'b0;
@@ -143,30 +143,30 @@ module Controller(
                 IRWrite=1'b0;
                 aluSrcA=1'b0;
                 aluSrcB=2'b11;
-                PCWrite=1'b0;
+                pcWrite=1'b0;
                 aluOp= 2'b00;
 
-                if(Op==lw | Op==sw)
+                if(op==lw | op==sw)
                 begin
                     nextstate=memAddr;
                 end
 
-                if(Op==rType)
+                if(op==rType)
                 begin
                     nextstate=execute;
                 end
 
-                if(Op==beq)
+                if(op==beq)
                 begin
                     nextstate=branch;
                 end
 
-                if(Op==jumps)
+                if(op==jumps)
                 begin
                     nextstate=jump;
                 end
 
-                if( (Op==iType1)| (Op==iType2)| (Op==iType3)| (Op==iType4))
+                if( (op==iType1)| (op==iType2)| (op==iType3)| (op==iType4) )
                 begin
                     nextstate=addIExecute;
                 end
@@ -178,12 +178,12 @@ module Controller(
                 aluSrcB= 2'b10;
                 aluOp = 2'b00;
 
-                if(Op==lw)
+                if(op==lw)
                 begin
                     nextstate=memRead;
                 end
 
-                if(Op==sw)
+                if(op==sw)
                 begin
                     nextstate=memWrite;
                 end
@@ -238,7 +238,7 @@ module Controller(
 
             jump:
             begin
-                PCWrite= 1'b1;
+                pcWrite= 1'b1;
                 PCSource= 2'b10;
                 nextstate= preFetch;
             end

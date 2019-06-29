@@ -36,12 +36,15 @@ module ALU(
 
     always @(a,b,control)
     begin
-        if (a==b) begin
+        if (a==b)
+        begin
             zFlag = 1'b1;
         end
-		  else begin
+        
+		else
+        begin
 				zFlag = 1'b0;
-		  end
+		end
     end
 
 endmodule

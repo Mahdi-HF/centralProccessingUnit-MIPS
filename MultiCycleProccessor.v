@@ -19,18 +19,18 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module MultiCycleProccessor(input clk, INT, NMI, INTD,
-    output INA);
+    output reg INA);
     
-    wire [5:0]Op, funct;
+    wire [5:0]op, funct;
     wire [1:0]aluControl, aluSrcB;
-    wire PCSource, aluSrc, RegWrite, RegDst, isInterrupted;
-    wire isBranch, PCWrite, lorD, MemWrite, MemtoReg, IRWrite;
+    wire pcSource, aluSrc, regWrite, regDst, isInterrupted, aluSrcA ;
+    wire isBranch, pcWrite, lorD, memWrite, memToReg, irWrite;
 
-    Controller controller(Op, funct, clk, INT, NMI, INTD,
-    isBranch, PCWrite, lorD, MemWrite, MemtoReg, IRWrite, INA,
-    aluControl, aluSrcB, PCSource, aluSrcA, RegWrite, RegDst, isInterrupted);
+    Controller controller(op, funct, clk, INT, NMI, INTD,
+    isBranch, pcWrite, lorD, memWrite, memToReg, irWrite, INA,
+    aluControl, aluSrcB, pcSource, aluSrcA, regWrite, regDst, isInterrupted);
 
-    DataPath dataPath(aluControl, aluSrcB, PCSource, aluSrcA, RegWrite, RegDst,
-    isInterrupted, clk, isBranch, PCWrite, lorD, MemWrite, MemtoReg, IRWrite, Op, funct);
+    DataPath dataPath(aluControl, aluSrcB, pcSource, aluSrcA, regWrite, regDst,
+    isInterrupted, clk, isBranch, pcWrite, lorD, memWrite, memToReg, irWrite, op, funct);
 
 endmodule
