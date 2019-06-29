@@ -64,28 +64,103 @@ module DataPathTest;
 		.funct(funct)
 	);
 
+	always #50 clk = ~clk;
+
 	initial begin
 		// Initialize Inputs
-		aluControl = 0;
-		aluSrcB = 0;
-		PCSource = 0;
-		ALUSrcA = 0;
-		RegWrite = 0;
-		RegDst = 0;
-		isInterrupted = 0;
-		clk = 0;
-		isBranch = 0;
-		PCWrite = 0;
-		lorD = 0;
-		MemWrite = 0;
-		MemtoReg = 0;
-		IRWrite = 0;
+		aluControl <= 0;
+		aluSrcB <= 0;
+		PCSource <= 0;
+		ALUSrcA <= 0;
+		RegWrite <= 0;
+		RegDst <= 0;
+		isInterrupted <= 0;
+		clk <= 0;
+		isBranch <= 0;
+		PCWrite <= 0;
+		lorD <= 0;
+		MemWrite <= 0;
+		MemtoReg <= 0;
+		IRWrite <= 0;
 
-		// Wait 100 ns for global reset to finish
-		#100;
-        
-		// Add stimulus here
+		#50;
+		aluControl <= 0;
+		aluSrcB <= 2'b01;
+		PCSource <= 0;
+		ALUSrcA <= 0;
+		RegWrite <= 0;
+		RegDst <= 0;
+		isInterrupted <= 0;
+		isBranch <= 0;
+		PCWrite <= 1;
+		lorD <= 0;
+		MemWrite <= 0;
+		MemtoReg <= 0;
+		IRWrite <= 1;
 
+		#50;
+		aluControl <= 0;
+		aluSrcB <= 2'b11;
+		PCSource <= 0;
+		ALUSrcA <= 0;
+		RegWrite <= 0;
+		RegDst <= 0;
+		isInterrupted <= 0;
+		isBranch <= 0;
+		PCWrite <= 1;
+		lorD <= 0;
+		MemWrite <= 0;
+		MemtoReg <= 0;
+		IRWrite <= 1;
+		
+		#50;
+		aluControl <= 2'b10;
+		aluSrcB <= 2'b00;
+		PCSource <= 0;
+		ALUSrcA <= 1;
+		RegWrite <= 0;
+		RegDst <= 0;
+		isInterrupted <= 0;
+		isBranch <= 0;
+		PCWrite <= 1;
+		lorD <= 0;
+		MemWrite <= 0;
+		MemtoReg <= 0;
+		IRWrite <= 1;
+
+		#50;
+		aluControl <= 2'b10;
+		aluSrcB <= 2'b00;
+		PCSource <= 0;
+		ALUSrcA <= 1;
+		RegWrite <= 1;
+		RegDst <= 1;
+		isInterrupted <= 0;
+		isBranch <= 0;
+		PCWrite <= 1;
+		lorD <= 0;
+		MemWrite <= 0;
+		MemtoReg <= 0;
+		IRWrite <= 1; // op = 00  funct = 100000
+
+		#50;
+		aluControl <= 0;
+		aluSrcB <= 0;
+		PCSource <= 0;
+		ALUSrcA <= 0;
+		RegWrite <= 0;
+		RegDst <= 0;
+		isInterrupted <= 0;
+		isBranch <= 0;
+		PCWrite <= 0;
+		lorD <= 0;
+		MemWrite <= 0;
+		MemtoReg <= 0;
+		IRWrite <= 0;
+
+		#200; $stop;
+
+		
 	end
       
 endmodule
