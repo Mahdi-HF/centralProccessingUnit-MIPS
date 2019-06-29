@@ -21,24 +21,22 @@
 // Additional Comments:
 // 
 ////////////////////////////////////////////////////////////////////////////////
-
 module DataPathTest;
-
 	// Inputs
-	reg [1:0] aluControl;
-	reg [1:0] aluSrcB;
-	reg PCSource;
-	reg aluSrcA;
-	reg RegWrite;
-	reg RegDst;
-	reg isInterrupted;
 	reg clk;
-	reg isBranch;
-	reg PCWrite;
 	reg lorD;
-	reg MemWrite;
-	reg MemtoReg;
-	reg IRWrite;
+	reg regDst;
+	reg aluSrcA;
+	reg pcWrite;
+	reg IrWrite;
+	reg pcSource;
+	reg regWrite;
+	reg isBranch;
+	reg memWrite;
+	reg memToReg;
+	reg [1:0] aluSrcB;
+	reg isInterrupted;
+	reg [1:0] aluControl;
 
 	// Outputs
 	wire [5:0] op;
@@ -46,21 +44,21 @@ module DataPathTest;
 
 	// Instantiate the Unit Under Test (UUT)
 	DataPath uut (
-		.aluControl(aluControl), 
-		.aluSrcB(aluSrcB), 
-		.PCSource(PCSource), 
-		.aluSrcA(aluSrcA), 
-		.RegWrite(RegWrite), 
-		.RegDst(RegDst), 
-		.isInterrupted(isInterrupted), 
-		.clk(clk), 
-		.isBranch(isBranch), 
-		.PCWrite(PCWrite), 
-		.lorD(lorD), 
-		.MemWrite(MemWrite), 
-		.MemtoReg(MemtoReg), 
-		.IRWrite(IRWrite), 
-		.op(op), 
+		.aluControl(aluControl),
+		.aluSrcB(aluSrcB),
+		.pcSource(pcSource), 
+		.aluSrcA(aluSrcA),
+		.regWrite(regWrite), 
+		.regDst(regDst), 
+		.isInterrupted(isInterrupted),
+		.clk(clk),
+		.isBranch(isBranch),
+		.pcWrite(pcWrite),
+		.lorD(lorD),
+		.memWrite(memWrite), 
+		.memToReg(memToReg), 
+		.IrWrite(IrWrite), 
+		.op(op),
 		.funct(funct)
 	);
 
@@ -70,93 +68,93 @@ module DataPathTest;
 		// Initialize Inputs
 		aluControl <= 0;
 		aluSrcB <= 0;
-		PCSource <= 0;
+		pcSource <= 0;
 		aluSrcA <= 0;
-		RegWrite <= 0;
-		RegDst <= 0;
+		regWrite <= 0;
+		regDst <= 0;
 		isInterrupted <= 0;
 		clk <= 0;
 		isBranch <= 0;
-		PCWrite <= 0;
+		pcWrite <= 0;
 		lorD <= 0;
-		MemWrite <= 0;
-		MemtoReg <= 0;
-		IRWrite <= 0;
+		memWrite <= 0;
+		memToReg <= 0;
+		IrWrite <= 0;
 
 		#50;
 		aluControl <= 0;
 		aluSrcB <= 2'b01;
-		PCSource <= 0;
+		pcSource <= 0;
 		aluSrcA <= 0;
-		RegWrite <= 0;
-		RegDst <= 0;
+		regWrite <= 0;
+		regDst <= 0;
 		isInterrupted <= 0;
 		isBranch <= 0;
-		PCWrite <= 1;
+		pcWrite <= 1;
 		lorD <= 0;
-		MemWrite <= 0;
-		MemtoReg <= 0;
-		IRWrite <= 1;
+		memWrite <= 0;
+		memToReg <= 0;
+		IrWrite <= 1;
 
 		#50;
 		aluControl <= 0;
 		aluSrcB <= 2'b11;
-		PCSource <= 0;
+		pcSource <= 0;
 		aluSrcA <= 0;
-		RegWrite <= 0;
-		RegDst <= 0;
+		regWrite <= 0;
+		regDst <= 0;
 		isInterrupted <= 0;
 		isBranch <= 0;
-		PCWrite <= 1;
+		pcWrite <= 1;
 		lorD <= 0;
-		MemWrite <= 0;
-		MemtoReg <= 0;
-		IRWrite <= 1;
+		memWrite <= 0;
+		memToReg <= 0;
+		IrWrite <= 1;
 		
 		#50;
 		aluControl <= 2'b10;
 		aluSrcB <= 2'b00;
-		PCSource <= 0;
+		pcSource <= 0;
 		aluSrcA <= 1;
-		RegWrite <= 0;
-		RegDst <= 0;
+		regWrite <= 0;
+		regDst <= 0;
 		isInterrupted <= 0;
 		isBranch <= 0;
-		PCWrite <= 1;
+		pcWrite <= 1;
 		lorD <= 0;
-		MemWrite <= 0;
-		MemtoReg <= 0;
-		IRWrite <= 1;
+		memWrite <= 0;
+		memToReg <= 0;
+		IrWrite <= 1;
 
 		#50;
 		aluControl <= 2'b10;
 		aluSrcB <= 2'b00;
-		PCSource <= 0;
+		pcSource <= 0;
 		aluSrcA <= 1;
-		RegWrite <= 1;
-		RegDst <= 1;
+		regWrite <= 1;
+		regDst <= 1;
 		isInterrupted <= 0;
 		isBranch <= 0;
-		PCWrite <= 1;
+		pcWrite <= 1;
 		lorD <= 0;
-		MemWrite <= 0;
-		MemtoReg <= 0;
-		IRWrite <= 1; // op = 00  funct = 100000
+		memWrite <= 0;
+		memToReg <= 0;
+		IrWrite <= 1; // op = 00  funct = 100000
 
 		#50;
 		aluControl <= 0;
 		aluSrcB <= 0;
-		PCSource <= 0;
+		pcSource <= 0;
 		aluSrcA <= 0;
-		RegWrite <= 0;
-		RegDst <= 0;
+		regWrite <= 0;
+		regDst <= 0;
 		isInterrupted <= 0;
 		isBranch <= 0;
-		PCWrite <= 0;
+		pcWrite <= 0;
 		lorD <= 0;
-		MemWrite <= 0;
-		MemtoReg <= 0;
-		IRWrite <= 0;
+		memWrite <= 0;
+		memToReg <= 0;
+		IrWrite <= 0;
 
 		#200; $stop;
 

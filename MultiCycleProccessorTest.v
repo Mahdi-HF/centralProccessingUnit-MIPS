@@ -42,6 +42,8 @@ module MultiCycleProccessorTest;
 		.INA(INA)
 	);
 
+	always #50 clk = ~clk;
+
 	initial begin
 		// Initialize Inputs
 		clk = 0;

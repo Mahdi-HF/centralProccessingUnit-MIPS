@@ -21,7 +21,7 @@
 module DataPath(input [1:0] aluControl, aluSrcB,
     input pcSource, aluSrcA, regWrite, regDst, isInterrupted, clk,
     input isBranch, pcWrite, lorD, memWrite, memToReg, IrWrite,
-    output reg [5:0] op, funct);
+    output reg [5:0]op, funct);
 
     wire zeroFlag;
     wire pcEnable;

@@ -25,7 +25,7 @@
 module ControllerTest;
 
 	// Inputs
-	reg [5:0] Op;
+	reg [5:0] op;
 	reg [5:0] funct;
 	reg clk = 0; 
 	reg INT;
@@ -34,7 +34,7 @@ module ControllerTest;
 
 	// Outputs
 	wire isBranch;
-	wire PCWrite;
+	wire pcWrite;
 	wire lorD;
 	wire MemWrite;
 	wire MemtoReg;
@@ -50,14 +50,14 @@ module ControllerTest;
 
 	// Instantiate the Unit Under Test (UUT)
 	Controller uut (
-		.Op(Op), 
+		.op(op), 
 		.funct(funct), 
 		.clk(clk), 
 		.INT(INT), 
 		.NMI(NMI), 
 		.INTD(INTD), 
 		.isBranch(isBranch), 
-		.PCWrite(PCWrite), 
+		.pcWrite(pcWrite), 
 		.lorD(lorD), 
 		.MemWrite(MemWrite), 
 		.MemtoReg(MemtoReg), 
@@ -76,8 +76,8 @@ module ControllerTest;
 
 	initial begin
 		// Initialize Inputs
-		//Op = 0;funct = 0;INT = 0;NMI = 0;INTD = 0;
-		Op = 6'b000000; funct = 6'b100000;INT = 0;NMI = 0;INTD = 0;
+		//op = 0;funct = 0;INT = 0;NMI = 0;INTD = 0;
+		op = 6'b000000; funct = 6'b100000;INT = 0;NMI = 0;INTD = 0;
 		#2000;$stop;
 
 
