@@ -24,7 +24,7 @@ module Memory(
 
     reg [31:0] data [1023:0];
 
-	 reg [10:0] i;
+	// reg [10:0] i;
 	 
     always @(posedge clk)
     begin
