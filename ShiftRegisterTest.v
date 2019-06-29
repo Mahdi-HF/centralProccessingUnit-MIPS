@@ -25,20 +25,20 @@
 module ShiftRegisterTest;
 	// Inputs
 	reg [31:0] dataIn;
-	reg CLK;
+	reg clk;
 
 	// Outputs
 	wire [31:0] dataOut;
 
 	// Instantiate the Unit Under Test (UUT)
-	ShiftRegister uut (dataIn,CLK,dataOut);
+	ShiftRegister uut (dataIn,clk,dataOut);
 
-	always #50 CLK = ~CLK;
+	always #50 clk = ~clk;
 	
 	initial begin
 		// Initialize Inputs
 		dataIn = 32'h0;
-		CLK = 0;
+		clk = 0;
 		
 		// Wait 100 ns for global reset to finish
 		dataIn = 32'h00000001;

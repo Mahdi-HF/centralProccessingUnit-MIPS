@@ -19,10 +19,10 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module ShiftRegisterEnable( 
-    input [31:0] dataIn, input CLK, control, 
+    input [31:0] dataIn, input clk, control, 
     output reg [31:0] dataOut ); 
     
-    always @(posedge CLK)  
+    always @(posedge clk)  
     begin  
 		//$display("in:");
 		//$display(dataIn);

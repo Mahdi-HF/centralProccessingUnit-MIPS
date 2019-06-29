@@ -19,14 +19,14 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module Memory(
-    input [31:0] Address, writeData, input Clk, input writeEnable,
+    input [31:0] Address, writeData, input clk, input writeEnable,
     output reg [31:0]MemData );
 
     reg [31:0] data [1023:0];
 
 	 reg [10:0] i;
 	 
-    always @(posedge Clk)
+    always @(posedge clk)
     begin
         if(writeEnable==1'b1)
         begin

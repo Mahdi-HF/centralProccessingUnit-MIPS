@@ -20,12 +20,12 @@
 //////////////////////////////////////////////////////////////////////////////////
 module Controller(
     input [5:0]Op, funct,
-    input Clk, INT, NMI, INTD,
+    input clk, INT, NMI, INTD,
     output reg isBranch, PCWrite, lorD, MemWrite, MemtoReg, IRWrite, INA,
-    output reg [1:0]aluControl, ALUSrcB, PCSource, output reg ALUSrcA, RegWrite, RegDst, isInterrupted);
+    output reg [1:0]aluControl, aluSrcB, PCSource, output reg aluSrcA, RegWrite, RegDst, isInterrupted);
 
     reg [4:0] state = 12, nextstate;
-    reg [1:0] ALUOp;
+    reg [1:0] aluOp;
     reg INTFlag = 0;
     reg NMIFlag = 0;
 
@@ -65,7 +65,7 @@ module Controller(
 		INA = 0;
 	end
 	
-    always@(posedge Clk)
+    always@(posedge clk)
     begin
         state=nextstate;
     end
@@ -124,11 +124,11 @@ module Controller(
 
             fetch:
             begin
-                ALUSrcA=1'b0;
+                aluSrcA=1'b0;
                 lorD= 1'b0;
                 IRWrite=1'b1;
-                ALUSrcB=2'b01;
-                ALUOp= 2'b00;
+                aluSrcB=2'b01;
+                aluOp= 2'b00;
                 PCWrite=1'b1;
                 PCSource=2'b00;
                 RegWrite = 1'b0;
@@ -141,10 +141,10 @@ module Controller(
             decode:
             begin
                 IRWrite=1'b0;
-                ALUSrcA=1'b0;
-                ALUSrcB=2'b11;
+                aluSrcA=1'b0;
+                aluSrcB=2'b11;
                 PCWrite=1'b0;
-                ALUOp= 2'b00;
+                aluOp= 2'b00;
 
                 if(Op==lw | Op==sw)
                 begin
@@ -174,9 +174,9 @@ module Controller(
 
             memAddr:
             begin
-                ALUSrcA = 1'b1;
-                ALUSrcB= 2'b10;
-                ALUOp = 2'b00;
+                aluSrcA = 1'b1;
+                aluSrcB= 2'b10;
+                aluOp = 2'b00;
 
                 if(Op==lw)
                 begin
@@ -212,9 +212,9 @@ module Controller(
 
             execute:
             begin
-                ALUSrcA= 1'b1;
-                ALUSrcB= 2'b00;
-                ALUOp = 2'b10;
+                aluSrcA= 1'b1;
+                aluSrcB= 2'b00;
+                aluOp = 2'b10;
                 nextstate = aluWriteBack;
             end
 
@@ -228,9 +228,9 @@ module Controller(
 
             branch:
             begin
-                ALUSrcA= 1'b1;
-                ALUSrcB= 2'b00;
-                ALUOp=2'b01;
+                aluSrcA= 1'b1;
+                aluSrcB= 2'b00;
+                aluOp=2'b01;
                 isBranch= 1'b1;
                 PCSource = 2'b01;
                 nextstate= preFetch;
@@ -245,9 +245,9 @@ module Controller(
 
             addIExecute:
             begin
-                ALUSrcA= 1'b1;
-                ALUSrcB= 2'b10;
-                ALUOp = 2'b10;
+                aluSrcA= 1'b1;
+                aluSrcB= 2'b10;
+                aluOp = 2'b10;
                 nextstate = addIwriteBack;
             end
 
@@ -262,9 +262,9 @@ module Controller(
     end
 
 
-    always @(ALUOp)
+    always @(aluOp)
     begin
-        if(ALUOp == 2'b10) //delegate it ...
+        if(aluOp == 2'b10) //delegate it ...
         begin
             case(funct)
                 6'b100000: //ADD
@@ -290,12 +290,12 @@ module Controller(
 			endcase
         end
 
-        else if(ALUOp == 2'b00)
+        else if(aluOp == 2'b00)
         begin
             aluControl = 2'b10; //ADD
         end
 
-        else if(ALUOp == 2'b01) 
+        else if(aluOp == 2'b01) 
         begin
             aluControl = 2'b11; //SUB
         end

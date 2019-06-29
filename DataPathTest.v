@@ -28,7 +28,7 @@ module DataPathTest;
 	reg [1:0] aluControl;
 	reg [1:0] aluSrcB;
 	reg PCSource;
-	reg ALUSrcA;
+	reg aluSrcA;
 	reg RegWrite;
 	reg RegDst;
 	reg isInterrupted;
@@ -49,7 +49,7 @@ module DataPathTest;
 		.aluControl(aluControl), 
 		.aluSrcB(aluSrcB), 
 		.PCSource(PCSource), 
-		.ALUSrcA(ALUSrcA), 
+		.aluSrcA(aluSrcA), 
 		.RegWrite(RegWrite), 
 		.RegDst(RegDst), 
 		.isInterrupted(isInterrupted), 
@@ -71,7 +71,7 @@ module DataPathTest;
 		aluControl <= 0;
 		aluSrcB <= 0;
 		PCSource <= 0;
-		ALUSrcA <= 0;
+		aluSrcA <= 0;
 		RegWrite <= 0;
 		RegDst <= 0;
 		isInterrupted <= 0;
@@ -87,7 +87,7 @@ module DataPathTest;
 		aluControl <= 0;
 		aluSrcB <= 2'b01;
 		PCSource <= 0;
-		ALUSrcA <= 0;
+		aluSrcA <= 0;
 		RegWrite <= 0;
 		RegDst <= 0;
 		isInterrupted <= 0;
@@ -102,7 +102,7 @@ module DataPathTest;
 		aluControl <= 0;
 		aluSrcB <= 2'b11;
 		PCSource <= 0;
-		ALUSrcA <= 0;
+		aluSrcA <= 0;
 		RegWrite <= 0;
 		RegDst <= 0;
 		isInterrupted <= 0;
@@ -117,7 +117,7 @@ module DataPathTest;
 		aluControl <= 2'b10;
 		aluSrcB <= 2'b00;
 		PCSource <= 0;
-		ALUSrcA <= 1;
+		aluSrcA <= 1;
 		RegWrite <= 0;
 		RegDst <= 0;
 		isInterrupted <= 0;
@@ -132,7 +132,7 @@ module DataPathTest;
 		aluControl <= 2'b10;
 		aluSrcB <= 2'b00;
 		PCSource <= 0;
-		ALUSrcA <= 1;
+		aluSrcA <= 1;
 		RegWrite <= 1;
 		RegDst <= 1;
 		isInterrupted <= 0;
@@ -147,7 +147,7 @@ module DataPathTest;
 		aluControl <= 0;
 		aluSrcB <= 0;
 		PCSource <= 0;
-		ALUSrcA <= 0;
+		aluSrcA <= 0;
 		RegWrite <= 0;
 		RegDst <= 0;
 		isInterrupted <= 0;

@@ -19,10 +19,10 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module ShiftRegister(
-    input [31:0] dataIn, input CLK,
+    input [31:0] dataIn, input clk,
     output reg [31:0] dataOut );
 
-    always @(posedge CLK) 
+    always @(posedge clk) 
     begin
         dataOut = dataIn;
     end

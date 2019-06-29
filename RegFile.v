@@ -19,13 +19,13 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module RegFile(
-    input [4:0] rA, rB, dR, [31:0] wData, input wEnable, input CLK,
+    input [4:0] rA, rB, dR, [31:0] wData, input wEnable, input clk,
     output [31:0] aData, bData);
 
     reg [31:0] regData [31:0];
     reg [5:0] i;
 
-    always @(posedge CLK)
+    always @(posedge clk)
         if(wEnable) regData[dR] <= wData;
         
     assign aData = regData[rA];

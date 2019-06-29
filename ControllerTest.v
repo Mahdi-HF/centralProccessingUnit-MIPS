@@ -27,7 +27,7 @@ module ControllerTest;
 	// Inputs
 	reg [5:0] Op;
 	reg [5:0] funct;
-	reg Clk = 0; 
+	reg clk = 0; 
 	reg INT;
 	reg NMI;
 	reg INTD;
@@ -41,9 +41,9 @@ module ControllerTest;
 	wire IRWrite;
 	wire INA;
 	wire [1:0] aluControl;
-	wire [1:0] ALUSrcB;
+	wire [1:0] aluSrcB;
 	wire PCSource;
-	wire ALUSrcA;
+	wire aluSrcA;
 	wire RegWrite;
 	wire RegDst;
 	wire isInterrupted;
@@ -52,7 +52,7 @@ module ControllerTest;
 	Controller uut (
 		.Op(Op), 
 		.funct(funct), 
-		.Clk(Clk), 
+		.clk(clk), 
 		.INT(INT), 
 		.NMI(NMI), 
 		.INTD(INTD), 
@@ -64,15 +64,15 @@ module ControllerTest;
 		.IRWrite(IRWrite), 
 		.INA(INA), 
 		.aluControl(aluControl), 
-		.ALUSrcB(ALUSrcB), 
+		.aluSrcB(aluSrcB), 
 		.PCSource(PCSource), 
-		.ALUSrcA(ALUSrcA), 
+		.aluSrcA(aluSrcA), 
 		.RegWrite(RegWrite), 
 		.RegDst(RegDst), 
 		.isInterrupted(isInterrupted)
 	);
 
-	always #50 Clk = ~Clk;
+	always #50 clk = ~clk;
 
 	initial begin
 		// Initialize Inputs

@@ -93,13 +93,13 @@ module DataPath(input [1:0] aluControl, aluSrcB,
     ShiftRegister aDataReg(aData, clk, aData2);
     ShiftRegister bDataReg(bData, clk, writeData);
 
-    Mux2 ALUPcMux(aluSrcA, pcOut2, aData2, srcA);
+    Mux2 aluPcMux(aluSrcA, pcOut2, aData2, srcA);
 
-    Mux4 SrcBMux(aluSrcB, writeData, four, signImm, shiftedsignImm, srcB);
+    Mux4 srcBMux(aluSrcB, writeData, four, signImm, shiftedsignImm, srcB);
 
-    ALU mainALU(srcA, srcB, aluControl, aluResult, zeroFlag);
+    ALU mainAlu(srcA, srcB, aluControl, aluResult, zeroFlag);
 
-    ShiftRegister ALUOutReg(aluResult, clk, aluOut);
+    ShiftRegister aluOutReg(aluResult, clk, aluOut);
 
     Shifte2New addrShifter(Instr[25:0], pcJump);
     Mux4 pcBrachMux(PCSource, aluResult, aluOut, {pcOut2[31:28],pcJump}, zero, pcIn);

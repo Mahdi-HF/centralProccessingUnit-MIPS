@@ -24,7 +24,7 @@
 
 module ShiftRegisterEnableTest;
 	// Inputs
-	reg CLK;
+	reg clk;
 	reg control;
 	reg [31:0] dataIn;
 
@@ -34,16 +34,16 @@ module ShiftRegisterEnableTest;
 	// Instantiate the Unit Under Test (UUT)
 	ShiftRegisterEnable uut (
 		.dataIn(dataIn), 
-		.CLK(CLK), 
+		.clk(clk), 
 		.control(control), 
 		.dataOut(dataOut)
 	);
 
-	always #50 CLK = ~CLK;
+	always #50 clk = ~clk;
 
 	initial begin
 		// Initialize Inputs
-		CLK = 0;
+		clk = 0;
 		dataIn = 0;
 		control = 0;
 

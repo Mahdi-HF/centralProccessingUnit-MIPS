@@ -24,7 +24,7 @@
 
 module MemoryTest;
 	// Inputs
-	reg Clk;
+	reg clk;
 	reg [31:0] Address;
 	reg [31:0] writeData;
 	reg writeEnable;
@@ -36,16 +36,16 @@ module MemoryTest;
 	Memory uut (
 		.Address(Address), 
 		.writeData(writeData), 
-		.Clk(Clk), 
+		.clk(clk), 
 		.writeEnable(writeEnable), 
 		.MemData(MemData)
 	);
 
-	always #50 Clk = ~Clk;
+	always #50 clk = ~clk;
 
 	initial begin
 		// Initialize Inputs
-		Clk = 0;
+		clk = 0;
 		Address = 0;
 		writeData = 0;
 		writeEnable = 0;
