@@ -31,7 +31,7 @@ module DataPath(input [1:0] aluControl, aluSrcB,
     wire [31:0]srcA;
     wire [31:0]srcB;
     wire [4:0]dstAdr;
-    //wire [31:0]Instr;
+    wire [31:0]Instr;
     wire [31:0]aData;
     wire [31:0]bData;
     wire [31:0]pcOut;

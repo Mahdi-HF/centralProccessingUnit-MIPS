@@ -21,10 +21,10 @@
 module MultiCycleProccessor(input clk, INT, NMI, INTD,
     output INA);
     
-    // wire [5:0]Op, funct;
-    // wire [1:0]aluControl2, ALUSrcB2;
-    // wire PCSource, ALUSrc, RegWrite, RegDst, isInterrupted;
-    // wire isBranch, PCWrite, lorD, MemWrite, MemtoReg, IRWrite;
+    wire [5:0]Op, funct;
+    wire [1:0]aluControl2, ALUSrcB2;
+    wire PCSource, ALUSrc, RegWrite, RegDst, isInterrupted;
+    wire isBranch, PCWrite, lorD, MemWrite, MemtoReg, IRWrite;
 
     Controller controller(Op, funct, clk, INT, NMI, INTD,
     isBranch, PCWrite, lorD, MemWrite, MemtoReg, IRWrite, INA,

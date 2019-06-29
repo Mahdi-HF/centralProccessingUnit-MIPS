@@ -22,9 +22,6 @@ module ShiftRegister(
     input [31:0] dataIn, input CLK,
     output reg [31:0] dataOut );
 
-    initial begin
-        dataOut = 32'bz;
-    end
     always @(posedge CLK) 
     begin
         dataOut = dataIn;

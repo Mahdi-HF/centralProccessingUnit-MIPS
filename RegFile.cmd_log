@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "Z:/Memari_Project/MemariProject/RegFile.xst" -ofn "Z:/Memari_Project/MemariProject/RegFile.syr" 
