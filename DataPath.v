@@ -84,7 +84,7 @@ module DataPath(input [1:0] aluControl, aluSrcB,
 
     ShiftRegister ALUOutReg(aluResult, clk, ALUOut);
 
-    Shifter? addrShifter(instr[25:0], pcJump); //TODO
+    Shifte2New addrShifter(Instr[25:0], pcJump); //TODO
     Mux4 pcBrachMux(PCSource, aluResult, ALUOut, {pcOut2,pcJump}, zero, pcIn);
 
 endmodule

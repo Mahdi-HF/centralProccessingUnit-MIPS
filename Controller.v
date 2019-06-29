@@ -22,9 +22,9 @@ module Controller(
     input [5:0]Op, funct,
     input Clk, INT, NMI, INTD,
     output reg isBranch, PCWrite, lorD, MemWrite, MemtoReg, IRWrite, INA,
-    output reg [1:0]aluControl, ALUSrcB, PCSource output reg ALUSrcA, RegWrite, RegDst, isInterrupted);
+    output reg [1:0]aluControl, ALUSrcB, PCSource, output reg ALUSrcA, RegWrite, RegDst, isInterrupted);
 
-    reg [4:0] state = 0, nextstate;
+    reg [4:0] state = 12, nextstate;
     reg [1:0] ALUOp;
     reg INTFlag = 0;
     reg NMIFlag = 0;
@@ -59,7 +59,12 @@ module Controller(
         if(INT == 1) INTFlag = 1; 
         if(NMI == 1) NMIFlag = 1; 
     end
-
+	
+	initial 
+	begin
+		INA = 0;
+	end
+	
     always@(posedge Clk)
     begin
         state=nextstate;

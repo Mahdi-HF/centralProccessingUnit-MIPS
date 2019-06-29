@@ -27,7 +27,7 @@ module ControllerTest;
 	// Inputs
 	reg [5:0] Op;
 	reg [5:0] funct;
-	reg Clk;
+	reg Clk = 0; 
 	reg INT;
 	reg NMI;
 	reg INTD;
@@ -72,15 +72,13 @@ module ControllerTest;
 		.isInterrupted(isInterrupted)
 	);
 
-	always #50 CLK = ~CLK;
+	always #50 Clk = ~Clk;
 
 	initial begin
 		// Initialize Inputs
-		Op = 0;funct = 0;Clk = 0;INT = 0;NMI = 0;INTD = 0;
-
-		#100; 
-		Op = 6'b000000; funct = 0;Clk = 0;INT = 0;NMI = 0;INTD = 0;
-
+		//Op = 0;funct = 0;INT = 0;NMI = 0;INTD = 0;
+		Op = 6'b000000; funct = 6'b100000;INT = 0;NMI = 0;INTD = 0;
+		#2000;$stop;
 
 
 	end
