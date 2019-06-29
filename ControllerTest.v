@@ -72,9 +72,16 @@ module ControllerTest;
 		.isInterrupted(isInterrupted)
 	);
 
+	always #50 CLK = ~CLK;
+
 	initial begin
 		// Initialize Inputs
 		Op = 0;funct = 0;Clk = 0;INT = 0;NMI = 0;INTD = 0;
+
+		#100; 
+		Op = 6'b000000; funct = 0;Clk = 0;INT = 0;NMI = 0;INTD = 0;
+
+
 
 	end
       

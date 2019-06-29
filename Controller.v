@@ -22,7 +22,7 @@ module Controller(
     input [5:0]Op, funct,
     input Clk, INT, NMI, INTD,
     output reg isBranch, PCWrite, lorD, MemWrite, MemtoReg, IRWrite, INA,
-    output reg [1:0]aluControl, ALUSrcB, output reg PCSource, ALUSrcA, RegWrite, RegDst, isInterrupted);
+    output reg [1:0]aluControl, ALUSrcB, PCSource output reg ALUSrcA, RegWrite, RegDst, isInterrupted);
 
     reg [4:0] state = 0, nextstate;
     reg [1:0] ALUOp;

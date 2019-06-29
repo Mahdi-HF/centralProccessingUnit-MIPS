@@ -35,13 +35,15 @@ module DataPath(input [1:0] aluControl, aluSrcB,
     wire [31:0]aData;
     wire [31:0]bData;
     wire [31:0]pcOut;
-    wire [31:0]pcOut2;
+    wire [31:0]pcJump;
+    wire [27:0]pcOut2;
     wire [31:0]ALUOut;
     wire [31:0]memData;
     wire [31:0]signImm;
     wire [31:0]aluResult;
     wire [31:0]writeData;
     wire [31:0]writeRegData;
+    wire [31:0]zero = 32'h0;
     wire [31:0]four = 32'h00000004;
     wire [31:0]interruptAddress = 32'hFFFFFFFF;
     
@@ -82,6 +84,7 @@ module DataPath(input [1:0] aluControl, aluSrcB,
 
     ShiftRegister ALUOutReg(aluResult, clk, ALUOut);
 
-    Mux2 pcBrachMux(PCSource, aluResult, ALUOut, pcIn);
+    Shifter? addrShifter(instr[25:0], pcJump); //TODO
+    Mux4 pcBrachMux(PCSource, aluResult, ALUOut, {pcOut2,pcJump}, zero, pcIn);
 
 endmodule
