@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "Z:/Memari_Project/MemariProject/ControllerTest_isim_beh.exe" -prj "Z:/Memari_Project/MemariProject/ControllerTest_beh.prj" "work.ControllerTest" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "Z:/Memari_Project/MemariProject/DataPathTest_isim_beh.exe" -prj "Z:/Memari_Project/MemariProject/DataPathTest_beh.prj" "work.DataPathTest" "work.glbl" 

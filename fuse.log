@@ -1,21 +1,47 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o Z:/Memari_Project/MemariProject/ControllerTest_isim_beh.exe -prj Z:/Memari_Project/MemariProject/ControllerTest_beh.prj work.ControllerTest work.glbl 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o Z:/Memari_Project/MemariProject/DataPathTest_isim_beh.exe -prj Z:/Memari_Project/MemariProject/DataPathTest_beh.prj work.DataPathTest work.glbl 
 ISim P.20131013 (signature 0x8ef4fb42)
 Number of CPUs detected in this system: 1
 Turning on mult-threading, number of parallel sub-compilation jobs: 0 
 Determining compilation order of HDL files
-Analyzing Verilog file "Z:/Memari_Project/MemariProject/Controller.v" into library work
-Analyzing Verilog file "Z:/Memari_Project/MemariProject/ControllerTest.v" into library work
+Analyzing Verilog file "Z:/Memari_Project/MemariProject/SignExtend.v" into library work
+Analyzing Verilog file "Z:/Memari_Project/MemariProject/ShiftRegisterEnable.v" into library work
+Analyzing Verilog file "Z:/Memari_Project/MemariProject/ShiftRegister.v" into library work
+Analyzing Verilog file "Z:/Memari_Project/MemariProject/Shifter2.v" into library work
+Analyzing Verilog file "Z:/Memari_Project/MemariProject/Shifte2New.v" into library work
+Analyzing Verilog file "Z:/Memari_Project/MemariProject/RegFile.v" into library work
+Analyzing Verilog file "Z:/Memari_Project/MemariProject/Mux4.v" into library work
+Analyzing Verilog file "Z:/Memari_Project/MemariProject/Mux2FiveBit.v" into library work
+Analyzing Verilog file "Z:/Memari_Project/MemariProject/Mux2.v" into library work
+Analyzing Verilog file "Z:/Memari_Project/MemariProject/Memory.v" into library work
+Analyzing Verilog file "Z:/Memari_Project/MemariProject/ALU.v" into library work
+Analyzing Verilog file "Z:/Memari_Project/MemariProject/DataPath.v" into library work
+Analyzing Verilog file "Z:/Memari_Project/MemariProject/DataPathTest.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
-WARNING:HDLCompiler:189 - "Z:/Memari_Project/MemariProject/ControllerTest.v" Line 68: Size mismatch in connection of port <PCSource>. Formal port size is 2-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "Z:/Memari_Project/MemariProject/DataPath.v" Line 93: Size mismatch in connection of port <dataOut>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "Z:/Memari_Project/MemariProject/DataPath.v" Line 96: Size mismatch in connection of port <B>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "Z:/Memari_Project/MemariProject/DataPath.v" Line 105: Size mismatch in connection of port <control>. Formal port size is 2-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "Z:/Memari_Project/MemariProject/DataPath.v" Line 89: Size mismatch in connection of port <out>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "Z:/Memari_Project/MemariProject/DataPath.v" Line 98: Size mismatch in connection of port <D>. Formal port size is 32-bit while actual signal size is 1-bit.
 Completed static elaboration
 Fuse Memory Usage: 77324 KB
-Fuse CPU Usage: 170 ms
-Compiling module Controller
-Compiling module ControllerTest
+Fuse CPU Usage: 210 ms
+Compiling module Mux2
+Compiling module Memory
+Compiling module ShiftRegisterEnable
+Compiling module ShiftRegister
+Compiling module Mux2FiveBit
+Compiling module SignExtend
+Compiling module Shifter2
+Compiling module RegFile
+Compiling module Mux4
+Compiling module ALU
+Compiling module Shifte2New
+Compiling module DataPath
+Compiling module DataPathTest
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Compiled 3 Verilog Units
-Built simulation executable Z:/Memari_Project/MemariProject/ControllerTest_isim_beh.exe
-Fuse Memory Usage: 81296 KB
-Fuse CPU Usage: 190 ms
+Compiled 14 Verilog Units
+Built simulation executable Z:/Memari_Project/MemariProject/DataPathTest_isim_beh.exe
+Fuse Memory Usage: 80784 KB
+Fuse CPU Usage: 240 ms

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Z:/Memari_Project/MemariProject/DataPathTest_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="DataPathTest" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="17" />
+   <wvobject fp_name="/DataPathTest/op" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">op[5:0]</obj_property>
+      <obj_property name="ObjectShortName">op[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DataPathTest/funct" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">funct[5:0]</obj_property>
+      <obj_property name="ObjectShortName">funct[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DataPathTest/aluControl" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">aluControl[1:0]</obj_property>
+      <obj_property name="ObjectShortName">aluControl[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DataPathTest/aluSrcB" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">aluSrcB[1:0]</obj_property>
+      <obj_property name="ObjectShortName">aluSrcB[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DataPathTest/PCSource" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">PCSource</obj_property>
+      <obj_property name="ObjectShortName">PCSource</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DataPathTest/ALUSrcA" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ALUSrcA</obj_property>
+      <obj_property name="ObjectShortName">ALUSrcA</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DataPathTest/RegWrite" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RegWrite</obj_property>
+      <obj_property name="ObjectShortName">RegWrite</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DataPathTest/RegDst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RegDst</obj_property>
+      <obj_property name="ObjectShortName">RegDst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DataPathTest/isInterrupted" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">isInterrupted</obj_property>
+      <obj_property name="ObjectShortName">isInterrupted</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DataPathTest/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DataPathTest/isBranch" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">isBranch</obj_property>
+      <obj_property name="ObjectShortName">isBranch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DataPathTest/PCWrite" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">PCWrite</obj_property>
+      <obj_property name="ObjectShortName">PCWrite</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DataPathTest/lorD" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">lorD</obj_property>
+      <obj_property name="ObjectShortName">lorD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DataPathTest/MemWrite" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">MemWrite</obj_property>
+      <obj_property name="ObjectShortName">MemWrite</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DataPathTest/MemtoReg" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">MemtoReg</obj_property>
+      <obj_property name="ObjectShortName">MemtoReg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DataPathTest/IRWrite" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">IRWrite</obj_property>
+      <obj_property name="ObjectShortName">IRWrite</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DataPathTest/uut/memData" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">memData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">memData[31:0]</obj_property>
+   </wvobject>
+</wave_config>

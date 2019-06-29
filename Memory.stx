@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to Z:/Memari_Project/MemariProject/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Reading design: Memory.prj
 
@@ -44,7 +44,7 @@ Parsing module <Memory>.
 
 
 Total REAL time to Xst completion: 3.00 secs
-Total CPU time to Xst completion: 3.69 secs
+Total CPU time to Xst completion: 3.65 secs
  
 --> 
 

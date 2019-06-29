@@ -34,15 +34,18 @@ module Memory(
         end
     end
 	
-    always @* 
+    always @*
     begin
+		//#1;
+		$display("Address is :");
+		$display(Address);
         MemData = data[Address];
     end
     
     initial
     begin
-		  for (i = 0; i < 32; i = i + 1)
-            data[i] = 32'dz;
+		  //for (i = 0; i < 32; i = i + 1)
+            //data[i] = 32'dz;
 				
         data[1] <= 32'd1; 
         data[2] <= 32'd2;
@@ -56,6 +59,8 @@ module Memory(
         data[10] <= 32'd10;
 
         data[128] <= 32'b00000000001000100001100000100000; //add 3 1 2
+		data[129] <= 32'b00000000001000100001100000100000; //add 3 1 2
+		data[130] <= 32'b00000000001000100001100000100000; //add 3 1 2
         data[132] <= 32'b00000000001000100010000000100010; //sub 3 1 2
         // data[136] <= 32'b001100 00000000000000000000000100 ; //Itype 1 : jump abs
         // data[140] <= 32'b001100 00011 00100 ; //Itype 1

@@ -53,7 +53,7 @@ module ShiftRegisterEnableTest;
 		dataIn = 32'h00000001;
 
 		#100 
-		control = 1;
+		control = 0;
 		dataIn = 32'hFFFFFFFF;
 
 		#100 
@@ -61,7 +61,7 @@ module ShiftRegisterEnableTest;
 		dataIn = 32'h00000000;
 
 		#100 
-		control = 1;
+		control = 0;
 		dataIn = 32'hFF0000FF;
 
 		#100; $stop;

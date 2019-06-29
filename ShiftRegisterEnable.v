@@ -23,9 +23,17 @@ module ShiftRegisterEnable(
     output reg [31:0] dataOut ); 
     
     always @(posedge CLK)  
-    begin 
-        if(control==1'b1) 
-            dataOut <= dataIn; 
-    end 
+    begin  
+		//$display("in:");
+		//$display(dataIn);
+		//$display("out:");
+		//$display(dataOut);
+		// && dataIn != 32'bz
+        if(control==1'b1)
+        begin
+			//$display("in the second loop");
+			dataOut <= dataIn;
+        end
+    end
  
 endmodule

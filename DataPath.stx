@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to Z:/Memari_Project/MemariProject/xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> Parameter xsthdpdir set to Z:/Memari_Project/MemariProject/xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> Reading design: DataPath.prj
 
@@ -47,6 +47,8 @@ Analyzing Verilog file "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Shif
 Parsing module <ShiftRegister>.
 Analyzing Verilog file "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Shifter2.v" into library work
 Parsing module <Shifter2>.
+Analyzing Verilog file "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Shifte2New.v" into library work
+Parsing module <Shifte2New>.
 Analyzing Verilog file "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\RegFile.v" into library work
 Parsing module <RegFile>.
 Analyzing Verilog file "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Mux4.v" into library work
@@ -63,8 +65,8 @@ Analyzing Verilog file "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Data
 Parsing module <DataPath>.
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.90 secs
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 3.92 secs
  
 --> 
 

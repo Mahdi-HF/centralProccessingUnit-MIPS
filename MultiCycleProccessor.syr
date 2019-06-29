@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.29 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.34 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> Reading design: MultiCycleProccessor.prj
 
@@ -141,24 +141,26 @@ Parsing module <MultiCycleProccessor>.
 Elaborating module <MultiCycleProccessor>.
 
 Elaborating module <Controller>.
-WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 73: Signal <INTD> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 75: Signal <NMIFlag> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 91: Signal <INTFlag> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 97: Signal <INTFlag> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 104: Signal <INTFlag> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 111: Signal <INTFlag> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 264: Signal <funct> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 78: Signal <INTD> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 80: Signal <NMIFlag> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 96: Signal <INTFlag> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 102: Signal <INTFlag> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 109: Signal <INTFlag> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 116: Signal <INTFlag> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 269: Signal <funct> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 WARNING:HDLCompiler:189 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\MultiCycleProccessor.v" Line 31: Size mismatch in connection of port <aluControl>. Formal port size is 2-bit while actual signal size is 1-bit.
 
 Elaborating module <DataPath>.
-
-Elaborating module <ShiftRegisterEnable>.
+WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 54: Signal <Instr> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 55: Signal <Instr> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 
 Elaborating module <Mux2>.
-WARNING:HDLCompiler:189 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 60: Size mismatch in connection of port <out>. Formal port size is 32-bit while actual signal size is 28-bit.
-WARNING:HDLCompiler:189 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 61: Size mismatch in connection of port <A>. Formal port size is 32-bit while actual signal size is 28-bit.
 
 Elaborating module <Memory>.
+"\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Memory.v" Line 40. $display Address is :
+"\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Memory.v" Line 41. $display  $Address
+
+Elaborating module <ShiftRegisterEnable>.
 
 Elaborating module <ShiftRegister>.
 
@@ -167,21 +169,20 @@ Elaborating module <Mux2FiveBit>.
 Elaborating module <SignExtend>.
 
 Elaborating module <Shifter2>.
-WARNING:HDLCompiler:189 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 72: Size mismatch in connection of port <out>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 89: Size mismatch in connection of port <out>. Formal port size is 32-bit while actual signal size is 1-bit.
 
 Elaborating module <RegFile>.
-WARNING:HDLCompiler:189 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 76: Size mismatch in connection of port <dataOut>. Formal port size is 32-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:189 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 79: Size mismatch in connection of port <A>. Formal port size is 32-bit while actual signal size is 28-bit.
+WARNING:HDLCompiler:189 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 93: Size mismatch in connection of port <dataOut>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 96: Size mismatch in connection of port <B>. Formal port size is 32-bit while actual signal size is 1-bit.
 
 Elaborating module <Mux4>.
-WARNING:HDLCompiler:189 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 81: Size mismatch in connection of port <D>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 98: Size mismatch in connection of port <D>. Formal port size is 32-bit while actual signal size is 1-bit.
 
 Elaborating module <ALU>.
 
 Elaborating module <Shifte2New>.
-WARNING:HDLCompiler:189 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 87: Size mismatch in connection of port <out>. Formal port size is 28-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 88: Size mismatch in connection of port <control>. Formal port size is 2-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:634 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 79: Net <aluSrcA> does not have a driver.
+WARNING:HDLCompiler:189 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 105: Size mismatch in connection of port <control>. Formal port size is 2-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:634 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 96: Net <ALUSrcA> does not have a driver.
 WARNING:HDLCompiler:189 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\MultiCycleProccessor.v" Line 33: Size mismatch in connection of port <aluControl>. Formal port size is 2-bit while actual signal size is 1-bit.
 
 =========================================================================
@@ -244,8 +245,8 @@ WARNING:Xst:737 - Found 1-bit latch for signal <MemWrite>. Latches may be genera
 WARNING:Xst:737 - Found 1-bit latch for signal <isBranch>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <MemtoReg>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <RegDst>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Found 1-bit tristate buffer for signal <aluControl<1>> created at line 260
-    Found 1-bit tristate buffer for signal <aluControl<0>> created at line 260
+    Found 1-bit tristate buffer for signal <aluControl<1>> created at line 265
+    Found 1-bit tristate buffer for signal <aluControl<0>> created at line 265
 WARNING:Xst:737 - Found 1-bit latch for signal <INTFlag>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
 	inferred   1 RAM(s).
@@ -257,18 +258,12 @@ Unit <Controller> synthesized.
 
 Synthesizing Unit <DataPath>.
     Related source file is "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v".
-WARNING:Xst:647 - Input <ALUSrcA> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:653 - Signal <aluSrcA> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-    Summary:
-	no macro.
-Unit <DataPath> synthesized.
-
-Synthesizing Unit <ShiftRegisterEnable>.
-    Related source file is "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\ShiftRegisterEnable.v".
-    Found 32-bit register for signal <dataOut>.
+WARNING:Xst:647 - Input <aluSrcA> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <ALUSrcA> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 32-bit register for signal <pcOut>.
     Summary:
 	inferred  32 D-type flip-flop(s).
-Unit <ShiftRegisterEnable> synthesized.
+Unit <DataPath> synthesized.
 
 Synthesizing Unit <Mux2>.
     Related source file is "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Mux2.v".
@@ -283,6 +278,13 @@ WARNING:Xst:647 - Input <Address<31:10>> is never used. This port will be preser
     Summary:
 	inferred   1 RAM(s).
 Unit <Memory> synthesized.
+
+Synthesizing Unit <ShiftRegisterEnable>.
+    Related source file is "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\ShiftRegisterEnable.v".
+    Found 32-bit register for signal <dataOut>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <ShiftRegisterEnable> synthesized.
 
 Synthesizing Unit <ShiftRegister>.
     Related source file is "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\ShiftRegister.v".
@@ -379,7 +381,6 @@ INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmet
 
 WARNING:Xst:1710 - FF/Latch <nextstate_4> (without init value) has a constant value of 0 in block <controller>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_4> has a constant value of 0 in block <controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <dataOut_31> of sequential type is unconnected in block <instructionReg>.
 WARNING:Xst:2677 - Node <dataOut_1> of sequential type is unconnected in block <aDataReg>.
 WARNING:Xst:2677 - Node <dataOut_2> of sequential type is unconnected in block <aDataReg>.
 WARNING:Xst:2677 - Node <dataOut_3> of sequential type is unconnected in block <aDataReg>.
@@ -413,7 +414,7 @@ WARNING:Xst:2677 - Node <dataOut_30> of sequential type is unconnected in block 
 WARNING:Xst:2677 - Node <dataOut_31> of sequential type is unconnected in block <aDataReg>.
 
 Synthesizing (advanced) Unit <Controller>.
-INFO:Xst:3231 - The small RAM <Mram__n0565> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0565> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -489,7 +490,6 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_data> will be implemented on LUTs ei
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
 Unit <Memory> synthesized (advanced).
-WARNING:Xst:2677 - Node <instructionReg/dataOut_31> of sequential type is unconnected in block <DataPath>.
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -501,8 +501,8 @@ Macro Statistics
  32x32-bit dual-port block RAM                         : 2
 # Adders/Subtractors                                   : 1
  32-bit addsub                                         : 1
-# Registers                                            : 132
- Flip-Flops                                            : 132
+# Registers                                            : 133
+ Flip-Flops                                            : 133
 # Comparators                                          : 1
  32-bit comparator equal                               : 1
 # Multiplexers                                         : 68
@@ -521,7 +521,6 @@ Macro Statistics
 =========================================================================
 WARNING:Xst:1710 - FF/Latch <nextstate_4> (without init value) has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_4> has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <instructionReg/dataOut_5> of sequential type is unconnected in block <DataPath>.
 WARNING:Xst:2677 - Node <instructionReg/dataOut_6> of sequential type is unconnected in block <DataPath>.
 WARNING:Xst:2677 - Node <instructionReg/dataOut_7> of sequential type is unconnected in block <DataPath>.
 WARNING:Xst:2677 - Node <instructionReg/dataOut_8> of sequential type is unconnected in block <DataPath>.
@@ -532,10 +531,6 @@ WARNING:Xst:2677 - Node <instructionReg/dataOut_22> of sequential type is unconn
 WARNING:Xst:2677 - Node <instructionReg/dataOut_23> of sequential type is unconnected in block <DataPath>.
 WARNING:Xst:2677 - Node <instructionReg/dataOut_24> of sequential type is unconnected in block <DataPath>.
 WARNING:Xst:2677 - Node <instructionReg/dataOut_25> of sequential type is unconnected in block <DataPath>.
-WARNING:Xst:2677 - Node <pcReg/dataOut_28> of sequential type is unconnected in block <DataPath>.
-WARNING:Xst:2677 - Node <pcReg/dataOut_29> of sequential type is unconnected in block <DataPath>.
-WARNING:Xst:2677 - Node <pcReg/dataOut_30> of sequential type is unconnected in block <DataPath>.
-WARNING:Xst:2677 - Node <pcReg/dataOut_31> of sequential type is unconnected in block <DataPath>.
 WARNING:Xst:2677 - Node <regFile/Mram_regData> of sequential type is unconnected in block <DataPath>.
 WARNING:Xst:2042 - Unit Controller: 2 internal tristates are replaced by logic (pull-up yes): aluControl<0>, aluControl<1>.
 
@@ -550,10 +545,6 @@ WARNING:Xst:2677 - Node <controller/PCSource_1> of sequential type is unconnecte
 WARNING:Xst:2677 - Node <controller/ALUSrcB_1> of sequential type is unconnected in block <MultiCycleProccessor>.
 WARNING:Xst:2677 - Node <controller/ALUSrcA> of sequential type is unconnected in block <MultiCycleProccessor>.
 WARNING:Xst:2677 - Node <dataPath/instructionReg/dataOut_2> of sequential type is unconnected in block <MultiCycleProccessor>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <dataPath/instructionReg/dataOut_3> is unconnected in block <MultiCycleProccessor>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <dataPath/instructionReg/dataOut_4> is unconnected in block <MultiCycleProccessor>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <dataPath/instructionReg/dataOut_0> is unconnected in block <MultiCycleProccessor>.
-WARNING:Xst:2677 - Node <dataPath/instructionReg/dataOut_1> of sequential type is unconnected in block <MultiCycleProccessor>.
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -565,8 +556,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 111
- Flip-Flops                                            : 111
+# Registers                                            : 121
+ Flip-Flops                                            : 121
 
 =========================================================================
 
@@ -589,20 +580,20 @@ Top Level Output File Name         : MultiCycleProccessor.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 257
+# BELS                             : 271
 #      GND                         : 1
 #      INV                         : 1
 #      LUT1                        : 1
-#      LUT2                        : 55
-#      LUT3                        : 44
-#      LUT4                        : 32
-#      LUT5                        : 3
-#      LUT6                        : 106
+#      LUT2                        : 61
+#      LUT3                        : 45
+#      LUT4                        : 27
+#      LUT5                        : 33
+#      LUT6                        : 88
 #      MUXCY                       : 13
 #      VCC                         : 1
-# FlipFlops/Latches                : 131
+# FlipFlops/Latches                : 141
 #      FD                          : 68
-#      FDE                         : 43
+#      FDE                         : 53
 #      LD                          : 16
 #      LDE                         : 2
 #      LDP                         : 2
@@ -622,17 +613,17 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             130  out of  126800     0%  
- Number of Slice LUTs:                  754  out of  63400     1%  
-    Number used as Logic:               242  out of  63400     0%  
+ Number of Slice Registers:             140  out of  126800     0%  
+ Number of Slice LUTs:                  768  out of  63400     1%  
+    Number used as Logic:               256  out of  63400     0%  
     Number used as Memory:              512  out of  19000     2%  
        Number used as RAM:              512
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    761
-   Number with an unused Flip Flop:     631  out of    761    82%  
-   Number with an unused LUT:             7  out of    761     0%  
-   Number of fully used LUT-FF pairs:   123  out of    761    16%  
+ Number of LUT Flip Flop pairs used:    775
+   Number with an unused Flip Flop:     635  out of    775    81%  
+   Number with an unused LUT:             7  out of    775     0%  
+   Number of fully used LUT-FF pairs:   133  out of    775    17%  
    Number of unique control sets:        17
 
 IO Utilization: 
@@ -663,23 +654,23 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
-----------------------------------------------------------------------------------------+--------------------------------+-------+
-Clock Signal                                                                            | Clock buffer(FF name)          | Load  |
-----------------------------------------------------------------------------------------+--------------------------------+-------+
-controller/_n0251(controller/_n02511:O)                                                 | NONE(*)(controller/ALUOp_0)    | 3     |
-controller/_n0496(controller/_n04962:O)                                                 | NONE(*)(controller/PCSource_0) | 1     |
-clk                                                                                     | BUFGP                          | 240   |
-controller/state[4]_GND_2_o_Select_80_o(controller/Mmux_state[4]_GND_2_o_Select_80_o1:O)| NONE(*)(controller/nextstate_2)| 4     |
-controller/state[4]_GND_2_o_equal_39_o(controller/state[4]_GND_2_o_equal_39_o<4>1:O)    | NONE(*)(controller/INA)        | 2     |
-controller/_n0530(controller/_n05301:O)                                                 | NONE(*)(controller/RegWrite)   | 2     |
-controller/_n0525(controller/_n05251:O)                                                 | NONE(*)(controller/lorD)       | 1     |
-controller/state[4]_RegWrite_Select_109_o(controller/out111:O)                          | NONE(*)(controller/RegDst)     | 1     |
-controller/_n0527(controller/_n05271:O)                                                 | NONE(*)(controller/PCWrite)    | 1     |
-controller/Mmux__n0304241(controller/Mram__n0565311:O)                                  | NONE(*)(controller/IRWrite)    | 1     |
-controller/_n0528(controller/_n05281:O)                                                 | NONE(*)(controller/MemWrite)   | 1     |
-controller/_n04961(controller/_n049611:O)                                               | NONE(*)(controller/isBranch)   | 1     |
-N1                                                                                      | NONE(controller/INTFlag)       | 2     |
-----------------------------------------------------------------------------------------+--------------------------------+-------+
+-----------------------------------------------------------------------------------------+--------------------------------+-------+
+Clock Signal                                                                             | Clock buffer(FF name)          | Load  |
+-----------------------------------------------------------------------------------------+--------------------------------+-------+
+controller/_n0251(controller/_n02511:O)                                                  | NONE(*)(controller/ALUOp_0)    | 3     |
+controller/_n0496(controller/_n04962:O)                                                  | NONE(*)(controller/PCSource_0) | 1     |
+clk                                                                                      | BUFGP                          | 250   |
+controller/state[4]_GND_2_o_Select_80_o(controller/Mmux_state[4]_GND_2_o_Select_80_o12:O)| NONE(*)(controller/nextstate_2)| 4     |
+controller/state[4]_GND_2_o_equal_39_o(controller/state[4]_GND_2_o_equal_39_o<4>1:O)     | NONE(*)(controller/INA)        | 2     |
+controller/_n0530(controller/_n05301:O)                                                  | NONE(*)(controller/RegWrite)   | 2     |
+controller/_n0525(controller/_n05251:O)                                                  | NONE(*)(controller/lorD)       | 1     |
+controller/state[4]_RegWrite_Select_109_o(controller/out111:O)                           | NONE(*)(controller/RegDst)     | 1     |
+controller/_n0527(controller/_n05271:O)                                                  | NONE(*)(controller/PCWrite)    | 1     |
+controller/Mmux__n0304241(controller/Mram__n0565311:O)                                   | NONE(*)(controller/IRWrite)    | 1     |
+controller/_n0528(controller/_n05281:O)                                                  | NONE(*)(controller/MemWrite)   | 1     |
+controller/_n04961(controller/_n049611:O)                                                | NONE(*)(controller/isBranch)   | 1     |
+N1                                                                                       | NONE(controller/INTFlag)       | 2     |
+-----------------------------------------------------------------------------------------+--------------------------------+-------+
 (*) These 11 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
@@ -693,7 +684,7 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 4.223ns (Maximum Frequency: 236.795MHz)
+   Minimum period: 4.224ns (Maximum Frequency: 236.761MHz)
    Minimum input arrival time before clock: 1.281ns
    Maximum output required time after clock: 0.751ns
    Maximum combinational path delay: No path found
@@ -704,16 +695,16 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 4.223ns (frequency: 236.795MHz)
-  Total number of paths / destination ports: 4967 / 1457
+  Clock period: 4.224ns (frequency: 236.761MHz)
+  Total number of paths / destination ports: 5719 / 1471
 -------------------------------------------------------------------------
-Delay:               4.223ns (Levels of Logic = 15)
+Delay:               4.224ns (Levels of Logic = 15)
   Source:            dataPath/regFile/Mram_regData1 (RAM)
-  Destination:       dataPath/pcReg/dataOut_27 (FF)
+  Destination:       dataPath/pcOut_31 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: dataPath/regFile/Mram_regData1 to dataPath/pcReg/dataOut_27
+  Data Path: dataPath/regFile/Mram_regData1 to dataPath/pcOut_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
@@ -732,10 +723,10 @@ Delay:               4.223ns (Levels of Logic = 15)
      MUXCY:CI->O           1   0.023   0.000  dataPath/mainALU/Mcompar_zFlag_cy<9> (dataPath/mainALU/Mcompar_zFlag_cy<9>)
      MUXCY:CI->O           1   0.023   0.000  dataPath/mainALU/Mcompar_zFlag_cy<10> (dataPath/zeroFlag)
      MUXCY:CI->O           1   0.023   0.000  dataPath/pcEnable1_cy (dataPath/zeroFlag_l1)
-     MUXCY:CI->O          28   0.262   0.385  dataPath/pcEnable1_cy1 (dataPath/pcEnable)
-     FDE:CE                    0.095          dataPath/pcReg/dataOut_0
+     MUXCY:CI->O          32   0.262   0.386  dataPath/pcEnable1_cy1 (dataPath/pcEnable)
+     FDE:CE                    0.095          dataPath/pcOut_0
     ----------------------------------------
-    Total                      4.223ns (3.003ns logic, 1.220ns route)
+    Total                      4.224ns (3.003ns logic, 1.221ns route)
                                        (71.1% logic, 28.9% route)
 
 =========================================================================
@@ -827,17 +818,17 @@ Clock to Setup on destination clock clk
                                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -----------------------------------------+---------+---------+---------+---------+
-clk                                      |    4.223|         |         |         |
-controller/Mmux__n0304241                |         |    0.911|         |         |
-controller/_n0251                        |         |    3.020|         |         |
-controller/_n0496                        |         |    1.376|         |         |
+clk                                      |    4.224|         |         |         |
+controller/Mmux__n0304241                |         |    0.937|         |         |
+controller/_n0251                        |         |    3.022|         |         |
+controller/_n0496                        |         |    1.377|         |         |
 controller/_n04961                       |         |    1.960|         |         |
 controller/_n0525                        |         |    2.876|         |         |
 controller/_n0527                        |         |    1.937|         |         |
 controller/_n0528                        |         |    2.070|         |         |
 controller/_n0530                        |         |    1.663|         |         |
 controller/state[4]_GND_2_o_Select_80_o  |         |    0.759|         |         |
-controller/state[4]_GND_2_o_equal_39_o   |         |    3.204|         |         |
+controller/state[4]_GND_2_o_equal_39_o   |         |    3.206|         |         |
 controller/state[4]_RegWrite_Select_109_o|         |    1.821|         |         |
 -----------------------------------------+---------+---------+---------+---------+
 
@@ -846,7 +837,7 @@ Clock to Setup on destination clock controller/Mmux__n0304241
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    1.110|         |
+clk            |         |         |    1.112|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock controller/_n0251
@@ -854,7 +845,7 @@ Clock to Setup on destination clock controller/_n0251
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    1.117|         |
+clk            |         |         |    1.120|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock controller/_n0496
@@ -862,7 +853,7 @@ Clock to Setup on destination clock controller/_n0496
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    1.110|         |
+clk            |         |         |    1.112|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock controller/_n04961
@@ -870,7 +861,7 @@ Clock to Setup on destination clock controller/_n04961
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    1.110|         |
+clk            |         |         |    1.112|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock controller/_n0525
@@ -878,7 +869,7 @@ Clock to Setup on destination clock controller/_n0525
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    1.110|         |
+clk            |         |         |    1.112|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock controller/_n0527
@@ -886,7 +877,7 @@ Clock to Setup on destination clock controller/_n0527
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    1.117|         |
+clk            |         |         |    1.120|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock controller/_n0528
@@ -894,7 +885,7 @@ Clock to Setup on destination clock controller/_n0528
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    1.117|         |
+clk            |         |         |    1.120|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock controller/_n0530
@@ -902,7 +893,7 @@ Clock to Setup on destination clock controller/_n0530
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    1.112|         |
+clk            |         |         |    1.117|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock controller/state[4]_GND_2_o_Select_80_o
@@ -911,7 +902,7 @@ Clock to Setup on destination clock controller/state[4]_GND_2_o_Select_80_o
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
 N1             |         |         |    1.884|         |
-clk            |         |         |    1.768|         |
+clk            |         |         |    2.127|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock controller/state[4]_GND_2_o_equal_39_o
@@ -927,20 +918,20 @@ Clock to Setup on destination clock controller/state[4]_RegWrite_Select_109_o
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    1.110|         |
+clk            |         |         |    1.112|         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 17.00 secs
-Total CPU time to Xst completion: 17.51 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.22 secs
  
 --> 
 
-Total memory usage is 233764 kilobytes
+Total memory usage is 267812 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  108 (   0 filtered)
+Number of warnings :   96 (   0 filtered)
 Number of infos    :    6 (   0 filtered)
 
