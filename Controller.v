@@ -55,7 +55,9 @@ module Controller(
     parameter iType2 = 6'b001101;
     parameter iType3 = 6'b001110;
     parameter iType4 = 6'b001111;
-    parameter jumpAndLinkOp = 6'b000011;
+    parameter jumpAndLinkFunct = 6'b000011;
+    parameter jumpAndLinkRegisterFunct = 6'b001001;
+    parameter jumpRegisterFunct = 6'b001000;
 
     always@(INT,NMI) 
     begin
@@ -190,7 +192,7 @@ module Controller(
                     nextstate=jump;
                 end
 
-                if(op==jumpAndLinkOp)
+                if(op==jumpAndLinkFunct)
                 begin
                     nextstate=jumpAndLink;
                 end
@@ -244,14 +246,14 @@ module Controller(
                 aluSrcA= 1'b1;
                 aluSrcB= 2'b00;
                 aluOp = 2'b10;
-                if(funct == 6'b001001)
+                if(funct == jumpAndLinkRegisterFunct)
                 begin
                     nextstate = jumpAndLinkRegister;
                 end
 
-                else if(funct == 6'001000)
+                else if(funct == jumpRegisterFunct)
                 begin
-                  neststate = jumpRegister;
+                  nextstate = jumpRegister;
                 end
 
                 else

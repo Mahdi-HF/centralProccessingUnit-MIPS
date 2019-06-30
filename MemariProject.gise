@@ -125,6 +125,10 @@
     <transform xil_pn:end_ts="1561882460" xil_pn:in_ck="-157163412417959006" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1561882460">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU.v"/>
       <outfile xil_pn:name="ALUTest.v"/>
       <outfile xil_pn:name="Controller.v"/>
@@ -169,6 +173,11 @@
     <transform xil_pn:end_ts="1561882462" xil_pn:in_ck="-157163412417959006" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1561882462">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU.v"/>
       <outfile xil_pn:name="ALUTest.v"/>
       <outfile xil_pn:name="Controller.v"/>
@@ -201,7 +210,10 @@
     <transform xil_pn:end_ts="1561882466" xil_pn:in_ck="-157163412417959006" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="889397135668599737" xil_pn:start_ts="1561882462">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="MultiCycleProccessorTest_beh.prj"/>
       <outfile xil_pn:name="MultiCycleProccessorTest_isim_beh.exe"/>
@@ -213,6 +225,9 @@
     <transform xil_pn:end_ts="1561882467" xil_pn:in_ck="-1921233632537017897" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-3097989545127133572" xil_pn:start_ts="1561882466">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="MultiCycleProccessorTest_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
@@ -245,17 +260,13 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1561882448" xil_pn:in_ck="8684329732430364048" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="4730116086320999512" xil_pn:start_ts="1561882429">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
+    <transform xil_pn:end_ts="1561892194" xil_pn:in_ck="8684329732430364048" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="4730116086320999512" xil_pn:start_ts="1561892184">
+      <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="MultiCycleProccessor.lso"/>
       <outfile xil_pn:name="MultiCycleProccessor.ngc"/>
       <outfile xil_pn:name="MultiCycleProccessor.ngr"/>
       <outfile xil_pn:name="MultiCycleProccessor.prj"/>
-      <outfile xil_pn:name="MultiCycleProccessor.stx"/>
       <outfile xil_pn:name="MultiCycleProccessor.syr"/>
       <outfile xil_pn:name="MultiCycleProccessor.xst"/>
       <outfile xil_pn:name="MultiCycleProccessorTest_beh.prj"/>
