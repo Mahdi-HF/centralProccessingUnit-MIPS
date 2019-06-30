@@ -20,16 +20,12 @@ Analyzing Verilog file "Z:/Memari_Project/MemariProject/MultiCycleProccessor.v" 
 Analyzing Verilog file "Z:/Memari_Project/MemariProject/MultiCycleProccessorTest.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
-WARNING:HDLCompiler:189 - "Z:/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 37: Size mismatch in connection of port <MemtoReg>. Formal port size is 2-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:189 - "Z:/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 38: Size mismatch in connection of port <RegDst>. Formal port size is 2-bit while actual signal size is 1-bit.
 WARNING:HDLCompiler:189 - "Z:/Memari_Project/MemariProject/DataPath.v" Line 101: Size mismatch in connection of port <control>. Formal port size is 1-bit while actual signal size is 2-bit.
 WARNING:HDLCompiler:189 - "Z:/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 40: Size mismatch in connection of port <aluSrcA>. Formal port size is 2-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:189 - "Z:/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 41: Size mismatch in connection of port <memToReg>. Formal port size is 2-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:189 - "Z:/Memari_Project/MemariProject/DataPath.v" Line 87: Size mismatch in connection of port <D>. Formal port size is 5-bit while actual signal size is 32-bit.
 WARNING:HDLCompiler:189 - "Z:/Memari_Project/MemariProject/DataPath.v" Line 96: Size mismatch in connection of port <wEnable>. Formal port size is 1-bit while actual signal size is 2-bit.
 Completed static elaboration
 Fuse Memory Usage: 77324 KB
-Fuse CPU Usage: 320 ms
+Fuse CPU Usage: 410 ms
 Compiling module Controller
 Compiling module Mux2
 Compiling module Memory
@@ -50,4 +46,4 @@ Time Resolution for simulation is 1ps.
 Compiled 16 Verilog Units
 Built simulation executable Z:/Memari_Project/MemariProject/MultiCycleProccessorTest_isim_beh.exe
 Fuse Memory Usage: 81296 KB
-Fuse CPU Usage: 430 ms
+Fuse CPU Usage: 520 ms

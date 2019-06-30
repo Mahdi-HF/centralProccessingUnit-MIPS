@@ -42,7 +42,7 @@ module DataPath(input [1:0] aluControl, aluSrcB,
     wire [31:0]signImm;
     wire [31:0]aluResult;
     wire [31:0]writeData;
-    wire [31:0]zero = 32'h0;
+    wire [31:0]zero = 32'b0;
     wire [31:0]writeRegData;
     wire [31:0]shiftedSignImm;
     reg  [31:0]pcOut = 32'd128;
@@ -84,7 +84,7 @@ module DataPath(input [1:0] aluControl, aluSrcB,
     ShiftRegister dataReg(memData, clk, data);
 
     // Mux2FiveBit dstMux(regDst, instr[20:16], instr[15:11], dstAdr);
-    Mux4Fivebit dstMux(regDst, instr[20:16], instr[15:11], thirtyOne, zero, dstAdr);
+    Mux4Fivebit dstMux(regDst, instr[20:16], instr[15:11], thirtyOne, instr[25:21], dstAdr);
 
 
     // Mux2 writeDataMux(memToReg, aluOut, data, writeRegData);

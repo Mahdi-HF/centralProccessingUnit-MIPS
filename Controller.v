@@ -28,6 +28,7 @@ module Controller(
     reg [1:0] aluOp;
     reg INTFlag = 0;
     reg NMIFlag = 0;
+	
 
     parameter fetch=0;
     parameter decode=1;
@@ -59,11 +60,14 @@ module Controller(
     parameter jumpAndLinkRegisterFunct = 6'b001001;
     parameter jumpRegisterFunct = 6'b001000;
 
-    always@(INT,NMI) 
-    begin
-        if(INT == 1) INTFlag = 1; 
-        if(NMI == 1) NMIFlag = 1; 
-    end
+    //always@(posedge INT,posedge NMI) 
+    //begin
+      //  if(INT == 1) INTFlag = 1; 
+        //if(NMI == 1) NMIFlag = 1; 
+		//if(state == fetch) begin
+			//INTFlag = 0;NMIFlag = 0;
+		//end
+    //end
 	
 	initial 
 	begin
@@ -90,6 +94,8 @@ module Controller(
 
     always @(state, op)
     begin
+		if(INT == 1) INTFlag = 1; 
+        if(NMI == 1) NMIFlag = 1; 
         case(state)
             preFetch:
             begin
@@ -99,6 +105,7 @@ module Controller(
                     begin
                         isInterrupted = 1'b0;
                         nextstate = fetch;
+                        INTFlag = 0;NMIFlag = 0;
                     end
 
                     else    // NMI should be taken
@@ -108,6 +115,7 @@ module Controller(
                         isInterrupted = 1'b1;
                         INA = 0;  
                         nextstate = fetch;
+                        INTFlag = 0;NMIFlag = 0;
                     end 
                 end
 
@@ -117,6 +125,7 @@ module Controller(
                     begin
                         isInterrupted = 1'b0;
                         nextstate = fetch;
+                        INTFlag = 0;NMIFlag = 0;
                     end
 
                     else if (INTFlag == 1 & NMIFlag == 0 )   // INT should be taken
@@ -126,6 +135,7 @@ module Controller(
                         isInterrupted = 1'b1;
                         INA = 1;
                         nextstate = fetch;
+                        INTFlag = 0;NMIFlag = 0;
                     end
 
                     else if (INTFlag == 1 & NMIFlag == 1 )  // NMI should be taken 
@@ -135,6 +145,7 @@ module Controller(
                         isInterrupted = 1'b1;
                         INA = 0;
                         nextstate = fetch;
+                        INTFlag = 0;NMIFlag = 0;
                     end
 
                     else if (INTFlag == 0 & NMIFlag == 1 )  // NMI should be taken 
@@ -144,6 +155,7 @@ module Controller(
                         isInterrupted = 1'b1;
                         INA = 0;
                         nextstate = fetch;
+                        INTFlag = 0;NMIFlag = 0;
                     end
                 end
             end
@@ -307,10 +319,15 @@ module Controller(
               aluSrcA = 1;
               aluSrcB = 0;
               PCSource = 0;
-              RegDst = 2'b01;
+              RegDst = 2'b11;
               MemtoReg = 2'b10;
               RegWrite = 1;
               aluOp = 2'b10;
+              isBranch = 0;
+              pcWrite = 0;
+              lorD=0;
+              MemWrite=0;
+              IRWrite=0;
               nextstate= preFetch;
             end
             jumpRegister:
@@ -318,22 +335,31 @@ module Controller(
               aluSrcA = 1;
               aluSrcB = 0;
               PCSource = 0;
-            //   RegDst = 2'b01;
+            //   RegDst = 2'b00;
             //   MemtoReg = 2'b10;
               RegWrite = 0;
               aluOp = 2'b10;
+              isBranch=0;
+              pcWrite=0;
+              aluSrcB = 0;
+              lorD=0;
+              MemWrite=0;
+              IRWrite=0;
               nextstate= preFetch;
             end
             jumpAndLink:
             begin
                 //   aluSrcA = 1;
                 //   aluSrcB = 0;
+                lorD = 0;
+                IRWrite=0;
+                MemWrite=0;
                 PCSource = 2'b10;
-                pcWrite = 2'b01;
-                RegDst = 2'b10;
+                pcWrite = 0;
+                RegDst = 2'b11;
                 MemtoReg = 2'b10;
-                //   RegWrite = 0;
-                //   aluOp = 2'b10;
+                RegWrite = 1;
+                aluOp = 2'b00;
                 nextstate= preFetch;
             end
         endcase
