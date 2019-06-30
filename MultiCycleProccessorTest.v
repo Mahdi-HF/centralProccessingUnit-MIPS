@@ -72,7 +72,7 @@ module MultiCycleProccessorTest;
 		NMI = 0;
 		INTD = 1;
 		
-		#1000; $stop;
+		#10000; $stop;
         
 		// Add stimulus here
 		

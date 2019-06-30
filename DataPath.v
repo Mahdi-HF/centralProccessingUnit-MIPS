@@ -48,7 +48,7 @@ module DataPath(input [1:0] aluControl, aluSrcB,
     reg  [31:0]pcOut = 32'd128;
     reg  [4:0]thirtyOne = 5'b11111;
     wire [31:0]four = 32'h00000004;
-    wire [31:0]interruptAddress = 32'hFFFFFFFF;
+    wire [31:0]interruptAddress = 32'hFFFFFFFE;
 
 
 	always @(aluControl, aluSrcB, pcSource, aluSrcA, regWrite, regDst,
