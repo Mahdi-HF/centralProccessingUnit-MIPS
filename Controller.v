@@ -42,6 +42,9 @@ module Controller(
     parameter addIExecute=10;
     parameter addIwriteBack=11;
     parameter preFetch=12;
+    parameter jumpAndLinkRegister=13;
+    parameter jumpRegister=14;
+    parameter jumpAndLink=15;
 
     parameter sw = 6'b101011;
     parameter lw = 6'b100011;
@@ -52,6 +55,7 @@ module Controller(
     parameter iType2 = 6'b001101;
     parameter iType3 = 6'b001110;
     parameter iType4 = 6'b001111;
+    parameter jumpAndLinkOp = 6'b000011;
 
     always@(INT,NMI) 
     begin
@@ -186,6 +190,11 @@ module Controller(
                     nextstate=jump;
                 end
 
+                if(op==jumpAndLinkOp)
+                begin
+                    nextstate=jumpAndLink;
+                end
+
                 if( (op==iType1)| (op==iType2)| (op==iType3)| (op==iType4) )
                 begin
                     nextstate=addIExecute;
@@ -235,7 +244,20 @@ module Controller(
                 aluSrcA= 1'b1;
                 aluSrcB= 2'b00;
                 aluOp = 2'b10;
-                nextstate = aluWriteBack;
+                if(funct == 6'b001001)
+                begin
+                    nextstate = jumpAndLinkRegister;
+                end
+
+                else if(funct == 6'001000)
+                begin
+                  neststate = jumpRegister;
+                end
+
+                else
+                begin
+                  nextstate = aluWriteBack;
+                end
             end
 
             aluWriteBack:
@@ -278,6 +300,40 @@ module Controller(
                 MemtoReg = 2'b00;
                 nextstate= preFetch;
             end
+            jumpAndLinkRegister:
+            begin
+              aluSrcA = 1;
+              aluSrcB = 0;
+              PCSource = 0;
+              RegDst = 2'b01;
+              MemtoReg = 2'b10;
+              RegWrite = 1;
+              aluOp = 2'b10;
+              nextstate= preFetch;
+            end
+            jumpRegister:
+            begin
+              aluSrcA = 1;
+              aluSrcB = 0;
+              PCSource = 0;
+            //   RegDst = 2'b01;
+            //   MemtoReg = 2'b10;
+              RegWrite = 0;
+              aluOp = 2'b10;
+              nextstate= preFetch;
+            end
+            jumpAndLink:
+            begin
+                //   aluSrcA = 1;
+                //   aluSrcB = 0;
+                PCSource = 2'b10;
+                pcWrite = 2'b01;
+                RegDst = 2'b10;
+                MemtoReg = 2'b10;
+                //   RegWrite = 0;
+                //   aluOp = 2'b10;
+                nextstate= preFetch;
+            end
         endcase
     end
 
@@ -305,6 +361,10 @@ module Controller(
                 6'b100010: //SUB
                 begin
                     aluControl = 2'b11;
+                end
+                6'b001001: //ADD for jal
+                begin
+                    aluControl = 2'b10;
                 end
                 default : aluControl = 2'bz;
 			endcase
