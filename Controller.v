@@ -62,7 +62,20 @@ module Controller(
 	
 	initial 
 	begin
-		INA = 0;
+		INA=0;
+        isBranch=0;
+        pcWrite=0;
+        lorD=0;
+        MemWrite=0;
+        MemtoReg=0;
+        IRWrite=0;
+        aluControl=0;
+        aluSrcB=0;
+        PCSource=0;
+        aluSrcA=0;
+        RegWrite=0
+        RegDst=0;
+        isInterrupted=0;
 	end
 	
     always@(posedge clk)
