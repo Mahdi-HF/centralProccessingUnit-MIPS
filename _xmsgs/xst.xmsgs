@@ -5,25 +5,25 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 78: Signal &lt;<arg fmt="%s" index="1">INTD</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 91: Signal &lt;<arg fmt="%s" index="1">INTD</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 80: Signal &lt;<arg fmt="%s" index="1">NMIFlag</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 96: Signal &lt;<arg fmt="%s" index="1">INTFlag</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 102: Signal &lt;<arg fmt="%s" index="1">INTFlag</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 93: Signal &lt;<arg fmt="%s" index="1">NMIFlag</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="91" delta="old" >"\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 109: Signal &lt;<arg fmt="%s" index="1">INTFlag</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 116: Signal &lt;<arg fmt="%s" index="1">INTFlag</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 115: Signal &lt;<arg fmt="%s" index="1">INTFlag</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 269: Signal &lt;<arg fmt="%s" index="1">funct</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 122: Signal &lt;<arg fmt="%s" index="1">INTFlag</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 129: Signal &lt;<arg fmt="%s" index="1">INTFlag</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 282: Signal &lt;<arg fmt="%s" index="1">funct</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="189" delta="old" >"\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\MultiCycleProccessor.v" Line 37: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">PCSource</arg>&gt;. Formal port size is <arg fmt="%d" index="2">2</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
@@ -35,7 +35,22 @@
 <msg type="warning" file="HDLCompiler" num="91" delta="old" >"\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 58: Signal &lt;<arg fmt="%s" index="1">instr</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="189" delta="old" >"\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 106: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">control</arg>&gt;. Formal port size is <arg fmt="%d" index="2">2</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 72: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">control</arg>&gt;. Formal port size is <arg fmt="%d" index="2">1</arg>-bit while actual signal size is <arg fmt="%d" index="1">2</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 86: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">control</arg>&gt;. Formal port size is <arg fmt="%d" index="2">1</arg>-bit while actual signal size is <arg fmt="%d" index="1">2</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 92: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">wEnable</arg>&gt;. Formal port size is <arg fmt="%d" index="2">1</arg>-bit while actual signal size is <arg fmt="%d" index="1">2</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 97: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">control</arg>&gt;. Formal port size is <arg fmt="%d" index="2">1</arg>-bit while actual signal size is <arg fmt="%d" index="1">2</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\MultiCycleProccessor.v" Line 39: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">pcSource</arg>&gt;. Formal port size is <arg fmt="%d" index="2">2</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\MultiCycleProccessor.v" Line 40: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">isInterrupted</arg>&gt;. Formal port size is <arg fmt="%d" index="2">2</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
 </msg>
 
 <msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">NMIFlag</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -108,6 +123,18 @@
 </msg>
 
 <msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">INTFlag</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">aluSrcA&lt;1:1&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">regWrite&lt;1:1&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">regDst&lt;1:1&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">isInterrupted&lt;1:1&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">Address&lt;31:10&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.

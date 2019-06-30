@@ -73,7 +73,7 @@ module Controller(
         aluSrcB=0;
         PCSource=0;
         aluSrcA=0;
-        RegWrite=0
+        RegWrite=0;
         RegDst=0;
         isInterrupted=0;
 	end

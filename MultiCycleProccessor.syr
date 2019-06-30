@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.21 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.21 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: MultiCycleProccessor.prj
 
@@ -141,13 +141,13 @@ Parsing module <MultiCycleProccessor>.
 Elaborating module <MultiCycleProccessor>.
 
 Elaborating module <Controller>.
-WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 78: Signal <INTD> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 80: Signal <NMIFlag> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 96: Signal <INTFlag> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 102: Signal <INTFlag> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 91: Signal <INTD> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 93: Signal <NMIFlag> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 109: Signal <INTFlag> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 116: Signal <INTFlag> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 269: Signal <funct> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 115: Signal <INTFlag> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 122: Signal <INTFlag> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 129: Signal <INTFlag> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 282: Signal <funct> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 WARNING:HDLCompiler:189 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\MultiCycleProccessor.v" Line 37: Size mismatch in connection of port <PCSource>. Formal port size is 2-bit while actual signal size is 1-bit.
 
 Elaborating module <DataPath>.
@@ -155,6 +155,7 @@ WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Da
 WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 58: Signal <instr> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 
 Elaborating module <Mux2>.
+WARNING:HDLCompiler:189 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 72: Size mismatch in connection of port <control>. Formal port size is 1-bit while actual signal size is 2-bit.
 
 Elaborating module <Memory>.
 "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Memory.v" Line 40. $display Address is :
@@ -165,19 +166,23 @@ Elaborating module <ShiftRegisterEnable>.
 Elaborating module <ShiftRegister>.
 
 Elaborating module <Mux2FiveBit>.
+WARNING:HDLCompiler:189 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 86: Size mismatch in connection of port <control>. Formal port size is 1-bit while actual signal size is 2-bit.
 
 Elaborating module <SignExtend>.
 
 Elaborating module <Shifter2>.
 
 Elaborating module <RegFile>.
+WARNING:HDLCompiler:189 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 92: Size mismatch in connection of port <wEnable>. Formal port size is 1-bit while actual signal size is 2-bit.
+WARNING:HDLCompiler:189 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 97: Size mismatch in connection of port <control>. Formal port size is 1-bit while actual signal size is 2-bit.
 
 Elaborating module <Mux4>.
 
 Elaborating module <ALU>.
 
 Elaborating module <Shifte2New>.
-WARNING:HDLCompiler:189 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 106: Size mismatch in connection of port <control>. Formal port size is 2-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\MultiCycleProccessor.v" Line 39: Size mismatch in connection of port <pcSource>. Formal port size is 2-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\MultiCycleProccessor.v" Line 40: Size mismatch in connection of port <isInterrupted>. Formal port size is 2-bit while actual signal size is 1-bit.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -239,8 +244,8 @@ WARNING:Xst:737 - Found 1-bit latch for signal <MemWrite>. Latches may be genera
 WARNING:Xst:737 - Found 1-bit latch for signal <isBranch>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <MemtoReg>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <RegDst>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Found 1-bit tristate buffer for signal <aluControl<1>> created at line 265
-    Found 1-bit tristate buffer for signal <aluControl<0>> created at line 265
+    Found 1-bit tristate buffer for signal <aluControl<1>> created at line 278
+    Found 1-bit tristate buffer for signal <aluControl<0>> created at line 278
 WARNING:Xst:737 - Found 1-bit latch for signal <INTFlag>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
 	inferred   1 RAM(s).
@@ -252,6 +257,10 @@ Unit <Controller> synthesized.
 
 Synthesizing Unit <DataPath>.
     Related source file is "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v".
+WARNING:Xst:647 - Input <aluSrcA<1:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <regWrite<1:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <regDst<1:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <isInterrupted<1:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 32-bit register for signal <pcOut>.
     Summary:
 	inferred  32 D-type flip-flop(s).
@@ -320,10 +329,10 @@ Unit <Mux4> synthesized.
 
 Synthesizing Unit <ALU>.
     Related source file is "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\ALU.v".
-    Found 32-bit subtractor for signal <a[31]_b[31]_sub_4_OUT> created at line 32.
-    Found 32-bit adder for signal <a[31]_b[31]_add_2_OUT> created at line 31.
-    Found 32-bit 4-to-1 multiplexer for signal <result> created at line 28.
-    Found 32-bit comparator equal for signal <zFlag> created at line 39
+    Found 32-bit subtractor for signal <a[31]_b[31]_sub_4_OUT> created at line 37.
+    Found 32-bit adder for signal <a[31]_b[31]_add_2_OUT> created at line 36.
+    Found 32-bit 4-to-1 multiplexer for signal <result> created at line 33.
+    Found 32-bit comparator equal for signal <zFlag> created at line 44
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred   1 Comparator(s).
@@ -397,7 +406,7 @@ INFO:Xst:3226 - The RAM <regFile/Mram_regData> will be implemented as a BLOCK RA
     |     aspect ratio   | 32-word x 32-bit                    |          |
     |     mode           | read-first                          |          |
     |     clkA           | connected to signal <clk>           | rise     |
-    |     weA            | connected to signal <regWrite>      | high     |
+    |     weA            | connected to signal <regWrite<0>>   | high     |
     |     addrA          | connected to signal <dstAdr>        |          |
     |     diA            | connected to signal <writeRegData>  |          |
     -----------------------------------------------------------------------
@@ -420,7 +429,7 @@ INFO:Xst:3226 - The RAM <regFile/Mram_regData1> will be implemented as a BLOCK R
     |     aspect ratio   | 32-word x 32-bit                    |          |
     |     mode           | read-first                          |          |
     |     clkA           | connected to signal <clk>           | rise     |
-    |     weA            | connected to signal <regWrite>      | high     |
+    |     weA            | connected to signal <regWrite<0>>   | high     |
     |     addrA          | connected to signal <dstAdr>        |          |
     |     diA            | connected to signal <writeRegData>  |          |
     -----------------------------------------------------------------------
@@ -617,7 +626,7 @@ controller/_n0527(controller/_n05271:O)                                         
 controller/Mmux__n0275241(controller/Mram__n0565411:O)                                   | NONE(*)(controller/IRWrite)    | 1     |
 controller/_n0528(controller/_n05281:O)                                                  | NONE(*)(controller/MemWrite)   | 1     |
 controller/_n04961(controller/_n049611:O)                                                | NONE(*)(controller/isBranch)   | 1     |
-N0                                                                                       | NONE(controller/INTFlag)       | 2     |
+N1                                                                                       | NONE(controller/INTFlag)       | 2     |
 -----------------------------------------------------------------------------------------+--------------------------------+-------+
 (*) These 11 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
@@ -741,13 +750,13 @@ Offset:              0.875ns (Levels of Logic = 2)
                                        (22.1% logic, 77.9% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'N0'
+Timing constraint: Default OFFSET IN BEFORE for Clock 'N1'
   Total number of paths / destination ports: 2 / 2
 -------------------------------------------------------------------------
 Offset:              0.629ns (Levels of Logic = 1)
   Source:            INT (PAD)
   Destination:       controller/INTFlag (LATCH)
-  Destination Clock: N0 falling
+  Destination Clock: N1 falling
 
   Data Path: INT to controller/INTFlag
                                 Gate     Net
@@ -871,7 +880,7 @@ Clock to Setup on destination clock controller/state[4]_GND_2_o_Select_80_o
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-N0             |         |         |    1.884|         |
+N1             |         |         |    1.884|         |
 clk            |         |         |    2.127|         |
 ---------------+---------+---------+---------+---------+
 
@@ -880,7 +889,7 @@ Clock to Setup on destination clock controller/state[4]_GND_2_o_equal_39_o
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-N0             |         |         |    1.478|         |
+N1             |         |         |    1.478|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock controller/state[4]_RegWrite_Select_109_o
@@ -894,14 +903,14 @@ clk            |         |         |    1.120|         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 17.00 secs
-Total CPU time to Xst completion: 17.28 secs
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.60 secs
  
 --> 
 
 Total memory usage is 267812 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   43 (   0 filtered)
+Number of warnings :   52 (   0 filtered)
 Number of infos    :    6 (   0 filtered)
 

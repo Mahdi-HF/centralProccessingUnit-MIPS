@@ -24,7 +24,8 @@ module MultiCycleProccessor(input clk, INT, NMI, INTD,
 	wire INA2;
     wire [5:0]op, funct;
     wire [1:0]aluControl, aluSrcB;
-    wire pcSource, regWrite, regDst, isInterrupted, aluSrcA ;
+    wire [1:0]pcSource;
+    wire regWrite, regDst, isInterrupted, aluSrcA ;
     wire isBranch, pcWrite, lorD, memWrite, memToReg, IrWrite;
 	
 	always @*

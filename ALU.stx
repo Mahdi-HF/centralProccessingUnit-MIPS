@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to Z:/Memari_Project/MemariProject/xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to Z:/Memari_Project/MemariProject/xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: ALU.prj
 
@@ -43,8 +43,8 @@ Analyzing Verilog file "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\ALU.
 Parsing module <ALU>.
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 3.18 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.12 secs
  
 --> 
 

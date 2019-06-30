@@ -3,88 +3,96 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="Z:/Memari_Project/MemariProject/DataPathTest_isim_beh.wdb" id="1" type="auto">
+      <db_ref path="Z:/Memari_Project/MemariProject/MultiCycleProccessorTest_isim_beh.wdb" id="1" type="auto">
          <top_modules>
-            <top_module name="DataPathTest" />
+            <top_module name="MultiCycleProccessorTest" />
             <top_module name="glbl" />
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="19" />
-   <wvobject fp_name="/DataPathTest/op" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">op[5:0]</obj_property>
-      <obj_property name="ObjectShortName">op[5:0]</obj_property>
+   <WVObjectSize size="21" />
+   <wvobject fp_name="/MultiCycleProccessorTest/INA" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">INA</obj_property>
+      <obj_property name="ObjectShortName">INA</obj_property>
    </wvobject>
-   <wvobject fp_name="/DataPathTest/funct" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">funct[5:0]</obj_property>
-      <obj_property name="ObjectShortName">funct[5:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DataPathTest/clk" type="logic" db_ref_id="1">
+   <wvobject fp_name="/MultiCycleProccessorTest/clk" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/DataPathTest/lorD" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">lorD</obj_property>
-      <obj_property name="ObjectShortName">lorD</obj_property>
+   <wvobject fp_name="/MultiCycleProccessorTest/INT" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">INT</obj_property>
+      <obj_property name="ObjectShortName">INT</obj_property>
    </wvobject>
-   <wvobject fp_name="/DataPathTest/regDst" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">regDst</obj_property>
-      <obj_property name="ObjectShortName">regDst</obj_property>
+   <wvobject fp_name="/MultiCycleProccessorTest/NMI" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">NMI</obj_property>
+      <obj_property name="ObjectShortName">NMI</obj_property>
    </wvobject>
-   <wvobject fp_name="/DataPathTest/aluSrcA" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">aluSrcA</obj_property>
-      <obj_property name="ObjectShortName">aluSrcA</obj_property>
+   <wvobject fp_name="/MultiCycleProccessorTest/INTD" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">INTD</obj_property>
+      <obj_property name="ObjectShortName">INTD</obj_property>
    </wvobject>
-   <wvobject fp_name="/DataPathTest/pcWrite" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">pcWrite</obj_property>
-      <obj_property name="ObjectShortName">pcWrite</obj_property>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/op" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">op[5:0]</obj_property>
+      <obj_property name="ObjectShortName">op[5:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/DataPathTest/IrWrite" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">IrWrite</obj_property>
-      <obj_property name="ObjectShortName">IrWrite</obj_property>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/funct" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">funct[5:0]</obj_property>
+      <obj_property name="ObjectShortName">funct[5:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/DataPathTest/pcSource" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">pcSource</obj_property>
-      <obj_property name="ObjectShortName">pcSource</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DataPathTest/regWrite" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">regWrite</obj_property>
-      <obj_property name="ObjectShortName">regWrite</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DataPathTest/isBranch" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">isBranch</obj_property>
-      <obj_property name="ObjectShortName">isBranch</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DataPathTest/memWrite" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">memWrite</obj_property>
-      <obj_property name="ObjectShortName">memWrite</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DataPathTest/memToReg" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">memToReg</obj_property>
-      <obj_property name="ObjectShortName">memToReg</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DataPathTest/aluSrcB" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">aluSrcB[1:0]</obj_property>
-      <obj_property name="ObjectShortName">aluSrcB[1:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DataPathTest/isInterrupted" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">isInterrupted</obj_property>
-      <obj_property name="ObjectShortName">isInterrupted</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DataPathTest/aluControl" type="array" db_ref_id="1">
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/aluControl" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">aluControl[1:0]</obj_property>
       <obj_property name="ObjectShortName">aluControl[1:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/DataPathTest/uut/aluResult" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">aluResult[31:0]</obj_property>
-      <obj_property name="ObjectShortName">aluResult[31:0]</obj_property>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/aluSrcB" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">aluSrcB[1:0]</obj_property>
+      <obj_property name="ObjectShortName">aluSrcB[1:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/DataPathTest/uut/pcIn" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">pcIn[31:0]</obj_property>
-      <obj_property name="ObjectShortName">pcIn[31:0]</obj_property>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/pcSource" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">pcSource</obj_property>
+      <obj_property name="ObjectShortName">pcSource</obj_property>
    </wvobject>
-   <wvobject fp_name="/DataPathTest/uut/pcOut2" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">pcOut2[31:0]</obj_property>
-      <obj_property name="ObjectShortName">pcOut2[31:0]</obj_property>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/regWrite" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">regWrite</obj_property>
+      <obj_property name="ObjectShortName">regWrite</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/regDst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">regDst</obj_property>
+      <obj_property name="ObjectShortName">regDst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/isInterrupted" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">isInterrupted</obj_property>
+      <obj_property name="ObjectShortName">isInterrupted</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/aluSrcA" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">aluSrcA</obj_property>
+      <obj_property name="ObjectShortName">aluSrcA</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/isBranch" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">isBranch</obj_property>
+      <obj_property name="ObjectShortName">isBranch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/pcWrite" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">pcWrite</obj_property>
+      <obj_property name="ObjectShortName">pcWrite</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/lorD" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">lorD</obj_property>
+      <obj_property name="ObjectShortName">lorD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/memWrite" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">memWrite</obj_property>
+      <obj_property name="ObjectShortName">memWrite</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/memToReg" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">memToReg</obj_property>
+      <obj_property name="ObjectShortName">memToReg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/IrWrite" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">IrWrite</obj_property>
+      <obj_property name="ObjectShortName">IrWrite</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/INA" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">INA</obj_property>
+      <obj_property name="ObjectShortName">INA</obj_property>
    </wvobject>
 </wave_config>

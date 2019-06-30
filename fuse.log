@@ -1,4 +1,4 @@
-Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "Z:/Memari_Project/MemariProject/DataPathTest_isim_beh.exe" -prj "Z:/Memari_Project/MemariProject/DataPathTest_beh.prj" "work.DataPathTest" "work.glbl" 
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "Z:/Memari_Project/MemariProject/MultiCycleProccessorTest_isim_beh.exe" -prj "Z:/Memari_Project/MemariProject/MultiCycleProccessorTest_beh.prj" "work.MultiCycleProccessorTest" "work.glbl" 
 ISim P.20131013 (signature 0x8ef4fb42)
 Number of CPUs detected in this system: 1
 Turning on mult-threading, number of parallel sub-compilation jobs: 0 
@@ -15,13 +15,19 @@ Analyzing Verilog file "Z:/Memari_Project/MemariProject/Mux2.v" into library wor
 Analyzing Verilog file "Z:/Memari_Project/MemariProject/Memory.v" into library work
 Analyzing Verilog file "Z:/Memari_Project/MemariProject/ALU.v" into library work
 Analyzing Verilog file "Z:/Memari_Project/MemariProject/DataPath.v" into library work
-Analyzing Verilog file "Z:/Memari_Project/MemariProject/DataPathTest.v" into library work
+Analyzing Verilog file "Z:/Memari_Project/MemariProject/Controller.v" into library work
+Analyzing Verilog file "Z:/Memari_Project/MemariProject/MultiCycleProccessor.v" into library work
+Analyzing Verilog file "Z:/Memari_Project/MemariProject/MultiCycleProccessorTest.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
-WARNING:HDLCompiler:189 - "Z:/Memari_Project/MemariProject/DataPath.v" Line 106: Size mismatch in connection of port <control>. Formal port size is 2-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "Z:/Memari_Project/MemariProject/DataPath.v" Line 96: Size mismatch in connection of port <control>. Formal port size is 1-bit while actual signal size is 2-bit.
+WARNING:HDLCompiler:189 - "Z:/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 40: Size mismatch in connection of port <aluSrcA>. Formal port size is 2-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "Z:/Memari_Project/MemariProject/DataPath.v" Line 85: Size mismatch in connection of port <control>. Formal port size is 1-bit while actual signal size is 2-bit.
+WARNING:HDLCompiler:189 - "Z:/Memari_Project/MemariProject/DataPath.v" Line 91: Size mismatch in connection of port <wEnable>. Formal port size is 1-bit while actual signal size is 2-bit.
 Completed static elaboration
 Fuse Memory Usage: 77324 KB
-Fuse CPU Usage: 320 ms
+Fuse CPU Usage: 220 ms
+Compiling module Controller
 Compiling module Mux2
 Compiling module Memory
 Compiling module ShiftRegisterEnable
@@ -34,10 +40,11 @@ Compiling module Mux4
 Compiling module ALU
 Compiling module Shifte2New
 Compiling module DataPath
-Compiling module DataPathTest
+Compiling module MultiCycleProccessor
+Compiling module MultiCycleProccessorTest
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Compiled 14 Verilog Units
-Built simulation executable Z:/Memari_Project/MemariProject/DataPathTest_isim_beh.exe
-Fuse Memory Usage: 80784 KB
-Fuse CPU Usage: 410 ms
+Compiled 16 Verilog Units
+Built simulation executable Z:/Memari_Project/MemariProject/MultiCycleProccessorTest_isim_beh.exe
+Fuse Memory Usage: 81296 KB
+Fuse CPU Usage: 280 ms

@@ -19,7 +19,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module DataPath(input [1:0] aluControl, aluSrcB,
-    input pcSource, aluSrcA, regWrite, regDst, isInterrupted,
+    input [1:0]pcSource, aluSrcA, regWrite, regDst, input isInterrupted,
     input clk, isBranch, pcWrite, lorD, memWrite, memToReg, IrWrite,
     output reg [5:0]op, funct);
 
@@ -40,7 +40,6 @@ module DataPath(input [1:0] aluControl, aluSrcB,
     wire [31:0]aluOut;
     wire [31:0]memData;
     wire [31:0]signImm;
-    wire [31:0]pcOut100;
     wire [31:0]aluResult;
     wire [31:0]writeData;
     wire [31:0]zero = 32'h0;

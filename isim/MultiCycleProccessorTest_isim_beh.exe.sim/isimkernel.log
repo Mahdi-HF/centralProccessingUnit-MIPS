@@ -1,0 +1,10 @@
+Command line:
+   MultiCycleProccessorTest_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  1272
+
+Sun Jun 30 00:39:24 2019
+
+
+ Elaboration Time: 0.090129 sec

@@ -52,9 +52,32 @@ module MultiCycleProccessorTest;
 		INTD = 0;
 
 		// Wait 100 ns for global reset to finish
-		#100;
+		#500
+		INT = 1;
+		NMI = 0;
+		INTD = 0;
+		
+		#500
+		INT = 0;
+		NMI = 1;
+		INTD = 0;
+		
+		#500
+		INT = 0;
+		NMI = 0;
+		INTD = 0;
+		
+		#500
+		INT = 1;
+		NMI = 0;
+		INTD = 1;
+		
+		#1000; $stop;
         
 		// Add stimulus here
+		
+
+
 
 	end
       

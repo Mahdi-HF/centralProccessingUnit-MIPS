@@ -35,9 +35,7 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="DataPath.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="DataPath.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="DataPath.xst"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="DataPathTest_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="DataPathTest_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="DataPathTest_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="DataPathTest_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Memory.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Memory.stx"/>
@@ -53,7 +51,12 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="MultiCycleProccessor.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="MultiCycleProccessor.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="MultiCycleProccessor.xst"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="MultiCycleProccessorTest_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="MultiCycleProccessorTest_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="MultiCycleProccessorTest_isim_beh.wdb"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="MultiCycleProccessorTest_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="MultiCycleProccessor_envsettings.html"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="MultiCycleProccessor_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="MultiCycleProccessor_summary.html"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="MultiCycleProccessor_xst.xrpt"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Mux2.prj"/>
@@ -119,7 +122,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1561869604" xil_pn:in_ck="-3735365522507843897" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1561869604">
+    <transform xil_pn:end_ts="1561879911" xil_pn:in_ck="-3735365522507843897" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1561879910">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ALU.v"/>
@@ -150,11 +153,11 @@
       <outfile xil_pn:name="mux4test.v"/>
       <outfile xil_pn:name="shifter2Test.v"/>
     </transform>
-    <transform xil_pn:end_ts="1561823862" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="1020005511414073374" xil_pn:start_ts="1561823862">
+    <transform xil_pn:end_ts="1561878155" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-4911163956121772715" xil_pn:start_ts="1561878155">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1561823862" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="1174839207973449532" xil_pn:start_ts="1561823862">
+    <transform xil_pn:end_ts="1561878155" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-9018158802372260109" xil_pn:start_ts="1561878155">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -162,9 +165,13 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1561869604" xil_pn:in_ck="-3735365522507843897" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1561869604">
+    <transform xil_pn:end_ts="1561878489" xil_pn:in_ck="-3735365522507843897" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1561878489">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU.v"/>
       <outfile xil_pn:name="ALUTest.v"/>
       <outfile xil_pn:name="Controller.v"/>
@@ -193,22 +200,28 @@
       <outfile xil_pn:name="mux4test.v"/>
       <outfile xil_pn:name="shifter2Test.v"/>
     </transform>
-    <transform xil_pn:end_ts="1561869608" xil_pn:in_ck="-3735365522507843897" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="8840851665638421419" xil_pn:start_ts="1561869604">
+    <transform xil_pn:end_ts="1561878496" xil_pn:in_ck="-3735365522507843897" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="889397135668599737" xil_pn:start_ts="1561878489">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="DataPathTest_beh.prj"/>
-      <outfile xil_pn:name="DataPathTest_isim_beh.exe"/>
+      <outfile xil_pn:name="MultiCycleProccessorTest_beh.prj"/>
+      <outfile xil_pn:name="MultiCycleProccessorTest_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1561869609" xil_pn:in_ck="-4889891170094272227" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-5517141293185636978" xil_pn:start_ts="1561869608">
+    <transform xil_pn:end_ts="1561878497" xil_pn:in_ck="-1921233632537017897" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-3097989545127133572" xil_pn:start_ts="1561878496">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="DataPathTest_isim_beh.wdb"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="MultiCycleProccessorTest_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
     </transform>
@@ -240,10 +253,12 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1561869595" xil_pn:in_ck="-5394762158911499851" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="4730116086320999512" xil_pn:start_ts="1561869575">
+    <transform xil_pn:end_ts="1561879905" xil_pn:in_ck="-5394762158911499851" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="4730116086320999512" xil_pn:start_ts="1561879894">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="MultiCycleProccessor.lso"/>
       <outfile xil_pn:name="MultiCycleProccessor.ngc"/>
       <outfile xil_pn:name="MultiCycleProccessor.ngr"/>
@@ -251,6 +266,8 @@
       <outfile xil_pn:name="MultiCycleProccessor.stx"/>
       <outfile xil_pn:name="MultiCycleProccessor.syr"/>
       <outfile xil_pn:name="MultiCycleProccessor.xst"/>
+      <outfile xil_pn:name="MultiCycleProccessorTest_beh.prj"/>
+      <outfile xil_pn:name="MultiCycleProccessorTest_stx_beh.prj"/>
       <outfile xil_pn:name="MultiCycleProccessor_xst.xrpt"/>
       <outfile xil_pn:name="RegFile.ngr"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>

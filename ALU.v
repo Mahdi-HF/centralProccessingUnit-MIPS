@@ -21,6 +21,11 @@
 module ALU(
     input [31:0]a, [31:0]b, [1:0]control,
     output reg [31:0]result, output reg zFlag);
+	
+	initial
+	begin
+		result = 32'b0;
+	end
 
     always @(a,b,control) 
     begin
@@ -43,7 +48,7 @@ module ALU(
         
 		else
         begin
-				zFlag = 1'b0;
+			zFlag = 1'b0;
 		end
     end
 
