@@ -320,9 +320,9 @@ LAB9:    t22 = (t7 + 4);
     if (t27 > 0)
         goto LAB10;
 
-LAB11:    xsi_set_current_line(42, ng0);
+LAB11:    xsi_set_current_line(45, ng0);
 
-LAB14:    xsi_set_current_line(43, ng0);
+LAB14:    xsi_set_current_line(46, ng0);
     t2 = ((char*)((ng1)));
     t3 = (t0 + 1104);
     xsi_vlogvar_assign_value(t3, t2, 0, 0, 1);
@@ -334,9 +334,9 @@ LAB8:    t21 = (t7 + 4);
     *((unsigned int *)t21) = 1;
     goto LAB9;
 
-LAB10:    xsi_set_current_line(39, ng0);
+LAB10:    xsi_set_current_line(40, ng0);
 
-LAB13:    xsi_set_current_line(40, ng0);
+LAB13:    xsi_set_current_line(41, ng0);
     t28 = ((char*)((ng2)));
     t29 = (t0 + 1104);
     xsi_vlogvar_assign_value(t29, t28, 0, 0, 1);

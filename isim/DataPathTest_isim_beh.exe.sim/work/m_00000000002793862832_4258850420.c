@@ -131,9 +131,9 @@ LAB13:    xsi_set_current_line(35, ng0);
 }
 
 
-extern void work_m_00000000000875750992_4258850420_init()
+extern void work_m_00000000002793862832_4258850420_init()
 {
 	static char *pe[] = {(void *)Always_25_0};
-	xsi_register_didat("work_m_00000000000875750992_4258850420", "isim/DataPathTest_isim_beh.exe.sim/work/m_00000000000875750992_4258850420.didat");
+	xsi_register_didat("work_m_00000000002793862832_4258850420", "isim/DataPathTest_isim_beh.exe.sim/work/m_00000000002793862832_4258850420.didat");
 	xsi_register_executes(pe);
 }

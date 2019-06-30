@@ -35,6 +35,7 @@ module DataPathTest;
 	reg memWrite;
 	reg memToReg;
 	reg [1:0] aluSrcB;
+	reg [1:0] aluOp;
 	reg isInterrupted;
 	reg [1:0] aluControl;
 
@@ -65,8 +66,10 @@ module DataPathTest;
 	always #50 clk = ~clk;
 
 	initial begin
-		// Initialize Inputs
-		aluControl <= 0;
+	//	Initialize Inputs
+		
+		// preFetch
+		aluOp <= 2'b00;
 		aluSrcB <= 0;
 		pcSource <= 0;
 		aluSrcA <= 0;
@@ -81,8 +84,9 @@ module DataPathTest;
 		memToReg <= 0;
 		IrWrite <= 0;
 
+		// fetch
 		#50;
-		aluControl <= 0;
+		aluOp <= 2'b00;
 		aluSrcB <= 2'b01;
 		pcSource <= 0;
 		aluSrcA <= 0;
@@ -96,8 +100,9 @@ module DataPathTest;
 		memToReg <= 0;
 		IrWrite <= 1;
 
+		//decode
 		#50;
-		aluControl <= 0;
+		aluOp <= 2'b00;
 		aluSrcB <= 2'b11;
 		pcSource <= 0;
 		aluSrcA <= 0;
@@ -105,14 +110,15 @@ module DataPathTest;
 		regDst <= 0;
 		isInterrupted <= 0;
 		isBranch <= 0;
-		pcWrite <= 1;
+		pcWrite <= 0;
 		lorD <= 0;
 		memWrite <= 0;
 		memToReg <= 0;
-		IrWrite <= 1;
+		IrWrite <= 0;
 		
+		// execute
 		#50;
-		aluControl <= 2'b10;
+		aluOp <= 2'b10;
 		aluSrcB <= 2'b00;
 		pcSource <= 0;
 		aluSrcA <= 1;
@@ -120,14 +126,15 @@ module DataPathTest;
 		regDst <= 0;
 		isInterrupted <= 0;
 		isBranch <= 0;
-		pcWrite <= 1;
+		pcWrite <= 0;
 		lorD <= 0;
 		memWrite <= 0;
 		memToReg <= 0;
-		IrWrite <= 1;
+		IrWrite <= 0;
 
+		// alu writeback
 		#50;
-		aluControl <= 2'b10;
+		aluOp <= 2'b10;
 		aluSrcB <= 2'b00;
 		pcSource <= 0;
 		aluSrcA <= 1;
@@ -135,14 +142,14 @@ module DataPathTest;
 		regDst <= 1;
 		isInterrupted <= 0;
 		isBranch <= 0;
-		pcWrite <= 1;
+		pcWrite <=0;
 		lorD <= 0;
 		memWrite <= 0;
 		memToReg <= 0;
-		IrWrite <= 1; // op = 00  funct = 100000
+		IrWrite <= 0; // op = 00  funct = 100000
 
 		#50;
-		aluControl <= 0;
+		aluOp <= 0;
 		aluSrcB <= 0;
 		pcSource <= 0;
 		aluSrcA <= 0;

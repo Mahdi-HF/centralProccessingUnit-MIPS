@@ -2,11 +2,7 @@ ISim log file
 Running: Z:\Memari_Project\MemariProject\DataPathTest_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb Z:/Memari_Project/MemariProject/DataPathTest_isim_beh.wdb 
 ISim P.20131013 (signature 0x8ef4fb42)
 This is a Full version of ISim.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v" Line 89.  For instance uut/shifter/, width 32 of formal port out is not equal to width 1 of actual signal shiftedsignImm.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v" Line 93.  For instance uut/aDataReg/, width 32 of formal port dataOut is not equal to width 1 of actual signal aData2.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v" Line 93.  For instance uut/ALUPcMux/, width 32 of formal port B is not equal to width 1 of actual signal aData2.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v" Line 89.  For instance uut/SrcBMux/, width 32 of formal port D is not equal to width 1 of actual signal shiftedsignImm.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v" Line 22.  For instance uut/pcBrachMux/, width 2 of formal port control is not equal to width 1 of actual signal PCSource.
+WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v" Line 22.  For instance uut/pcBrachMux/, width 2 of formal port control is not equal to width 1 of actual signal pcSource.
 Time resolution is 1 ps
 # onerror resume
 # wave add /
@@ -19,6 +15,90 @@ Address is :
 4294967295
 Address is :
        128
+Stopped at time : 450 ns :  in File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPathTest.v" Line 159 
+ISim P.20131013 (signature 0x8ef4fb42)
+This is a Full version of ISim.
+WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v" Line 22.  For instance uut/pcBrachMux/, width 2 of formal port control is not equal to width 1 of actual signal pcSource.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Address is :
+         x
+Address is :
+4294967295
+Address is :
+       128
+Stopped at time : 450 ns :  in File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPathTest.v" Line 159 
+ISim P.20131013 (signature 0x8ef4fb42)
+This is a Full version of ISim.
+WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v" Line 22.  For instance uut/pcBrachMux/, width 2 of formal port control is not equal to width 1 of actual signal pcSource.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Address is :
+         x
+Address is :
+4294967295
+Address is :
+       128
 Address is :
          0
-Stopped at time : 450 ns :  in File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPathTest.v" Line 161 
+Stopped at time : 450 ns :  in File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPathTest.v" Line 159 
+ISim P.20131013 (signature 0x8ef4fb42)
+This is a Full version of ISim.
+WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v" Line 22.  For instance uut/pcBrachMux/, width 2 of formal port control is not equal to width 1 of actual signal pcSource.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Address is :
+         x
+Address is :
+4294967295
+Address is :
+       128
+Address is :
+         0
+Stopped at time : 450 ns :  in File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPathTest.v" Line 166 
+ISim P.20131013 (signature 0x8ef4fb42)
+This is a Full version of ISim.
+WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v" Line 22.  For instance uut/pcBrachMux/, width 2 of formal port control is not equal to width 1 of actual signal pcSource.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Address is :
+         x
+Address is :
+4294967295
+Address is :
+       128
+Address is :
+         0
+Stopped at time : 450 ns :  in File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPathTest.v" Line 166 
+ISim P.20131013 (signature 0x8ef4fb42)
+This is a Full version of ISim.
+WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v" Line 22.  For instance uut/pcBrachMux/, width 2 of formal port control is not equal to width 1 of actual signal pcSource.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Address is :
+         x
+Address is :
+4294967295
+Address is :
+       128
+Address is :
+         0
+Stopped at time : 450 ns :  in File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPathTest.v" Line 166 
+ISim P.20131013 (signature 0x8ef4fb42)
+This is a Full version of ISim.
+WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v" Line 22.  For instance uut/pcBrachMux/, width 2 of formal port control is not equal to width 1 of actual signal pcSource.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Address is :
+         x
+Address is :
+4294967295
+Address is :
+       128
+Stopped at time : 450 ns :  in File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPathTest.v" Line 166 

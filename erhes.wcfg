@@ -10,7 +10,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="17" />
+   <WVObjectSize size="19" />
    <wvobject fp_name="/DataPathTest/op" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">op[5:0]</obj_property>
       <obj_property name="ObjectShortName">op[5:0]</obj_property>
@@ -19,64 +19,72 @@
       <obj_property name="ElementShortName">funct[5:0]</obj_property>
       <obj_property name="ObjectShortName">funct[5:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/DataPathTest/aluControl" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">aluControl[1:0]</obj_property>
-      <obj_property name="ObjectShortName">aluControl[1:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DataPathTest/aluSrcB" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">aluSrcB[1:0]</obj_property>
-      <obj_property name="ObjectShortName">aluSrcB[1:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DataPathTest/PCSource" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">PCSource</obj_property>
-      <obj_property name="ObjectShortName">PCSource</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DataPathTest/ALUSrcA" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">ALUSrcA</obj_property>
-      <obj_property name="ObjectShortName">ALUSrcA</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DataPathTest/RegWrite" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">RegWrite</obj_property>
-      <obj_property name="ObjectShortName">RegWrite</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DataPathTest/RegDst" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">RegDst</obj_property>
-      <obj_property name="ObjectShortName">RegDst</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DataPathTest/isInterrupted" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">isInterrupted</obj_property>
-      <obj_property name="ObjectShortName">isInterrupted</obj_property>
-   </wvobject>
    <wvobject fp_name="/DataPathTest/clk" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DataPathTest/isBranch" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">isBranch</obj_property>
-      <obj_property name="ObjectShortName">isBranch</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DataPathTest/PCWrite" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">PCWrite</obj_property>
-      <obj_property name="ObjectShortName">PCWrite</obj_property>
    </wvobject>
    <wvobject fp_name="/DataPathTest/lorD" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">lorD</obj_property>
       <obj_property name="ObjectShortName">lorD</obj_property>
    </wvobject>
-   <wvobject fp_name="/DataPathTest/MemWrite" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">MemWrite</obj_property>
-      <obj_property name="ObjectShortName">MemWrite</obj_property>
+   <wvobject fp_name="/DataPathTest/regDst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">regDst</obj_property>
+      <obj_property name="ObjectShortName">regDst</obj_property>
    </wvobject>
-   <wvobject fp_name="/DataPathTest/MemtoReg" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">MemtoReg</obj_property>
-      <obj_property name="ObjectShortName">MemtoReg</obj_property>
+   <wvobject fp_name="/DataPathTest/aluSrcA" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">aluSrcA</obj_property>
+      <obj_property name="ObjectShortName">aluSrcA</obj_property>
    </wvobject>
-   <wvobject fp_name="/DataPathTest/IRWrite" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">IRWrite</obj_property>
-      <obj_property name="ObjectShortName">IRWrite</obj_property>
+   <wvobject fp_name="/DataPathTest/pcWrite" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">pcWrite</obj_property>
+      <obj_property name="ObjectShortName">pcWrite</obj_property>
    </wvobject>
-   <wvobject fp_name="/DataPathTest/uut/memData" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">memData[31:0]</obj_property>
-      <obj_property name="ObjectShortName">memData[31:0]</obj_property>
+   <wvobject fp_name="/DataPathTest/IrWrite" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">IrWrite</obj_property>
+      <obj_property name="ObjectShortName">IrWrite</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DataPathTest/pcSource" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">pcSource</obj_property>
+      <obj_property name="ObjectShortName">pcSource</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DataPathTest/regWrite" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">regWrite</obj_property>
+      <obj_property name="ObjectShortName">regWrite</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DataPathTest/isBranch" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">isBranch</obj_property>
+      <obj_property name="ObjectShortName">isBranch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DataPathTest/memWrite" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">memWrite</obj_property>
+      <obj_property name="ObjectShortName">memWrite</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DataPathTest/memToReg" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">memToReg</obj_property>
+      <obj_property name="ObjectShortName">memToReg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DataPathTest/aluSrcB" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">aluSrcB[1:0]</obj_property>
+      <obj_property name="ObjectShortName">aluSrcB[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DataPathTest/isInterrupted" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">isInterrupted</obj_property>
+      <obj_property name="ObjectShortName">isInterrupted</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DataPathTest/aluControl" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">aluControl[1:0]</obj_property>
+      <obj_property name="ObjectShortName">aluControl[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DataPathTest/uut/aluResult" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">aluResult[31:0]</obj_property>
+      <obj_property name="ObjectShortName">aluResult[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DataPathTest/uut/pcIn" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pcIn[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pcIn[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DataPathTest/uut/pcOut2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pcOut2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pcOut2[31:0]</obj_property>
    </wvobject>
 </wave_config>

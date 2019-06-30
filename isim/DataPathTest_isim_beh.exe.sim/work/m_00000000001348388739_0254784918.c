@@ -364,9 +364,9 @@ LAB11:    t35 = *((unsigned int *)t17);
 }
 
 
-extern void work_m_00000000004173668131_0254784918_init()
+extern void work_m_00000000001348388739_0254784918_init()
 {
 	static char *pe[] = {(void *)Always_28_0,(void *)Cont_31_1,(void *)Cont_32_2,(void *)Initial_35_3};
-	xsi_register_didat("work_m_00000000004173668131_0254784918", "isim/DataPathTest_isim_beh.exe.sim/work/m_00000000004173668131_0254784918.didat");
+	xsi_register_didat("work_m_00000000001348388739_0254784918", "isim/DataPathTest_isim_beh.exe.sim/work/m_00000000001348388739_0254784918.didat");
 	xsi_register_executes(pe);
 }
