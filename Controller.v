@@ -42,7 +42,6 @@ module Controller(
     parameter addIExecute=10;
     parameter addIwriteBack=11;
     parameter preFetch=12;
-    parameter interrupt=13;
 
     parameter sw = 6'b101011;
     parameter lw = 6'b100011;
@@ -102,7 +101,7 @@ module Controller(
                         MemtoReg=2'b10;
                         isInterrupted = 1'b1;
                         INA = 0;  
-                        nextstate = interrupt;
+                        nextstate = fetch;
                     end 
                 end
 
@@ -120,7 +119,7 @@ module Controller(
                         MemtoReg=2'b10;
                         isInterrupted = 1'b1;
                         INA = 1;
-                        nextstate = interrupt;
+                        nextstate = fetch;
                     end
 
                     else if (INTFlag == 1 & NMIFlag == 1 )  // NMI should be taken 
@@ -129,7 +128,7 @@ module Controller(
                         MemtoReg=2'b10;
                         isInterrupted = 1'b1;
                         INA = 0;
-                        nextstate = interrupt;
+                        nextstate = fetch;
                     end
 
                     else if (INTFlag == 0 & NMIFlag == 1 )  // NMI should be taken 
@@ -138,7 +137,7 @@ module Controller(
                         MemtoReg=2'b10;
                         isInterrupted = 1'b1;
                         INA = 0;
-                        nextstate = interrupt;
+                        nextstate = fetch;
                     end
                 end
             end

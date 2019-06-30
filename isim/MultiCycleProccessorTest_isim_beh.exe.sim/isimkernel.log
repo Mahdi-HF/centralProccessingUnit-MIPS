@@ -2,9 +2,27 @@ Command line:
    MultiCycleProccessorTest_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  1276
+     -socket  1288
 
-Sun Jun 30 01:16:21 2019
+Sun Jun 30 02:00:09 2019
 
 
- Elaboration Time: 0.100144 sec
+ Elaboration Time: 0.080115 sec
+
+ Current Memory Usage: 521.368 Meg
+
+ Total Signals          : 136
+ Total Nets             : 829
+ Total Signal Drivers   : 54
+ Total Blocks           : 23
+ Total Primitive Blocks : 20
+ Total Processes        : 88
+ Total Traceable Variables  : 90
+ Total Scalar Nets and Variables : 35810
+
+ Total Simulation Time: 0.080115 sec
+
+ Current Memory Usage: 364.081 Meg
+
+Sun Jun 30 02:58:02 2019
+

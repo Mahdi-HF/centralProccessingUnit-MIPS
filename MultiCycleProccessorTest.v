@@ -46,13 +46,13 @@ module MultiCycleProccessorTest;
 
 	initial begin
 		// Initialize Inputs
-		clk = 0;
+		clk = 1;
 		INT = 0;
 		NMI = 0;
 		INTD = 0;
 
 		// Wait 100 ns for global reset to finish
-		#500
+		#200
 		INT = 1;
 		NMI = 0;
 		INTD = 0;
@@ -82,4 +82,3 @@ module MultiCycleProccessorTest;
 	end
       
 endmodule
-
