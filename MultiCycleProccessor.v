@@ -22,9 +22,9 @@ module MultiCycleProccessor(input clk, INT, NMI, INTD,
     output reg INA);
     
 	wire INA2;
-    wire [5:0]op, funct;
-    wire [1:0]aluControl, aluSrcB;
     wire [1:0]pcSource;
+	wire [5:0]op, funct;
+	wire [1:0]aluControl, aluSrcB;
     wire regWrite, regDst, isInterrupted, aluSrcA ;
     wire isBranch, pcWrite, lorD, memWrite, memToReg, IrWrite;
 	

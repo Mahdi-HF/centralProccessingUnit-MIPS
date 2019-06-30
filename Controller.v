@@ -21,8 +21,8 @@
 module Controller(
     input [5:0]op, funct,
     input clk, INT, NMI, INTD,
-    output reg isBranch, pcWrite, lorD, MemWrite, MemtoReg, IRWrite, INA,
-    output reg [1:0]aluControl, aluSrcB, PCSource, output reg aluSrcA, RegWrite, RegDst, isInterrupted);
+    output reg isBranch, pcWrite, lorD, MemWrite, output reg [1:0] MemtoReg, output reg IRWrite, INA,
+    output reg [1:0]aluControl, aluSrcB, PCSource, output reg aluSrcA, RegWrite, output reg [1:0] RegDst, output reg isInterrupted);
 
     reg [4:0] state = 5'b01100, nextstate; //state will stat at 12
     reg [1:0] aluOp;
@@ -98,6 +98,8 @@ module Controller(
 
                     else    // NMI should be taken
                     begin
+                        RegDst = 2'b10;
+                        MemtoReg=2'b10;
                         isInterrupted = 1'b1;
                         INA = 0;  
                         nextstate = interrupt;
@@ -114,6 +116,8 @@ module Controller(
 
                     else if (INTFlag == 1 & NMIFlag == 0 )   // INT should be taken
                     begin
+                        RegDst = 2'b10;
+                        MemtoReg=2'b10;
                         isInterrupted = 1'b1;
                         INA = 1;
                         nextstate = interrupt;
@@ -121,6 +125,8 @@ module Controller(
 
                     else if (INTFlag == 1 & NMIFlag == 1 )  // NMI should be taken 
                     begin
+                        RegDst = 2'b10;
+                        MemtoReg=2'b10;
                         isInterrupted = 1'b1;
                         INA = 0;
                         nextstate = interrupt;
@@ -128,6 +134,8 @@ module Controller(
 
                     else if (INTFlag == 0 & NMIFlag == 1 )  // NMI should be taken 
                     begin
+                        RegDst = 2'b10;
+                        MemtoReg=2'b10;
                         isInterrupted = 1'b1;
                         INA = 0;
                         nextstate = interrupt;
@@ -147,7 +155,7 @@ module Controller(
                 RegWrite = 1'b0;
                 MemWrite=1'b0;
                 isBranch= 1'b0;
-                MemtoReg=1'b0;
+                MemtoReg=2'b00;
                 nextstate=decode;
             end
 
@@ -210,9 +218,9 @@ module Controller(
 
             memWriteBack:
             begin
-                RegDst = 1'b0;
+                RegDst = 2'b00;
                 RegWrite = 1'b1;
-                MemtoReg= 1'b1;
+                MemtoReg= 2'b01;
                 nextstate=preFetch;
             end
 
@@ -233,9 +241,9 @@ module Controller(
 
             aluWriteBack:
             begin
-                RegDst= 1'b1;
+                RegDst= 2'b01;
                 RegWrite = 1'b1;
-                MemtoReg = 1'b0;
+                MemtoReg = 2'b00;
                 nextstate= preFetch;
             end
 
@@ -266,9 +274,9 @@ module Controller(
 
             addIwriteBack:
             begin
-                RegDst= 1'b1;
+                RegDst= 2'b01;
                 RegWrite = 1'b1;
-                MemtoReg = 1'b0;
+                MemtoReg = 2'b00;
                 nextstate= preFetch;
             end
         endcase

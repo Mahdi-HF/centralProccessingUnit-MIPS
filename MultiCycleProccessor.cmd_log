@@ -119,3 +119,7 @@ xst -intstyle ise -ifn "Z:/Memari_Project/MemariProject/MultiCycleProccessor.xst
 xst -intstyle ise -ifn "Z:/Memari_Project/MemariProject/MultiCycleProccessor.xst" -ofn "Z:/Memari_Project/MemariProject/MultiCycleProccessor.syr" 
 xst -intstyle ise -ifn "Z:/Memari_Project/MemariProject/MultiCycleProccessor.xst" -ofn "Z:/Memari_Project/MemariProject/MultiCycleProccessor.syr" 
 xst -intstyle ise -ifn "Z:/Memari_Project/MemariProject/MultiCycleProccessor.xst" -ofn "Z:/Memari_Project/MemariProject/MultiCycleProccessor.syr" 
+xst -intstyle ise -ifn "Z:/Memari_Project/MemariProject/MultiCycleProccessor.xst" -ofn "Z:/Memari_Project/MemariProject/MultiCycleProccessor.syr" 
+xst -intstyle ise -ifn "Z:/Memari_Project/MemariProject/MultiCycleProccessor.xst" -ofn "Z:/Memari_Project/MemariProject/MultiCycleProccessor.syr" 
+xst -intstyle ise -ifn "Z:/Memari_Project/MemariProject/MultiCycleProccessor.xst" -ofn "Z:/Memari_Project/MemariProject/MultiCycleProccessor.syr" 
+xst -intstyle ise -ifn "Z:/Memari_Project/MemariProject/MultiCycleProccessor.xst" -ofn "Z:/Memari_Project/MemariProject/MultiCycleProccessor.syr" 

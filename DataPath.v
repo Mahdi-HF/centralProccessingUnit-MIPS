@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 module DataPath(input [1:0] aluControl, aluSrcB,
     input [1:0]pcSource, aluSrcA, regWrite, regDst, input isInterrupted,
-    input clk, isBranch, pcWrite, lorD, memWrite, memToReg, IrWrite,
+    input clk, isBranch, pcWrite, lorD, memWrite, input [1:0]memToReg, input IrWrite,
     output reg [5:0]op, funct);
 
     wire zeroFlag;
@@ -46,6 +46,7 @@ module DataPath(input [1:0] aluControl, aluSrcB,
     wire [31:0]writeRegData;
     wire [31:0]shiftedSignImm;
     reg  [31:0]pcOut = 32'd128;
+    reg  [4:0]thirtyOne = 5'b11111;
     wire [31:0]four = 32'h00000004;
     wire [31:0]interruptAddress = 32'hFFFFFFFF;
 
@@ -82,8 +83,12 @@ module DataPath(input [1:0] aluControl, aluSrcB,
 	
     ShiftRegister dataReg(memData, clk, data);
 
-    Mux2FiveBit dstMux(regDst, instr[20:16], instr[15:11], dstAdr);
-    Mux2 writeDataMux(memToReg, aluOut, data, writeRegData);
+    // Mux2FiveBit dstMux(regDst, instr[20:16], instr[15:11], dstAdr);
+    Mux4Fivebit dstMux(regDst, instr[20:16], instr[15:11], thirtyOne, zero, dstAdr);
+
+
+    // Mux2 writeDataMux(memToReg, aluOut, data, writeRegData);
+    Mux4 writeDataMux(memToReg, aluOut, data, pcOut, zero, writeRegData);
 
     SignExtend signExtender(instr[15:0], signImm);
     Shifter2 shifter(signImm, shiftedSignImm);
