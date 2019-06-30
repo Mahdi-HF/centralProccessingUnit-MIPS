@@ -10,7 +10,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="21" />
+   <WVObjectSize size="48" />
    <wvobject fp_name="/MultiCycleProccessorTest/INA" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">INA</obj_property>
       <obj_property name="ObjectShortName">INA</obj_property>
@@ -31,6 +31,14 @@
       <obj_property name="ElementShortName">INTD</obj_property>
       <obj_property name="ObjectShortName">INTD</obj_property>
    </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/controller/state" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">state[4:0]</obj_property>
+      <obj_property name="ObjectShortName">state[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/pcSource" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pcSource[1:0]</obj_property>
+      <obj_property name="ObjectShortName">pcSource[1:0]</obj_property>
+   </wvobject>
    <wvobject fp_name="/MultiCycleProccessorTest/uut/op" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">op[5:0]</obj_property>
       <obj_property name="ObjectShortName">op[5:0]</obj_property>
@@ -46,10 +54,6 @@
    <wvobject fp_name="/MultiCycleProccessorTest/uut/aluSrcB" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">aluSrcB[1:0]</obj_property>
       <obj_property name="ObjectShortName">aluSrcB[1:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/MultiCycleProccessorTest/uut/pcSource" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">pcSource</obj_property>
-      <obj_property name="ObjectShortName">pcSource</obj_property>
    </wvobject>
    <wvobject fp_name="/MultiCycleProccessorTest/uut/regWrite" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">regWrite</obj_property>
@@ -94,5 +98,109 @@
    <wvobject fp_name="/MultiCycleProccessorTest/uut/INA" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">INA</obj_property>
       <obj_property name="ObjectShortName">INA</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/dataPath/Adr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Adr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Adr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/dataPath/pcIn" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pcIn[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pcIn[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/dataPath/data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/dataPath/srcA" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">srcA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">srcA[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/dataPath/srcB" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">srcB[31:0]</obj_property>
+      <obj_property name="ObjectShortName">srcB[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/dataPath/dstAdr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dstAdr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">dstAdr[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/dataPath/instr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">instr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">instr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/dataPath/aData" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">aData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">aData[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/dataPath/bData" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">bData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">bData[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/dataPath/aData2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">aData2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">aData2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/dataPath/pcJump" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pcJump[27:0]</obj_property>
+      <obj_property name="ObjectShortName">pcJump[27:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/dataPath/pcOut2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pcOut2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pcOut2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/dataPath/aluOut" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">aluOut[31:0]</obj_property>
+      <obj_property name="ObjectShortName">aluOut[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/dataPath/memData" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">memData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">memData[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/dataPath/signImm" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">signImm[31:0]</obj_property>
+      <obj_property name="ObjectShortName">signImm[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/dataPath/aluResult" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">aluResult[31:0]</obj_property>
+      <obj_property name="ObjectShortName">aluResult[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/dataPath/writeData" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">writeData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">writeData[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/dataPath/zero" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">zero[31:0]</obj_property>
+      <obj_property name="ObjectShortName">zero[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/dataPath/writeRegData" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">writeRegData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">writeRegData[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/dataPath/shiftedSignImm" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">shiftedSignImm[31:0]</obj_property>
+      <obj_property name="ObjectShortName">shiftedSignImm[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/dataPath/four" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">four[31:0]</obj_property>
+      <obj_property name="ObjectShortName">four[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/dataPath/interruptAddress" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">interruptAddress[31:0]</obj_property>
+      <obj_property name="ObjectShortName">interruptAddress[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/dataPath/op" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">op[5:0]</obj_property>
+      <obj_property name="ObjectShortName">op[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/dataPath/funct" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">funct[5:0]</obj_property>
+      <obj_property name="ObjectShortName">funct[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/dataPath/pcOut" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pcOut[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pcOut[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/MultiCycleProccessorTest/uut/dataPath/thirtyOne" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">thirtyOne[4:0]</obj_property>
+      <obj_property name="ObjectShortName">thirtyOne[4:0]</obj_property>
    </wvobject>
 </wave_config>

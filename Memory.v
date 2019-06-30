@@ -22,7 +22,7 @@ module Memory(
     input [31:0] Address, writeData, input clk, writeEnable,
     output reg [31:0]MemData );
 
-    reg [31:0] data [1023:0];
+    reg [31:0] data [4095:0];
 
 	// reg [10:0] i;
 	 
@@ -77,11 +77,11 @@ module Memory(
 
         data[164] <= 32'b00000000100000001111100000001001; //jalr : r4 31
 
-        data[168] <= 32'10101100000001000000000000001110; //sw r4 14(r0)
+        data[168] <= 32'b10101100000001000000000000001110; //sw r4 14(r0)
 
-        data[32'hFFFFFFFE] <= 32'b000000 00001 00010 00011 00000 100110; //XOR r3 r1 r2
+        data[4088] <= 32'b00000000001000100001100000100110; //XOR r3 r1 r2
 
-        data[32'hFFFFFFFF] <= 32'b00000011111000000000000000001000; //jr : 31
+        data[4092] <= 32'b00000011111000000000000000001000; //jr : 31
         
     end 
 endmodule

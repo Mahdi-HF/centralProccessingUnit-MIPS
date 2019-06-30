@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Reading design: MultiCycleProccessor.prj
 
@@ -141,15 +141,15 @@ Parsing module <MultiCycleProccessor>.
 Elaborating module <MultiCycleProccessor>.
 
 Elaborating module <Controller>.
-WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 94: Signal <INTD> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 96: Signal <NMIFlag> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 114: Signal <INTFlag> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 120: Signal <INTFlag> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 129: Signal <INTFlag> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 138: Signal <INTFlag> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 247: Signal <funct> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 252: Signal <funct> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 345: Signal <funct> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 96: Signal <INTD> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 98: Signal <NMIFlag> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 116: Signal <INTFlag> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 122: Signal <INTFlag> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 131: Signal <INTFlag> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 140: Signal <INTFlag> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 249: Signal <funct> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 254: Signal <funct> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 347: Signal <funct> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 WARNING:HDLCompiler:189 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\MultiCycleProccessor.v" Line 37: Size mismatch in connection of port <MemtoReg>. Formal port size is 2-bit while actual signal size is 1-bit.
 WARNING:HDLCompiler:189 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\MultiCycleProccessor.v" Line 38: Size mismatch in connection of port <RegDst>. Formal port size is 2-bit while actual signal size is 1-bit.
 
@@ -224,7 +224,9 @@ Synthesizing Unit <Controller>.
         iType2 = 6'b001101
         iType3 = 6'b001110
         iType4 = 6'b001111
-        jumpAndLinkOp = 6'b000011
+        jumpAndLinkFunct = 6'b000011
+        jumpAndLinkRegisterFunct = 6'b001001
+        jumpRegisterFunct = 6'b001000
     Found 5-bit register for signal <state>.
     Found 16x6-bit Read Only RAM for signal <_n0891>
 WARNING:Xst:737 - Found 1-bit latch for signal <NMIFlag>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -252,8 +254,8 @@ WARNING:Xst:737 - Found 1-bit latch for signal <PCSource<0>>. Latches may be gen
 WARNING:Xst:737 - Found 1-bit latch for signal <RegWrite>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <MemWrite>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <isBranch>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Found 1-bit tristate buffer for signal <aluControl<1>> created at line 341
-    Found 1-bit tristate buffer for signal <aluControl<0>> created at line 341
+    Found 1-bit tristate buffer for signal <aluControl<1>> created at line 343
+    Found 1-bit tristate buffer for signal <aluControl<0>> created at line 343
 WARNING:Xst:737 - Found 1-bit latch for signal <INTFlag>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
 	inferred   1 RAM(s).
@@ -280,8 +282,8 @@ Unit <Mux2> synthesized.
 
 Synthesizing Unit <Memory>.
     Related source file is "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Memory.v".
-WARNING:Xst:647 - Input <Address<31:10>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 1024x32-bit single-port RAM <Mram_data> for signal <data>.
+WARNING:Xst:647 - Input <Address<31:12>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 4096x32-bit single-port RAM <Mram_data> for signal <data>.
     Summary:
 	inferred   1 RAM(s).
 Unit <Memory> synthesized.
@@ -357,9 +359,9 @@ HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 4
- 1024x32-bit single-port RAM                           : 1
  16x6-bit single-port Read Only RAM                    : 1
  32x32-bit dual-port RAM                               : 2
+ 4096x32-bit single-port RAM                           : 1
 # Adders/Subtractors                                   : 1
  32-bit addsub                                         : 1
 # Registers                                            : 7
@@ -457,7 +459,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_data> will be implemented on LUTs ei
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 1024-word x 32-bit                  |          |
+    |     aspect ratio   | 4096-word x 32-bit                  |          |
     |     clkA           | connected to signal <clk>           | rise     |
     |     weA            | connected to signal <writeEnable>   | high     |
     |     addrA          | connected to signal <Address>       |          |
@@ -471,9 +473,9 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 4
- 1024x32-bit single-port distributed RAM               : 1
  16x6-bit single-port distributed Read Only RAM        : 1
  32x32-bit dual-port block RAM                         : 2
+ 4096x32-bit single-port distributed RAM               : 1
 # Adders/Subtractors                                   : 1
  32-bit addsub                                         : 1
 # Registers                                            : 133
@@ -511,7 +513,7 @@ WARNING:Xst:2677 - Node <controller/RegDst_1> of sequential type is unconnected 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block MultiCycleProccessor, actual ratio is 0.
+Found area constraint ratio of 100 (+ 5) on block MultiCycleProccessor, actual ratio is 1.
 
 Final Macro Processing ...
 
@@ -543,17 +545,18 @@ Top Level Output File Name         : MultiCycleProccessor.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 473
+# BELS                             : 694
 #      GND                         : 1
 #      INV                         : 1
 #      LUT1                        : 1
-#      LUT2                        : 5
-#      LUT3                        : 48
-#      LUT4                        : 80
-#      LUT5                        : 58
-#      LUT6                        : 193
+#      LUT2                        : 8
+#      LUT3                        : 57
+#      LUT4                        : 83
+#      LUT5                        : 55
+#      LUT6                        : 305
 #      MUXCY                       : 44
-#      MUXF7                       : 9
+#      MUXF7                       : 74
+#      MUXF8                       : 32
 #      VCC                         : 1
 #      XORCY                       : 32
 # FlipFlops/Latches                : 155
@@ -562,8 +565,8 @@ Primitive and Black Box Usage:
 #      LD                          : 19
 #      LDE                         : 2
 #      LDP                         : 2
-# RAMS                             : 130
-#      RAM256X1S                   : 128
+# RAMS                             : 514
+#      RAM256X1S                   : 512
 #      RAMB18E1                    : 2
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
@@ -579,16 +582,16 @@ Selected Device : 7a100tcsg324-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:             154  out of  126800     0%  
- Number of Slice LUTs:                  898  out of  63400     1%  
-    Number used as Logic:               386  out of  63400     0%  
-    Number used as Memory:              512  out of  19000     2%  
-       Number used as RAM:              512
+ Number of Slice LUTs:                 2558  out of  63400     4%  
+    Number used as Logic:               510  out of  63400     0%  
+    Number used as Memory:             2048  out of  19000    10%  
+       Number used as RAM:             2048
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    905
-   Number with an unused Flip Flop:     751  out of    905    82%  
-   Number with an unused LUT:             7  out of    905     0%  
-   Number of fully used LUT-FF pairs:   147  out of    905    16%  
+ Number of LUT Flip Flop pairs used:   2597
+   Number with an unused Flip Flop:    2443  out of   2597    94%  
+   Number with an unused LUT:            39  out of   2597     1%  
+   Number of fully used LUT-FF pairs:   115  out of   2597     4%  
    Number of unique control sets:        18
 
 IO Utilization: 
@@ -626,7 +629,7 @@ controller/state[4]_GND_2_o_Select_112_o(controller/Mmux_state[4]_GND_2_o_Select
 controller/_n0723(controller/_n07231:O)                                                     | NONE(*)(controller/PCSource_0) | 2     |
 controller/_n0589(controller/_n05891:O)                                                     | NONE(*)(controller/aluOp_0)    | 5     |
 controller/state[4]_GND_2_o_Select_108_o(controller/Mmux_state[4]_GND_2_o_Select_108_o11:O) | NONE(*)(controller/RegDst_0)   | 1     |
-clk                                                                                         | BUFGP                          | 262   |
+clk                                                                                         | BUFGP                          | 646   |
 controller/state[4]_GND_2_o_Select_98_o(controller/Mmux_state[4]_GND_2_o_Select_98_o22:O)   | NONE(*)(controller/nextstate_2)| 4     |
 controller/_n0939(controller/_n09391:O)                                                     | NONE(*)(controller/INA)        | 2     |
 controller/_n0760(controller/_n07601:O)                                                     | NONE(*)(controller/pcWrite)    | 1     |
@@ -706,7 +709,7 @@ Delay:               0.971ns (Levels of Logic = 1)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 4.675ns (frequency: 213.908MHz)
-  Total number of paths / destination ports: 27131 / 1524
+  Total number of paths / destination ports: 39163 / 5364
 -------------------------------------------------------------------------
 Delay:               4.675ns (Levels of Logic = 37)
   Source:            dataPath/instructionReg/dataOut_5 (FF)
@@ -721,7 +724,7 @@ Delay:               4.675ns (Levels of Logic = 37)
      FDE:C->Q              7   0.361   0.721  dataPath/instructionReg/dataOut_5 (dataPath/instructionReg/dataOut_5)
      LUT6:I0->O            2   0.097   0.299  controller/aluControl<0>LogicTrst1 (controller/aluControl<0>LogicTrst)
      LUT3:I2->O            4   0.097   0.293  controller/aluControl<0>LogicTrst2_1 (controller/aluControl<0>LogicTrst2)
-     MUXF7:S->O            1   0.335   0.556  dataPath/srcBMux/Mmux_out110_SW2 (N85)
+     MUXF7:S->O            1   0.335   0.556  dataPath/srcBMux/Mmux_out110_SW2 (N89)
      LUT6:I2->O            1   0.097   0.000  dataPath/mainAlu/Mmux_result2_rs_lut<0> (dataPath/mainAlu/Mmux_result2_rs_lut<0>)
      MUXCY:S->O            1   0.353   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<0> (dataPath/mainAlu/Mmux_result2_rs_cy<0>)
      MUXCY:CI->O           1   0.023   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<1> (dataPath/mainAlu/Mmux_result2_rs_cy<1>)
@@ -874,12 +877,12 @@ clk                                     |    4.675|         |         |         
 controller/Mmux__n0322262               |         |    0.953|         |         |
 controller/Mram__n089111                |         |    1.960|         |         |
 controller/_n0589                       |         |    4.189|         |         |
-controller/_n0723                       |         |    1.983|         |         |
-controller/_n0758                       |         |    2.876|         |         |
+controller/_n0723                       |         |    1.993|         |         |
+controller/_n0758                       |         |    2.834|         |         |
 controller/_n0760                       |         |    1.937|         |         |
 controller/_n0761                       |         |    0.909|         |         |
-controller/_n0762                       |         |    2.070|         |         |
-controller/_n0939                       |         |    4.117|         |         |
+controller/_n0762                       |         |    2.125|         |         |
+controller/_n0939                       |         |    4.072|         |         |
 controller/state[4]_GND_2_o_Select_108_o|         |    1.829|         |         |
 controller/state[4]_GND_2_o_Select_112_o|         |    1.668|         |         |
 controller/state[4]_GND_2_o_Select_98_o |         |    0.759|         |         |
@@ -988,12 +991,12 @@ clk            |         |         |    2.387|         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 20.00 secs
-Total CPU time to Xst completion: 19.82 secs
+Total REAL time to Xst completion: 22.00 secs
+Total CPU time to Xst completion: 21.84 secs
  
 --> 
 
-Total memory usage is 233764 kilobytes
+Total memory usage is 237476 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   54 (   0 filtered)

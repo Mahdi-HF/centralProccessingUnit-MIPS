@@ -17,7 +17,7 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Address is :
-4294967295
+      4088
 Address is :
        128
 Finished circuit initialization process.
@@ -26,9 +26,7 @@ Address is :
 Address is :
        132
 Address is :
-       136
-Address is :
-4294967295
+      4088
 ISim P.20131013 (signature 0x8ef4fb42)
 This is a Full version of ISim.
 WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 29.  For instance uut/controller/, width 2 of formal port MemtoReg is not equal to width 1 of actual signal memToReg.
@@ -43,7 +41,7 @@ WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCyclePro
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Address is :
-4294967295
+      4088
 Address is :
        128
 Finished circuit initialization process.
@@ -52,105 +50,7 @@ Address is :
 Address is :
        132
 Address is :
-       136
-Address is :
-4294967295
+      4088
 # run 1.00us
-ISim P.20131013 (signature 0x8ef4fb42)
-This is a Full version of ISim.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 29.  For instance uut/controller/, width 2 of formal port MemtoReg is not equal to width 1 of actual signal memToReg.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 28.  For instance uut/controller/, width 2 of formal port RegDst is not equal to width 1 of actual signal regDst.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v" Line 45.  For instance dataPath/dstMux/, width 5 of formal port D is not equal to width 32 of actual signal zero.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v" Line 22.  For instance dataPath/regFile/, width 1 of formal port wEnable is not equal to width 2 of actual signal regWrite.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v" Line 22.  For instance dataPath/aluPcMux/, width 1 of formal port control is not equal to width 2 of actual signal aluSrcA.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 28.  For instance uut/dataPath/, width 2 of formal port aluSrcA is not equal to width 1 of actual signal aluSrcA.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 28.  For instance uut/dataPath/, width 2 of formal port regWrite is not equal to width 1 of actual signal regWrite.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 28.  For instance uut/dataPath/, width 2 of formal port regDst is not equal to width 1 of actual signal regDst.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 29.  For instance uut/dataPath/, width 2 of formal port memToReg is not equal to width 1 of actual signal memToReg.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Address is :
-4294967295
-Address is :
-       128
-Finished circuit initialization process.
-Address is :
-       128
-Address is :
-       132
-Address is :
-       136
-Address is :
-4294967295
-ISim P.20131013 (signature 0x8ef4fb42)
-This is a Full version of ISim.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 29.  For instance uut/controller/, width 2 of formal port MemtoReg is not equal to width 1 of actual signal memToReg.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 28.  For instance uut/controller/, width 2 of formal port RegDst is not equal to width 1 of actual signal regDst.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v" Line 45.  For instance dataPath/dstMux/, width 5 of formal port D is not equal to width 32 of actual signal zero.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v" Line 22.  For instance dataPath/regFile/, width 1 of formal port wEnable is not equal to width 2 of actual signal regWrite.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v" Line 22.  For instance dataPath/aluPcMux/, width 1 of formal port control is not equal to width 2 of actual signal aluSrcA.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 28.  For instance uut/dataPath/, width 2 of formal port aluSrcA is not equal to width 1 of actual signal aluSrcA.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 28.  For instance uut/dataPath/, width 2 of formal port regWrite is not equal to width 1 of actual signal regWrite.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 28.  For instance uut/dataPath/, width 2 of formal port regDst is not equal to width 1 of actual signal regDst.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 29.  For instance uut/dataPath/, width 2 of formal port memToReg is not equal to width 1 of actual signal memToReg.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Address is :
-4294967295
-Address is :
-       128
-Finished circuit initialization process.
-Address is :
-       128
-Address is :
-       132
-Address is :
-4294967295
-ISim P.20131013 (signature 0x8ef4fb42)
-This is a Full version of ISim.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 29.  For instance uut/controller/, width 2 of formal port MemtoReg is not equal to width 1 of actual signal memToReg.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 28.  For instance uut/controller/, width 2 of formal port RegDst is not equal to width 1 of actual signal regDst.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v" Line 45.  For instance dataPath/dstMux/, width 5 of formal port D is not equal to width 32 of actual signal zero.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v" Line 22.  For instance dataPath/regFile/, width 1 of formal port wEnable is not equal to width 2 of actual signal regWrite.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v" Line 22.  For instance dataPath/aluPcMux/, width 1 of formal port control is not equal to width 2 of actual signal aluSrcA.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 28.  For instance uut/dataPath/, width 2 of formal port aluSrcA is not equal to width 1 of actual signal aluSrcA.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 28.  For instance uut/dataPath/, width 2 of formal port regWrite is not equal to width 1 of actual signal regWrite.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 28.  For instance uut/dataPath/, width 2 of formal port regDst is not equal to width 1 of actual signal regDst.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 29.  For instance uut/dataPath/, width 2 of formal port memToReg is not equal to width 1 of actual signal memToReg.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Address is :
-4294967295
-Address is :
-       128
-Finished circuit initialization process.
-Address is :
-       128
-Address is :
-       132
-Address is :
-4294967295
-ISim P.20131013 (signature 0x8ef4fb42)
-This is a Full version of ISim.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 29.  For instance uut/controller/, width 2 of formal port MemtoReg is not equal to width 1 of actual signal memToReg.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 28.  For instance uut/controller/, width 2 of formal port RegDst is not equal to width 1 of actual signal regDst.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v" Line 45.  For instance dataPath/dstMux/, width 5 of formal port D is not equal to width 32 of actual signal zero.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v" Line 22.  For instance dataPath/regFile/, width 1 of formal port wEnable is not equal to width 2 of actual signal regWrite.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v" Line 22.  For instance dataPath/aluPcMux/, width 1 of formal port control is not equal to width 2 of actual signal aluSrcA.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 28.  For instance uut/dataPath/, width 2 of formal port aluSrcA is not equal to width 1 of actual signal aluSrcA.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 28.  For instance uut/dataPath/, width 2 of formal port regWrite is not equal to width 1 of actual signal regWrite.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 28.  For instance uut/dataPath/, width 2 of formal port regDst is not equal to width 1 of actual signal regDst.
-WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 29.  For instance uut/dataPath/, width 2 of formal port memToReg is not equal to width 1 of actual signal memToReg.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Address is :
-4294967295
-Address is :
-       128
-Finished circuit initialization process.
-Address is :
-       128
-Address is :
-       132
-Address is :
-4294967295
+# run 1.00us
+# run 1.00us

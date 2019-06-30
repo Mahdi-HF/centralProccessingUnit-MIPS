@@ -24,7 +24,7 @@
 static const char *ng0 = "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v";
 static unsigned int ng1[] = {0U, 0U};
 static unsigned int ng2[] = {4U, 0U};
-static unsigned int ng3[] = {4294967295U, 0U};
+static unsigned int ng3[] = {4088U, 0U};
 static unsigned int ng4[] = {1U, 0U};
 
 
