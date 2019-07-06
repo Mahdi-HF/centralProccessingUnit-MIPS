@@ -105,6 +105,7 @@ module Controller(
                     begin
                         isInterrupted = 1'b0;
                         nextstate = fetch;
+                        INA = 0;
                         INTFlag = 0;NMIFlag = 0;
                     end
 
@@ -113,7 +114,7 @@ module Controller(
                         RegDst = 2'b10;
                         MemtoReg=2'b10;
                         isInterrupted = 1'b1;
-                        INA = 0;  
+                        INA = 0;
                         nextstate = fetch;
                         INTFlag = 0;NMIFlag = 0;
                     end 
@@ -125,6 +126,7 @@ module Controller(
                     begin
                         isInterrupted = 1'b0;
                         nextstate = fetch;
+                        INA = 0;
                         INTFlag = 0;NMIFlag = 0;
                     end
 
@@ -174,6 +176,7 @@ module Controller(
                 isBranch= 1'b0;
                 MemtoReg=2'b00;
                 nextstate=decode;
+                isInterrupted=0;
             end
 
             decode:
