@@ -56,18 +56,16 @@ module DataPath(input [1:0] aluControl, aluSrcB,
     begin
 		op = instr[31:26];
         funct = instr[5:0];
-    end
-
-    assign pcEnable = (isBranch & zeroFlag) | pcWrite;
-
-    //ShiftRegisterEnable pcReg(pcIn, clk, pcEnable, pcOut);
-    always @(posedge clk)  
-    begin 
+        
         if(pcEnable==1'b1)
         begin
           pcOut <= pcIn;
         end
     end
+
+    assign pcEnable = (isBranch & zeroFlag) | pcWrite;
+
+    //ShiftRegisterEnable pcReg(pcIn, clk, pcEnable, pcOut);
 
     Mux2 interruptMux(isInterrupted, pcOut, interruptAddress, pcOut2);
     Mux2 memoryAddressMux(lorD, pcOut2, aluOut, Adr);
