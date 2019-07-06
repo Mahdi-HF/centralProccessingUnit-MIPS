@@ -34,8 +34,11 @@ module RegFile(
     // set initial values
     initial 
     begin
-        for (i = 0; i < 32; i = i + 1)
-            //regData[i] = i;
-			regData[i] = 0;
+		regData[0] = 0;
+		regData[1] = 1;
+		regData[2] = 1;
+		regData[3] = 1;
+        for (i = 4; i < 32; i = i + 1)
+			regData[i] = i;
     end
 endmodule
