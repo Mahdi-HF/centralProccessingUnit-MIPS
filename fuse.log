@@ -46,4 +46,4 @@ Time Resolution for simulation is 1ps.
 Compiled 16 Verilog Units
 Built simulation executable Z:/Memari_Project/MemariProject/MultiCycleProccessorTest_isim_beh.exe
 Fuse Memory Usage: 81296 KB
-Fuse CPU Usage: 200 ms
+Fuse CPU Usage: 180 ms

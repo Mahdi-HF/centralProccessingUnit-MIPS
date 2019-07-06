@@ -92,7 +92,7 @@ module Controller(
         state=nextstate;
     end
 
-    always @(state, op)
+    always @(state, op, INT, NMI )
     begin
 		if(INT == 1) INTFlag = 1; 
         if(NMI == 1) NMIFlag = 1; 
@@ -306,7 +306,7 @@ module Controller(
             begin
                 aluSrcA= 1'b1;
                 aluSrcB= 2'b10;
-                aluOp = 2'b10;
+                aluOp = 2'b00;
                 nextstate = addIwriteBack;
             end
 

@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: MultiCycleProccessor.prj
 
@@ -141,8 +141,6 @@ Parsing module <MultiCycleProccessor>.
 Elaborating module <MultiCycleProccessor>.
 
 Elaborating module <Controller>.
-WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 97: Signal <INT> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 98: Signal <NMI> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 102: Signal <INTD> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 264: Signal <funct> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Controller.v" Line 269: Signal <funct> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
@@ -150,10 +148,8 @@ WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\Co
 
 Elaborating module <DataPath>.
 WARNING:HDLCompiler:872 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 49: Using initial value of thirtyOne since it is never assigned
+WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 56: Signal <instr> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 57: Signal <instr> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 58: Signal <instr> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 60: Signal <pcEnable> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 62: Signal <pcIn> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 
 Elaborating module <Mux2>.
 
@@ -174,8 +170,8 @@ Elaborating module <SignExtend>.
 Elaborating module <Shifter2>.
 
 Elaborating module <RegFile>.
-WARNING:HDLCompiler:189 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 94: Size mismatch in connection of port <wEnable>. Formal port size is 1-bit while actual signal size is 2-bit.
-WARNING:HDLCompiler:189 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 99: Size mismatch in connection of port <control>. Formal port size is 1-bit while actual signal size is 2-bit.
+WARNING:HDLCompiler:189 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 97: Size mismatch in connection of port <wEnable>. Formal port size is 1-bit while actual signal size is 2-bit.
+WARNING:HDLCompiler:189 - "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v" Line 102: Size mismatch in connection of port <control>. Formal port size is 1-bit while actual signal size is 2-bit.
 
 Elaborating module <ALU>.
 
@@ -223,7 +219,7 @@ Synthesizing Unit <Controller>.
         jumpAndLinkRegisterFunct = 6'b001001
         jumpRegisterFunct = 6'b001000
     Found 5-bit register for signal <state>.
-    Found 16x6-bit Read Only RAM for signal <_n0925>
+    Found 16x6-bit Read Only RAM for signal <_n0924>
 WARNING:Xst:737 - Found 1-bit latch for signal <INTFlag>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <NMIFlag>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <isInterrupted>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -264,40 +260,9 @@ Synthesizing Unit <DataPath>.
     Related source file is "\\vboxsvr\sharedwithvm\Memari_Project\MemariProject\DataPath.v".
 WARNING:Xst:647 - Input <aluSrcA<1:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <regWrite<1:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:737 - Found 1-bit latch for signal <pcOut<30>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <pcOut<29>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <pcOut<28>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <pcOut<27>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <pcOut<26>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <pcOut<25>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <pcOut<24>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <pcOut<23>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <pcOut<22>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <pcOut<21>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <pcOut<20>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <pcOut<19>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <pcOut<18>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <pcOut<17>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <pcOut<16>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <pcOut<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <pcOut<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <pcOut<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <pcOut<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <pcOut<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <pcOut<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <pcOut<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <pcOut<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <pcOut<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <pcOut<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <pcOut<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <pcOut<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <pcOut<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <pcOut<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <pcOut<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <pcOut<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <pcOut<31>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 32-bit register for signal <pcOut>.
     Summary:
-	inferred  32 Latch(s).
+	inferred  32 D-type flip-flop(s).
 Unit <DataPath> synthesized.
 
 Synthesizing Unit <Mux2>.
@@ -390,11 +355,11 @@ Macro Statistics
  4096x32-bit single-port RAM                           : 1
 # Adders/Subtractors                                   : 1
  32-bit addsub                                         : 1
-# Registers                                            : 6
- 32-bit register                                       : 5
+# Registers                                            : 7
+ 32-bit register                                       : 6
  5-bit register                                        : 1
-# Latches                                              : 58
- 1-bit latch                                           : 58
+# Latches                                              : 26
+ 1-bit latch                                           : 26
 # Comparators                                          : 1
  32-bit comparator equal                               : 1
 # Multiplexers                                         : 111
@@ -417,7 +382,7 @@ INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmet
 
 
 Synthesizing (advanced) Unit <Controller>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0925> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0924> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -504,8 +469,8 @@ Macro Statistics
  4096x32-bit single-port distributed RAM               : 1
 # Adders/Subtractors                                   : 1
  32-bit addsub                                         : 1
-# Registers                                            : 101
- Flip-Flops                                            : 101
+# Registers                                            : 133
+ Flip-Flops                                            : 133
 # Comparators                                          : 1
  32-bit comparator equal                               : 1
 # Multiplexers                                         : 142
@@ -545,8 +510,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 100
- Flip-Flops                                            : 100
+# Registers                                            : 132
+ Flip-Flops                                            : 132
 
 =========================================================================
 
@@ -569,28 +534,29 @@ Top Level Output File Name         : MultiCycleProccessor.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 620
+# BELS                             : 683
 #      GND                         : 1
-#      LUT2                        : 2
-#      LUT3                        : 6
-#      LUT4                        : 87
-#      LUT5                        : 137
-#      LUT6                        : 206
-#      MUXCY                       : 42
+#      INV                         : 1
+#      LUT1                        : 1
+#      LUT2                        : 3
+#      LUT3                        : 5
+#      LUT4                        : 88
+#      LUT5                        : 111
+#      LUT6                        : 290
+#      MUXCY                       : 44
 #      MUXF7                       : 74
 #      MUXF8                       : 32
 #      VCC                         : 1
 #      XORCY                       : 32
 # FlipFlops/Latches                : 157
 #      FD                          : 68
-#      FDE                         : 32
-#      LD                          : 56
-#      LDE                         : 1
+#      FDE                         : 64
+#      LD                          : 23
+#      LDE                         : 2
 # RAMS                             : 514
 #      RAM256X1S                   : 512
 #      RAMB18E1                    : 2
-# Clock Buffers                    : 2
-#      BUFG                        : 1
+# Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 4
 #      IBUF                        : 3
@@ -604,17 +570,17 @@ Selected Device : 7a100tcsg324-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:             156  out of  126800     0%  
- Number of Slice LUTs:                 2486  out of  63400     3%  
-    Number used as Logic:               438  out of  63400     0%  
+ Number of Slice LUTs:                 2547  out of  63400     4%  
+    Number used as Logic:               499  out of  63400     0%  
     Number used as Memory:             2048  out of  19000    10%  
        Number used as RAM:             2048
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   2522
-   Number with an unused Flip Flop:    2366  out of   2522    93%  
-   Number with an unused LUT:            36  out of   2522     1%  
-   Number of fully used LUT-FF pairs:   120  out of   2522     4%  
-   Number of unique control sets:        19
+ Number of LUT Flip Flop pairs used:   2584
+   Number with an unused Flip Flop:    2428  out of   2584    93%  
+   Number with an unused LUT:            37  out of   2584     1%  
+   Number of fully used LUT-FF pairs:   119  out of   2584     4%  
+   Number of unique control sets:        18
 
 IO Utilization: 
  Number of IOs:                           5
@@ -624,7 +590,7 @@ IO Utilization:
 Specific Feature Utilization:
  Number of Block RAM/FIFO:                1  out of    135     0%  
     Number using Block RAM only:          1
- Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
 
 ---------------------------
 Partition Resource Summary:
@@ -647,26 +613,24 @@ Clock Information:
 --------------------------------------------------------------------------------------------+----------------------------------+-------+
 Clock Signal                                                                                | Clock buffer(FF name)            | Load  |
 --------------------------------------------------------------------------------------------+----------------------------------+-------+
-controller/state[4]_GND_2_o_Select_121_o(controller/Mmux_state[4]_GND_2_o_Select_117_o122:O)| NONE(*)(controller/MemtoReg_0)   | 2     |
-controller/_n0828(controller/_n08281:O)                                                     | NONE(*)(controller/PCSource_0)   | 2     |
-controller/_n0424(controller/_n04241:O)                                                     | NONE(*)(controller/aluOp_0)      | 2     |
-controller/_n0727(controller/_n07271:O)                                                     | NONE(*)(controller/aluSrcB_0)    | 3     |
-controller/state[4]_GND_2_o_Select_117_o(controller/Mmux_state[4]_GND_2_o_Select_117_o11:O) | NONE(*)(controller/RegDst_0)     | 2     |
-clk                                                                                         | BUFGP                            | 614   |
-controller/state[4]_GND_2_o_Select_107_o(controller/Mmux_state[4]_GND_2_o_Select_107_o22:O) | NONE(*)(controller/nextstate_2)  | 4     |
-controller/GND_2_o_GND_2_o_MUX_48_o(controller/Mmux_GND_2_o_GND_2_o_MUX_48_o11:O)           | NONE(*)(controller/NMIFlag)      | 1     |
-controller/GND_2_o_GND_2_o_MUX_40_o(controller/Mmux_GND_2_o_GND_2_o_MUX_40_o11:O)           | NONE(*)(controller/INTFlag)      | 1     |
-controller/_n0940(controller/_n09401:O)                                                     | NONE(*)(controller/INA)          | 1     |
-controller/_n0863(controller/_n08631:O)                                                     | NONE(*)(controller/RegWrite)     | 1     |
-controller/_n0425(controller/_n04251:O)                                                     | NONE(*)(controller/lorD)         | 1     |
-controller/_n0428(controller/_n04281:O)                                                     | NONE(*)(controller/pcWrite)      | 1     |
-controller/_n0427(controller/_n04271:O)                                                     | NONE(*)(controller/IRWrite)      | 1     |
-controller/_n0389(controller/_n03891:O)                                                     | NONE(*)(controller/MemWrite)     | 1     |
-controller/_n0426(controller/_n04261:O)                                                     | NONE(*)(controller/isBranch)     | 1     |
-controller/state[4]_GND_2_o_Select_105_o(controller/state[4]_GND_2_o_Select_105_o1:O)       | NONE(*)(controller/isInterrupted)| 1     |
-dataPath/pcEnable(dataPath/pcEnable1:O)                                                     | BUFG(*)(dataPath/pcOut_31)       | 32    |
+controller/state[4]_GND_2_o_Select_119_o(controller/Mmux_state[4]_GND_2_o_Select_115_o121:O)| NONE(*)(controller/MemtoReg_0)   | 2     |
+controller/_n0691(controller/_n06911:O)                                                     | NONE(*)(controller/PCSource_0)   | 2     |
+controller/_n0623(controller/_n06231:O)                                                     | NONE(*)(controller/aluOp_0)      | 2     |
+controller/_n0588(controller/_n05881:O)                                                     | NONE(*)(controller/aluSrcB_1)    | 3     |
+controller/state[4]_GND_2_o_Select_115_o(controller/Mmux_state[4]_GND_2_o_Select_115_o11:O) | NONE(*)(controller/RegDst_0)     | 2     |
+clk                                                                                         | BUFGP                            | 646   |
+controller/state[4]_GND_2_o_Select_105_o(controller/Mmux_state[4]_GND_2_o_Select_105_o22:O) | NONE(*)(controller/nextstate_2)  | 4     |
+controller/_n0927(controller/_n09271:O)                                                     | NONE(*)(controller/isInterrupted)| 2     |
+controller/GND_2_o_GND_2_o_MUX_49_o(controller/Mmux_GND_2_o_GND_2_o_MUX_49_o11:O)           | NONE(*)(controller/NMIFlag)      | 1     |
+controller/GND_2_o_GND_2_o_MUX_41_o(controller/Mmux_GND_2_o_GND_2_o_MUX_41_o11:O)           | NONE(*)(controller/INTFlag)      | 1     |
+controller/_n0729(controller/_n07291:O)                                                     | NONE(*)(controller/RegWrite)     | 1     |
+controller/_n0728(controller/_n07281:O)                                                     | NONE(*)(controller/pcWrite)      | 1     |
+controller/_n0726(controller/_n07261:O)                                                     | NONE(*)(controller/lorD)         | 1     |
+controller/_n0727(controller/_n07271:O)                                                     | NONE(*)(controller/IRWrite)      | 1     |
+controller/_n0730(controller/_n07301:O)                                                     | NONE(*)(controller/MemWrite)     | 1     |
+controller/_n0421(controller/_n04211:O)                                                     | NONE(*)(controller/isBranch)     | 1     |
 --------------------------------------------------------------------------------------------+----------------------------------+-------+
-(*) These 17 clock signal(s) are generated by combinatorial logic,
+(*) These 15 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -679,8 +643,8 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 4.765ns (Maximum Frequency: 209.853MHz)
-   Minimum input arrival time before clock: 1.585ns
+   Minimum period: 4.675ns (Maximum Frequency: 213.908MHz)
+   Minimum input arrival time before clock: 1.286ns
    Maximum output required time after clock: 0.751ns
    Maximum combinational path delay: No path found
 
@@ -689,68 +653,68 @@ Timing Details:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'controller/state[4]_GND_2_o_Select_121_o'
-  Clock period: 1.232ns (frequency: 811.539MHz)
+Timing constraint: Default period analysis for Clock 'controller/state[4]_GND_2_o_Select_119_o'
+  Clock period: 1.187ns (frequency: 842.300MHz)
   Total number of paths / destination ports: 2 / 2
 -------------------------------------------------------------------------
-Delay:               1.232ns (Levels of Logic = 1)
-  Source:            controller/MemtoReg_1 (LATCH)
-  Destination:       controller/MemtoReg_1 (LATCH)
-  Source Clock:      controller/state[4]_GND_2_o_Select_121_o falling
-  Destination Clock: controller/state[4]_GND_2_o_Select_121_o falling
+Delay:               1.187ns (Levels of Logic = 1)
+  Source:            controller/MemtoReg_0 (LATCH)
+  Destination:       controller/MemtoReg_0 (LATCH)
+  Source Clock:      controller/state[4]_GND_2_o_Select_119_o falling
+  Destination Clock: controller/state[4]_GND_2_o_Select_119_o falling
 
-  Data Path: controller/MemtoReg_1 to controller/MemtoReg_1
+  Data Path: controller/MemtoReg_0 to controller/MemtoReg_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LD:G->Q              33   0.472   0.663  controller/MemtoReg_1 (controller/MemtoReg_1)
-     LUT6:I2->O            1   0.097   0.000  controller/Mmux__n062511 (controller/_n0625)
-     LD:D                     -0.028          controller/MemtoReg_1
+     LD:G->Q              33   0.472   0.618  controller/MemtoReg_0 (controller/MemtoReg_0)
+     LUT6:I3->O            1   0.097   0.000  controller/Mmux__n082811 (controller/_n0828)
+     LD:D                     -0.028          controller/MemtoReg_0
     ----------------------------------------
-    Total                      1.232ns (0.569ns logic, 0.663ns route)
-                                       (46.2% logic, 53.8% route)
+    Total                      1.187ns (0.569ns logic, 0.618ns route)
+                                       (47.9% logic, 52.1% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'controller/state[4]_GND_2_o_Select_117_o'
-  Clock period: 1.103ns (frequency: 906.290MHz)
+Timing constraint: Default period analysis for Clock 'controller/state[4]_GND_2_o_Select_115_o'
+  Clock period: 0.887ns (frequency: 1126.887MHz)
   Total number of paths / destination ports: 2 / 2
 -------------------------------------------------------------------------
-Delay:               1.103ns (Levels of Logic = 1)
-  Source:            controller/RegDst_1 (LATCH)
-  Destination:       controller/RegDst_1 (LATCH)
-  Source Clock:      controller/state[4]_GND_2_o_Select_117_o falling
-  Destination Clock: controller/state[4]_GND_2_o_Select_117_o falling
+Delay:               0.887ns (Levels of Logic = 1)
+  Source:            controller/RegDst_0 (LATCH)
+  Destination:       controller/RegDst_0 (LATCH)
+  Source Clock:      controller/state[4]_GND_2_o_Select_115_o falling
+  Destination Clock: controller/state[4]_GND_2_o_Select_115_o falling
 
-  Data Path: controller/RegDst_1 to controller/RegDst_1
+  Data Path: controller/RegDst_0 to controller/RegDst_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LD:G->Q               6   0.472   0.534  controller/RegDst_1 (controller/RegDst_1)
-     LUT6:I3->O            1   0.097   0.000  controller/Mmux__n028811 (controller/_n0288)
-     LD:D                     -0.028          controller/RegDst_1
+     LD:G->Q               6   0.472   0.318  controller/RegDst_0 (controller/RegDst_0)
+     LUT6:I5->O            1   0.097   0.000  controller/Mmux__n028711 (controller/_n0287)
+     LD:D                     -0.028          controller/RegDst_0
     ----------------------------------------
-    Total                      1.103ns (0.569ns logic, 0.534ns route)
-                                       (51.6% logic, 48.4% route)
+    Total                      0.887ns (0.569ns logic, 0.318ns route)
+                                       (64.1% logic, 35.9% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 4.765ns (frequency: 209.853MHz)
-  Total number of paths / destination ports: 16375 / 5300
+  Clock period: 4.675ns (frequency: 213.908MHz)
+  Total number of paths / destination ports: 39237 / 5364
 -------------------------------------------------------------------------
-Delay:               4.765ns (Levels of Logic = 37)
-  Source:            dataPath/instructionReg/dataOut_5 (FF)
-  Destination:       dataPath/aluOutReg/dataOut_31 (FF)
+Delay:               4.675ns (Levels of Logic = 37)
+  Source:            dataPath/instructionReg/dataOut_3 (FF)
+  Destination:       dataPath/pcOut_31 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: dataPath/instructionReg/dataOut_5 to dataPath/aluOutReg/dataOut_31
+  Data Path: dataPath/instructionReg/dataOut_3 to dataPath/pcOut_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              7   0.361   0.721  dataPath/instructionReg/dataOut_5 (dataPath/instructionReg/dataOut_5)
-     LUT6:I0->O            1   0.097   0.295  controller/aluControl<0>LogicTrst1 (controller/aluControl<0>LogicTrst)
-     LUT3:I2->O           71   0.097   0.392  controller/aluControl<0>LogicTrst2 (aluControl<0>)
-     MUXF7:S->O            1   0.335   0.556  dataPath/srcBMux/Mmux_out110_SW2 (N8)
+     FDE:C->Q              7   0.361   0.721  dataPath/instructionReg/dataOut_3 (dataPath/instructionReg/dataOut_3)
+     LUT6:I0->O            2   0.097   0.299  controller/aluControl<0>LogicTrst1 (controller/aluControl<0>LogicTrst)
+     LUT3:I2->O            4   0.097   0.293  controller/aluControl<0>LogicTrst2_1 (controller/aluControl<0>LogicTrst2)
+     MUXF7:S->O            1   0.335   0.556  dataPath/srcBMux/Mmux_out110_SW2 (N81)
      LUT6:I2->O            1   0.097   0.000  dataPath/mainAlu/Mmux_result2_rs_lut<0> (dataPath/mainAlu/Mmux_result2_rs_lut<0>)
      MUXCY:S->O            1   0.353   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<0> (dataPath/mainAlu/Mmux_result2_rs_cy<0>)
      MUXCY:CI->O           1   0.023   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<1> (dataPath/mainAlu/Mmux_result2_rs_cy<1>)
@@ -783,162 +747,83 @@ Delay:               4.765ns (Levels of Logic = 37)
      MUXCY:CI->O           1   0.023   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<28> (dataPath/mainAlu/Mmux_result2_rs_cy<28>)
      MUXCY:CI->O           1   0.023   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<29> (dataPath/mainAlu/Mmux_result2_rs_cy<29>)
      MUXCY:CI->O           0   0.023   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<30> (dataPath/mainAlu/Mmux_result2_rs_cy<30>)
-     XORCY:CI->O           1   0.370   0.295  dataPath/mainAlu/Mmux_result2_rs_xor<31> (dataPath/mainAlu/Mmux_result2_split<31>)
-     LUT5:I4->O            2   0.097   0.000  dataPath/mainAlu/Mmux_result3251 (dataPath/aluResult<31>)
+     XORCY:CI->O           2   0.370   0.299  dataPath/mainAlu/Mmux_result2_rs_xor<31> (dataPath/mainAlu/Mmux_result2_split<31>)
+     LUT5:I4->O            1   0.097   0.000  dataPath/mainAlu/Mmux_result3251 (dataPath/aluResult<31>)
      FD:D                      0.008          dataPath/aluOutReg/dataOut_31
     ----------------------------------------
-    Total                      4.765ns (2.505ns logic, 2.260ns route)
-                                       (52.6% logic, 47.4% route)
+    Total                      4.675ns (2.505ns logic, 2.170ns route)
+                                       (53.6% logic, 46.4% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'dataPath/pcEnable'
-  Clock period: 4.045ns (frequency: 247.243MHz)
-  Total number of paths / destination ports: 1501 / 32
--------------------------------------------------------------------------
-Delay:               4.045ns (Levels of Logic = 37)
-  Source:            dataPath/pcOut_0 (LATCH)
-  Destination:       dataPath/pcOut_31 (LATCH)
-  Source Clock:      dataPath/pcEnable falling
-  Destination Clock: dataPath/pcEnable falling
-
-  Data Path: dataPath/pcOut_0 to dataPath/pcOut_31
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LD:G->Q              11   0.472   0.342  dataPath/pcOut_0 (dataPath/pcOut_0)
-     LUT6:I5->O            1   0.097   0.000  dataPath/srcBMux/Mmux_out110_SW2_G (N21)
-     MUXF7:I1->O           1   0.279   0.556  dataPath/srcBMux/Mmux_out110_SW2 (N8)
-     LUT6:I2->O            1   0.097   0.000  dataPath/mainAlu/Mmux_result2_rs_lut<0> (dataPath/mainAlu/Mmux_result2_rs_lut<0>)
-     MUXCY:S->O            1   0.353   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<0> (dataPath/mainAlu/Mmux_result2_rs_cy<0>)
-     MUXCY:CI->O           1   0.023   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<1> (dataPath/mainAlu/Mmux_result2_rs_cy<1>)
-     MUXCY:CI->O           1   0.023   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<2> (dataPath/mainAlu/Mmux_result2_rs_cy<2>)
-     MUXCY:CI->O           1   0.023   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<3> (dataPath/mainAlu/Mmux_result2_rs_cy<3>)
-     MUXCY:CI->O           1   0.023   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<4> (dataPath/mainAlu/Mmux_result2_rs_cy<4>)
-     MUXCY:CI->O           1   0.023   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<5> (dataPath/mainAlu/Mmux_result2_rs_cy<5>)
-     MUXCY:CI->O           1   0.023   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<6> (dataPath/mainAlu/Mmux_result2_rs_cy<6>)
-     MUXCY:CI->O           1   0.023   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<7> (dataPath/mainAlu/Mmux_result2_rs_cy<7>)
-     MUXCY:CI->O           1   0.023   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<8> (dataPath/mainAlu/Mmux_result2_rs_cy<8>)
-     MUXCY:CI->O           1   0.023   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<9> (dataPath/mainAlu/Mmux_result2_rs_cy<9>)
-     MUXCY:CI->O           1   0.023   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<10> (dataPath/mainAlu/Mmux_result2_rs_cy<10>)
-     MUXCY:CI->O           1   0.023   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<11> (dataPath/mainAlu/Mmux_result2_rs_cy<11>)
-     MUXCY:CI->O           1   0.023   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<12> (dataPath/mainAlu/Mmux_result2_rs_cy<12>)
-     MUXCY:CI->O           1   0.023   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<13> (dataPath/mainAlu/Mmux_result2_rs_cy<13>)
-     MUXCY:CI->O           1   0.023   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<14> (dataPath/mainAlu/Mmux_result2_rs_cy<14>)
-     MUXCY:CI->O           1   0.023   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<15> (dataPath/mainAlu/Mmux_result2_rs_cy<15>)
-     MUXCY:CI->O           1   0.023   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<16> (dataPath/mainAlu/Mmux_result2_rs_cy<16>)
-     MUXCY:CI->O           1   0.023   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<17> (dataPath/mainAlu/Mmux_result2_rs_cy<17>)
-     MUXCY:CI->O           1   0.023   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<18> (dataPath/mainAlu/Mmux_result2_rs_cy<18>)
-     MUXCY:CI->O           1   0.023   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<19> (dataPath/mainAlu/Mmux_result2_rs_cy<19>)
-     MUXCY:CI->O           1   0.023   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<20> (dataPath/mainAlu/Mmux_result2_rs_cy<20>)
-     MUXCY:CI->O           1   0.023   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<21> (dataPath/mainAlu/Mmux_result2_rs_cy<21>)
-     MUXCY:CI->O           1   0.023   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<22> (dataPath/mainAlu/Mmux_result2_rs_cy<22>)
-     MUXCY:CI->O           1   0.023   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<23> (dataPath/mainAlu/Mmux_result2_rs_cy<23>)
-     MUXCY:CI->O           1   0.023   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<24> (dataPath/mainAlu/Mmux_result2_rs_cy<24>)
-     MUXCY:CI->O           1   0.023   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<25> (dataPath/mainAlu/Mmux_result2_rs_cy<25>)
-     MUXCY:CI->O           1   0.023   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<26> (dataPath/mainAlu/Mmux_result2_rs_cy<26>)
-     MUXCY:CI->O           1   0.023   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<27> (dataPath/mainAlu/Mmux_result2_rs_cy<27>)
-     MUXCY:CI->O           1   0.023   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<28> (dataPath/mainAlu/Mmux_result2_rs_cy<28>)
-     MUXCY:CI->O           1   0.023   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<29> (dataPath/mainAlu/Mmux_result2_rs_cy<29>)
-     MUXCY:CI->O           0   0.023   0.000  dataPath/mainAlu/Mmux_result2_rs_cy<30> (dataPath/mainAlu/Mmux_result2_rs_cy<30>)
-     XORCY:CI->O           1   0.370   0.295  dataPath/mainAlu/Mmux_result2_rs_xor<31> (dataPath/mainAlu/Mmux_result2_split<31>)
-     LUT5:I4->O            2   0.097   0.299  dataPath/mainAlu/Mmux_result3251 (dataPath/aluResult<31>)
-     LUT6:I5->O            1   0.097   0.000  dataPath/pcBrachMux/Mmux_out251 (dataPath/pcIn<31>)
-     LD:D                     -0.028          dataPath/pcOut_31
-    ----------------------------------------
-    Total                      4.045ns (2.552ns logic, 1.493ns route)
-                                       (63.1% logic, 36.9% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'controller/state[4]_GND_2_o_Select_121_o'
+Timing constraint: Default OFFSET IN BEFORE for Clock 'controller/state[4]_GND_2_o_Select_119_o'
   Total number of paths / destination ports: 4 / 2
 -------------------------------------------------------------------------
 Offset:              1.286ns (Levels of Logic = 3)
   Source:            NMI (PAD)
   Destination:       controller/MemtoReg_0 (LATCH)
-  Destination Clock: controller/state[4]_GND_2_o_Select_121_o falling
+  Destination Clock: controller/state[4]_GND_2_o_Select_119_o falling
 
   Data Path: NMI to controller/MemtoReg_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             5   0.001   0.530  NMI_IBUF (NMI_IBUF)
-     LUT3:I0->O            2   0.097   0.561  controller/Mmux__n0691121 (controller/Mmux__n069112)
-     LUT6:I2->O            1   0.097   0.000  controller/Mmux__n069111 (controller/_n0691)
+     LUT3:I0->O            2   0.097   0.561  controller/Mmux__n0828121 (controller/Mmux__n082812)
+     LUT6:I2->O            1   0.097   0.000  controller/Mmux__n082811 (controller/_n0828)
      LD:D                     -0.028          controller/MemtoReg_0
     ----------------------------------------
     Total                      1.286ns (0.195ns logic, 1.091ns route)
                                        (15.2% logic, 84.8% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'controller/state[4]_GND_2_o_Select_117_o'
+Timing constraint: Default OFFSET IN BEFORE for Clock 'controller/state[4]_GND_2_o_Select_115_o'
   Total number of paths / destination ports: 4 / 2
 -------------------------------------------------------------------------
-Offset:              1.149ns (Levels of Logic = 3)
+Offset:              1.276ns (Levels of Logic = 3)
   Source:            INTD (PAD)
   Destination:       controller/RegDst_1 (LATCH)
-  Destination Clock: controller/state[4]_GND_2_o_Select_117_o falling
+  Destination Clock: controller/state[4]_GND_2_o_Select_115_o falling
 
   Data Path: INTD to controller/RegDst_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             4   0.001   0.393  INTD_IBUF (INTD_IBUF)
-     LUT3:I1->O            2   0.097   0.561  controller/Mmux__n02881111 (controller/Mmux__n0288111)
-     LUT6:I2->O            1   0.097   0.000  controller/Mmux__n028811 (controller/_n0288)
+     IBUF:I->O             4   0.001   0.697  INTD_IBUF (INTD_IBUF)
+     LUT5:I0->O            2   0.097   0.383  controller/Mmux__n03531121 (controller/Mmux__n0353112)
+     LUT4:I2->O            1   0.097   0.000  controller/Mmux__n035311 (controller/_n0353)
      LD:D                     -0.028          controller/RegDst_1
     ----------------------------------------
-    Total                      1.149ns (0.195ns logic, 0.954ns route)
-                                       (17.0% logic, 83.0% route)
+    Total                      1.276ns (0.195ns logic, 1.081ns route)
+                                       (15.3% logic, 84.7% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'controller/_n0940'
-  Total number of paths / destination ports: 3 / 1
+Timing constraint: Default OFFSET IN BEFORE for Clock 'controller/_n0927'
+  Total number of paths / destination ports: 6 / 2
 -------------------------------------------------------------------------
 Offset:              0.795ns (Levels of Logic = 2)
   Source:            INTD (PAD)
-  Destination:       controller/INA (LATCH)
-  Destination Clock: controller/_n0940 falling
-
-  Data Path: INTD to controller/INA
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             4   0.001   0.697  INTD_IBUF (INTD_IBUF)
-     LUT5:I0->O            1   0.097   0.000  controller/Mmux_INA_GND_2_o_MUX_124_o11 (controller/INA_GND_2_o_MUX_124_o)
-     LDE:D                    -0.028          controller/INA
-    ----------------------------------------
-    Total                      0.795ns (0.098ns logic, 0.697ns route)
-                                       (12.3% logic, 87.7% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'controller/state[4]_GND_2_o_Select_105_o'
-  Total number of paths / destination ports: 3 / 1
--------------------------------------------------------------------------
-Offset:              1.585ns (Levels of Logic = 3)
-  Source:            INTD (PAD)
   Destination:       controller/isInterrupted (LATCH)
-  Destination Clock: controller/state[4]_GND_2_o_Select_105_o falling
+  Destination Clock: controller/_n0927 falling
 
   Data Path: INTD to controller/isInterrupted
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             4   0.001   0.697  INTD_IBUF (INTD_IBUF)
-     LUT5:I0->O            3   0.097   0.693  controller/Mmux_state[4]_GND_2_o_Select_117_o1211 (controller/Mmux_state[4]_GND_2_o_Select_117_o121)
-     LUT5:I0->O            1   0.097   0.000  controller/state[4]_isInterrupted_Select_104_o1 (controller/state[4]_isInterrupted_Select_104_o)
-     LD:D                     -0.028          controller/isInterrupted
+     LUT5:I0->O            1   0.097   0.000  controller/Mmux_INA_GND_2_o_MUX_126_o11 (controller/INA_GND_2_o_MUX_126_o)
+     LDE:D                    -0.028          controller/INA
     ----------------------------------------
-    Total                      1.585ns (0.195ns logic, 1.390ns route)
+    Total                      0.795ns (0.098ns logic, 0.697ns route)
                                        (12.3% logic, 87.7% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'controller/_n0940'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'controller/_n0927'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Offset:              0.751ns (Levels of Logic = 1)
   Source:            controller/INA (LATCH)
   Destination:       INA (PAD)
-  Source Clock:      controller/_n0940 falling
+  Source Clock:      controller/_n0927 falling
 
   Data Path: controller/INA to INA
                                 Gate     Net
@@ -960,37 +845,23 @@ Clock to Setup on destination clock clk
                                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------+---------+---------+---------+---------+
-clk                                     |    4.765|         |         |         |
-controller/_n0389                       |         |    2.115|         |         |
-controller/_n0424                       |         |    4.278|         |         |
-controller/_n0425                       |         |    2.874|         |         |
-controller/_n0427                       |         |    0.953|         |         |
-controller/_n0727                       |         |    4.117|         |         |
-controller/_n0863                       |         |    0.909|         |         |
-controller/state[4]_GND_2_o_Select_105_o|         |    4.079|         |         |
-controller/state[4]_GND_2_o_Select_107_o|         |    0.759|         |         |
-controller/state[4]_GND_2_o_Select_117_o|         |    2.001|         |         |
-controller/state[4]_GND_2_o_Select_121_o|         |    1.840|         |         |
-dataPath/pcEnable                       |         |    3.656|         |         |
+clk                                     |    4.675|         |         |         |
+controller/_n0421                       |         |    1.960|         |         |
+controller/_n0588                       |         |    4.121|         |         |
+controller/_n0623                       |         |    4.189|         |         |
+controller/_n0691                       |         |    1.994|         |         |
+controller/_n0726                       |         |    2.874|         |         |
+controller/_n0727                       |         |    0.953|         |         |
+controller/_n0728                       |         |    1.937|         |         |
+controller/_n0729                       |         |    0.909|         |         |
+controller/_n0730                       |         |    2.115|         |         |
+controller/_n0927                       |         |    4.071|         |         |
+controller/state[4]_GND_2_o_Select_105_o|         |    0.759|         |         |
+controller/state[4]_GND_2_o_Select_115_o|         |    2.001|         |         |
+controller/state[4]_GND_2_o_Select_119_o|         |    1.840|         |         |
 ----------------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock controller/GND_2_o_GND_2_o_MUX_40_o
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-clk            |         |         |    1.123|         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock controller/GND_2_o_GND_2_o_MUX_48_o
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-clk            |         |         |    1.123|         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock controller/_n0389
+Clock to Setup on destination clock controller/GND_2_o_GND_2_o_MUX_41_o
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -998,15 +869,7 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 clk            |         |         |    1.122|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock controller/_n0424
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-clk            |         |         |    1.123|         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock controller/_n0425
+Clock to Setup on destination clock controller/GND_2_o_GND_2_o_MUX_49_o
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -1014,7 +877,7 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 clk            |         |         |    1.122|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock controller/_n0426
+Clock to Setup on destination clock controller/_n0421
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -1022,7 +885,7 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 clk            |         |         |    1.122|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock controller/_n0427
+Clock to Setup on destination clock controller/_n0588
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -1030,12 +893,28 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 clk            |         |         |    1.122|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock controller/_n0428
+Clock to Setup on destination clock controller/_n0623
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    1.123|         |
+clk            |         |         |    1.122|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock controller/_n0691
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    1.122|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock controller/_n0726
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    1.122|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock controller/_n0727
@@ -1046,7 +925,7 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 clk            |         |         |    1.122|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock controller/_n0828
+Clock to Setup on destination clock controller/_n0728
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -1054,7 +933,7 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 clk            |         |         |    1.122|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock controller/_n0863
+Clock to Setup on destination clock controller/_n0729
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -1062,26 +941,24 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 clk            |         |         |    1.122|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock controller/_n0940
+Clock to Setup on destination clock controller/_n0730
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    1.122|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock controller/_n0927
 -----------------------------------+---------+---------+---------+---------+
                                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -----------------------------------+---------+---------+---------+---------+
-controller/GND_2_o_GND_2_o_MUX_40_o|         |         |    0.868|         |
-controller/GND_2_o_GND_2_o_MUX_48_o|         |         |    1.094|         |
+controller/GND_2_o_GND_2_o_MUX_41_o|         |         |    1.084|         |
+controller/GND_2_o_GND_2_o_MUX_49_o|         |         |    1.094|         |
 -----------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock controller/state[4]_GND_2_o_Select_105_o
------------------------------------+---------+---------+---------+---------+
-                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
------------------------------------+---------+---------+---------+---------+
-clk                                |         |         |    1.122|         |
-controller/GND_2_o_GND_2_o_MUX_40_o|         |         |    1.875|         |
-controller/GND_2_o_GND_2_o_MUX_48_o|         |         |    1.752|         |
------------------------------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock controller/state[4]_GND_2_o_Select_107_o
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -1089,50 +966,37 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 clk            |         |         |    2.234|         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock controller/state[4]_GND_2_o_Select_117_o
+Clock to Setup on destination clock controller/state[4]_GND_2_o_Select_115_o
 ----------------------------------------+---------+---------+---------+---------+
                                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------+---------+---------+---------+---------+
-clk                                     |         |         |    1.259|         |
-controller/GND_2_o_GND_2_o_MUX_48_o     |         |         |    1.752|         |
-controller/state[4]_GND_2_o_Select_117_o|         |         |    1.103|         |
+clk                                     |         |         |    1.425|         |
+controller/GND_2_o_GND_2_o_MUX_49_o     |         |         |    1.620|         |
+controller/state[4]_GND_2_o_Select_115_o|         |         |    0.887|         |
 ----------------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock controller/state[4]_GND_2_o_Select_121_o
+Clock to Setup on destination clock controller/state[4]_GND_2_o_Select_119_o
 ----------------------------------------+---------+---------+---------+---------+
                                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------+---------+---------+---------+---------+
-clk                                     |         |         |    1.260|         |
-controller/GND_2_o_GND_2_o_MUX_48_o     |         |         |    1.707|         |
-controller/state[4]_GND_2_o_Select_121_o|         |         |    1.232|         |
-----------------------------------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock dataPath/pcEnable
-----------------------------------------+---------+---------+---------+---------+
-                                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
-----------------------------------------+---------+---------+---------+---------+
-clk                                     |         |         |    5.154|         |
-controller/_n0424                       |         |         |    4.667|         |
-controller/_n0727                       |         |         |    4.506|         |
-controller/_n0828                       |         |         |    1.232|         |
-controller/state[4]_GND_2_o_Select_105_o|         |         |    4.468|         |
-dataPath/pcEnable                       |         |         |    4.045|         |
+clk                                     |         |         |    1.341|         |
+controller/GND_2_o_GND_2_o_MUX_49_o     |         |         |    1.536|         |
+controller/state[4]_GND_2_o_Select_119_o|         |         |    1.187|         |
 ----------------------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 22.00 secs
-Total CPU time to Xst completion: 21.62 secs
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 11.64 secs
  
 --> 
 
-Total memory usage is 237476 kilobytes
+Total memory usage is 269476 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   79 (   0 filtered)
+Number of warnings :   43 (   0 filtered)
 Number of infos    :    6 (   0 filtered)
 
