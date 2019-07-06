@@ -50,18 +50,21 @@ module DataPath(input [1:0] aluControl, aluSrcB,
     wire [31:0]four = 32'h00000004;
     wire [31:0]interruptAddress = 32'd4088;
 
-
 	always @(aluControl, aluSrcB, pcSource, aluSrcA, regWrite, regDst,
     isInterrupted, clk, isBranch, pcWrite, lorD, memWrite, memToReg, IrWrite)
     begin
 		op = instr[31:26];
         funct = instr[5:0];
-        
-        if(pcEnable==1'b1)
+    end
+	
+	always @(posedge clk)
+	begin
+		if(pcEnable==1'b1)
         begin
           pcOut <= pcIn;
         end
-    end
+		
+	end
 
     assign pcEnable = (isBranch & zeroFlag) | pcWrite;
 

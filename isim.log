@@ -22,6 +22,8 @@ Address is :
        132
 Address is :
       4088
+Address is :
+      4092
 ISim P.20131013 (signature 0x8ef4fb42)
 This is a Full version of ISim.
 WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v" Line 22.  For instance dataPath/regFile/, width 1 of formal port wEnable is not equal to width 2 of actual signal regWrite.
@@ -41,23 +43,16 @@ Address is :
        132
 Address is :
       4088
-# run all
 Address is :
       4092
+# run 1.00us
 Address is :
       4096
 Address is :
       4100
+# run 1.00us
 Address is :
       4104
-Stopped at time : 11700 ns :  in File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCycleProccessorTest.v" Line 75 
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run all
-Stopped at time : 514069900 ns : File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/Controller.v" Line 91
 ISim P.20131013 (signature 0x8ef4fb42)
 This is a Full version of ISim.
 WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v" Line 22.  For instance dataPath/regFile/, width 1 of formal port wEnable is not equal to width 2 of actual signal regWrite.
@@ -77,7 +72,6 @@ Address is :
        132
 Address is :
       4088
-# run 1.00us
 Address is :
       4092
 # run 1.00us
@@ -85,6 +79,10 @@ Address is :
       4096
 Address is :
       4100
+# run 1.00us
+Address is :
+      4104
+# run 1.00us
 ISim P.20131013 (signature 0x8ef4fb42)
 This is a Full version of ISim.
 WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v" Line 22.  For instance dataPath/regFile/, width 1 of formal port wEnable is not equal to width 2 of actual signal regWrite.
@@ -104,6 +102,527 @@ Address is :
        132
 Address is :
       4088
+Address is :
+      4092
+# run 1.00us
+Address is :
+      4096
+Address is :
+      4100
+# run 1.00us
+Address is :
+      4104
+# run 1.00us
+ISim P.20131013 (signature 0x8ef4fb42)
+This is a Full version of ISim.
+WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v" Line 22.  For instance dataPath/regFile/, width 1 of formal port wEnable is not equal to width 2 of actual signal regWrite.
+WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v" Line 22.  For instance dataPath/aluPcMux/, width 1 of formal port control is not equal to width 2 of actual signal aluSrcA.
+WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 28.  For instance uut/dataPath/, width 2 of formal port aluSrcA is not equal to width 1 of actual signal aluSrcA.
+WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 28.  For instance uut/dataPath/, width 2 of formal port regWrite is not equal to width 1 of actual signal regWrite.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Address is :
+      4088
+Address is :
+       128
+Finished circuit initialization process.
+Address is :
+       128
+Address is :
+       132
+Address is :
+      4088
+Address is :
+      4092
+# run 1.00us
+Address is :
+      4096
+Address is :
+      4100
+# run 1.00us
+Address is :
+      4104
+ISim P.20131013 (signature 0x8ef4fb42)
+This is a Full version of ISim.
+WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v" Line 22.  For instance dataPath/regFile/, width 1 of formal port wEnable is not equal to width 2 of actual signal regWrite.
+WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v" Line 22.  For instance dataPath/aluPcMux/, width 1 of formal port control is not equal to width 2 of actual signal aluSrcA.
+WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 28.  For instance uut/dataPath/, width 2 of formal port aluSrcA is not equal to width 1 of actual signal aluSrcA.
+WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 28.  For instance uut/dataPath/, width 2 of formal port regWrite is not equal to width 1 of actual signal regWrite.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Address is :
+      4088
+Address is :
+       128
+Finished circuit initialization process.
+Address is :
+       128
+Address is :
+       132
+Address is :
+      4088
+Address is :
+      4092
+# run 1.00us
+Address is :
+      4096
+Address is :
+      4100
+# run 1.00us
+Address is :
+      4104
+# run 1.00us
+ISim P.20131013 (signature 0x8ef4fb42)
+This is a Full version of ISim.
+WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v" Line 22.  For instance dataPath/regFile/, width 1 of formal port wEnable is not equal to width 2 of actual signal regWrite.
+WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v" Line 22.  For instance dataPath/aluPcMux/, width 1 of formal port control is not equal to width 2 of actual signal aluSrcA.
+WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 28.  For instance uut/dataPath/, width 2 of formal port aluSrcA is not equal to width 1 of actual signal aluSrcA.
+WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 28.  For instance uut/dataPath/, width 2 of formal port regWrite is not equal to width 1 of actual signal regWrite.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Address is :
+      4088
+Address is :
+       128
+Finished circuit initialization process.
+Address is :
+       128
+Address is :
+       132
+Address is :
+      4088
+Address is :
+      4092
+# run 1.00us
+Address is :
+      4096
+Address is :
+       132
+Address is :
+       136
+# run 1.00us
+Address is :
+       140
+Address is :
+         2
+Address is :
+      4088
 # run 1.00us
 Address is :
       4092
+Address is :
+      4096
+Address is :
+      4092
+# run 1.00us
+Address is :
+      4096
+Address is :
+      4092
+Address is :
+      4096
+Address is :
+      4092
+# run 1.00us
+Address is :
+      4096
+Address is :
+      4092
+Address is :
+      4096
+Address is :
+      4092
+# run 1.00us
+Address is :
+      4096
+Address is :
+      4092
+Address is :
+      4096
+Address is :
+      4092
+# run 1.00us
+Address is :
+      4096
+Address is :
+      4092
+Address is :
+      4096
+Address is :
+      4092
+# run 1.00us
+Address is :
+      4096
+Address is :
+      4092
+Address is :
+      4096
+Address is :
+      4092
+# run 1.00us
+Address is :
+      4096
+Address is :
+      4092
+Address is :
+      4096
+Address is :
+      4092
+# run 1.00us
+Address is :
+      4096
+Address is :
+      4092
+Address is :
+      4096
+Address is :
+      4092
+# run 1.00us
+Address is :
+      4096
+Address is :
+      4092
+Address is :
+      4096
+Address is :
+      4092
+# run 1.00us
+Address is :
+      4096
+Address is :
+      4092
+Address is :
+      4096
+Address is :
+      4092
+# run 1.00us
+Address is :
+      4096
+Stopped at time : 13210 ns :  in File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCycleProccessorTest.v" Line 79 
+# run 1.00us
+Address is :
+      4092
+Address is :
+      4096
+Address is :
+      4092
+Address is :
+      4096
+# run 1.00us
+Address is :
+      4092
+Address is :
+      4096
+Address is :
+      4092
+Address is :
+      4096
+# run 1.00us
+Address is :
+      4092
+Address is :
+      4096
+Address is :
+      4092
+Address is :
+      4096
+# run 1.00us
+Address is :
+      4092
+Address is :
+      4096
+Address is :
+      4092
+Address is :
+      4096
+# run 1.00us
+Address is :
+      4092
+Address is :
+      4096
+Address is :
+      4092
+Address is :
+      4096
+# run 1.00us
+Address is :
+      4092
+Address is :
+      4096
+Address is :
+      4092
+Address is :
+      4096
+# run 1.00us
+Address is :
+      4092
+Address is :
+      4096
+Address is :
+      4092
+Address is :
+      4096
+# run 1.00us
+Address is :
+      4092
+Address is :
+      4096
+Address is :
+      4092
+Address is :
+      4096
+# run 1.00us
+Address is :
+      4092
+Address is :
+      4096
+Address is :
+      4092
+Address is :
+      4096
+# run 1.00us
+Address is :
+      4092
+Address is :
+      4096
+Address is :
+      4092
+Address is :
+      4096
+# run 1.00us
+Address is :
+      4092
+Address is :
+      4096
+Address is :
+      4092
+Address is :
+      4096
+# run 1.00us
+Address is :
+      4092
+Address is :
+      4096
+Address is :
+      4092
+Address is :
+      4096
+# run 1.00us
+Address is :
+      4092
+Address is :
+      4096
+Address is :
+      4092
+Address is :
+      4096
+# run 1.00us
+Address is :
+      4092
+Address is :
+      4096
+Address is :
+      4092
+Address is :
+      4096
+# run 1.00us
+Address is :
+      4092
+Address is :
+      4096
+Address is :
+      4092
+Address is :
+      4096
+# run 1.00us
+Address is :
+      4092
+Address is :
+      4096
+Address is :
+      4092
+Address is :
+      4096
+# run 1.00us
+Address is :
+      4092
+Address is :
+      4096
+Address is :
+      4092
+Address is :
+      4096
+# run 1.00us
+Address is :
+      4092
+Address is :
+      4096
+Address is :
+      4092
+Address is :
+      4096
+# run 1.00us
+Address is :
+      4092
+Address is :
+      4096
+Address is :
+      4092
+Address is :
+      4096
+# run 1.00us
+Address is :
+      4092
+Address is :
+      4096
+Address is :
+      4092
+Address is :
+      4096
+# run 1.00us
+Address is :
+      4092
+Address is :
+      4096
+Address is :
+      4092
+Address is :
+      4096
+ISim P.20131013 (signature 0x8ef4fb42)
+This is a Full version of ISim.
+WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v" Line 22.  For instance dataPath/regFile/, width 1 of formal port wEnable is not equal to width 2 of actual signal regWrite.
+WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v" Line 22.  For instance dataPath/aluPcMux/, width 1 of formal port control is not equal to width 2 of actual signal aluSrcA.
+WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 28.  For instance uut/dataPath/, width 2 of formal port aluSrcA is not equal to width 1 of actual signal aluSrcA.
+WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 28.  For instance uut/dataPath/, width 2 of formal port regWrite is not equal to width 1 of actual signal regWrite.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Address is :
+      4088
+Address is :
+       128
+Finished circuit initialization process.
+Address is :
+       128
+Address is :
+       132
+Address is :
+      4088
+Address is :
+      4092
+# run 1.00us
+Address is :
+      4096
+Address is :
+       132
+Address is :
+       136
+# run 1.00us
+Address is :
+       140
+Address is :
+         2
+Address is :
+      4088
+# run 1.00us
+Address is :
+      4092
+Address is :
+      4096
+Address is :
+      4092
+# run 1.00us
+Address is :
+      4096
+Address is :
+      4092
+Address is :
+      4096
+Address is :
+      4092
+# run 1.00us
+Address is :
+      4096
+Address is :
+      4092
+Address is :
+      4096
+Address is :
+      4092
+# run 1.00us
+Address is :
+      4096
+Address is :
+      4092
+Address is :
+      4096
+Address is :
+      4092
+# run 1.00us
+Address is :
+      4096
+Address is :
+      4092
+Address is :
+      4096
+Address is :
+      4092
+# run 1.00us
+Address is :
+      4096
+Address is :
+      4092
+Address is :
+      4096
+Address is :
+      4092
+ISim P.20131013 (signature 0x8ef4fb42)
+This is a Full version of ISim.
+WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v" Line 22.  For instance dataPath/regFile/, width 1 of formal port wEnable is not equal to width 2 of actual signal regWrite.
+WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/DataPath.v" Line 22.  For instance dataPath/aluPcMux/, width 1 of formal port control is not equal to width 2 of actual signal aluSrcA.
+WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 28.  For instance uut/dataPath/, width 2 of formal port aluSrcA is not equal to width 1 of actual signal aluSrcA.
+WARNING: File "//VBoxSvr/SharedWithVM/Memari_Project/MemariProject/MultiCycleProccessor.v" Line 28.  For instance uut/dataPath/, width 2 of formal port regWrite is not equal to width 1 of actual signal regWrite.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Address is :
+      4088
+Address is :
+       128
+Finished circuit initialization process.
+Address is :
+       128
+Address is :
+       132
+Address is :
+      4088
+Address is :
+      4092
+# run 1.00us
+Address is :
+      4096
+Address is :
+       132
+Address is :
+       136
+# run 1.00us
+Address is :
+       140
+Address is :
+         2
+Address is :
+       140
+Address is :
+       144
+Address is :
+       160
+Address is :
+         0
+# run 1.00us
+Address is :
+         4
+Address is :
+         8
+Address is :
+        12
+# run 1.00us
+Address is :
+         x

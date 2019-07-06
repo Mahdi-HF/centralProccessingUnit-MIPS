@@ -57,20 +57,30 @@ module MultiCycleProccessorTest;
 		NMI = 0;
 		INTD = 0;
 		
-		#500
+		#10
+		INT = 0;
+		NMI = 0;
+		INTD = 0;
+		
+		#2000
 		INT = 0;
 		NMI = 1;
 		INTD = 0;
 		
-		#500
+		#10
 		INT = 0;
 		NMI = 0;
 		INTD = 0;
 		
-		#500
+		#2000
 		INT = 1;
 		NMI = 0;
 		INTD = 1;
+		
+		#10
+		INT = 0;
+		NMI = 0;
+		INTD = 0;
 		
 		#10000; $stop;
         

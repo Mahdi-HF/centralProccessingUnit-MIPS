@@ -176,7 +176,7 @@ module Controller(
                 isBranch= 1'b0;
                 MemtoReg=2'b00;
                 nextstate=decode;
-                isInterrupted=0;
+                //isInterrupted=0;
             end
 
             decode:
@@ -343,7 +343,7 @@ module Controller(
               RegWrite = 0;
               aluOp = 2'b10;
               isBranch=0;
-              pcWrite=0;
+              pcWrite=1;
               aluSrcB = 0;
               lorD=0;
               MemWrite=0;
@@ -394,6 +394,10 @@ module Controller(
                     aluControl = 2'b11;
                 end
                 6'b001001: //ADD for jal
+                begin
+                    aluControl = 2'b10;
+                end
+				6'b001000: //ADD for jr
                 begin
                     aluControl = 2'b10;
                 end

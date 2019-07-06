@@ -35,6 +35,7 @@ module RegFile(
     initial 
     begin
         for (i = 0; i < 32; i = i + 1)
-            regData[i] = i;
+            //regData[i] = i;
+			regData[i] = 0;
     end
 endmodule
